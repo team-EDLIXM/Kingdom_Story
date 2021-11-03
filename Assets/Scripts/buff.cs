@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class buff : MonoBehaviour
 {
-    public hero Hero;
+    
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

@@ -9,7 +9,7 @@ public class hero : MonoBehaviour
     public float jumpHeight;
     private float mInput;
     private Rigidbody2D rb;
-    bool fRigth = true;
+    private bool fRigth = true;
 
     private bool isGrounded;
     public Transform groundCheck;
@@ -22,6 +22,7 @@ public class hero : MonoBehaviour
     {
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
+       
     }
 
     public void Update()
@@ -29,18 +30,24 @@ public class hero : MonoBehaviour
         if (isGrounded)
         {
             extraJump = extraJumpValue;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.W) && extraJump > 0)
         {
             rb.velocity = Vector2.up * jumpHeight;
             extraJump--;
+            
         }
 
-        else if (Input.GetKeyDown(KeyCode.W) && extraJump == 0 && isGrounded == true)
+        else if (Input.GetKeyDown(KeyCode.W)  && extraJump == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpHeight;
+            
         }
+
+        ;
+        
 
         
         
@@ -52,7 +59,26 @@ public class hero : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatisGround);
         mInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(mInput * speed, rb.velocity.y);
+
+        if (fRigth == false && mInput > 0 )
+        {
+            Flip();
+        }
+        else if (fRigth == true && mInput < 0)
+        {
+            Flip();
+        }
     }
+
+    void Flip() 
+    {
+        fRigth = !fRigth;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
+
+    }
+
 
    /* public void OnTriggerEnter2D(Collider2D collision)
     {
