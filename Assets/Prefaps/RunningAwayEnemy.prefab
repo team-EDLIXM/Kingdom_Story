@@ -117,6 +117,7 @@ Transform:
   - {fileID: 2787638649762428252}
   - {fileID: 2787638651389069150}
   - {fileID: 1726488895748960460}
+  - {fileID: 1579068097871799719}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -182,7 +183,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 8
 --- !u!114 &2714569460225388471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,9 +200,8 @@ MonoBehaviour:
   floor:
     serializedVersion: 2
     m_Bits: 8
-  wallCheck: {fileID: 0}
-  floorCheck: {fileID: 0}
-  player: {fileID: 0}
+  wallCheck: {fileID: 2787638651389069151}
+  floorCheck: {fileID: 7435869669875642818}
   nowhereToRun: 0
 --- !u!114 &2714569460225388469
 MonoBehaviour:
@@ -215,8 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f283d5b3cc6db43b6605f23d78a53e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  fireball: {fileID: 3469624636936143426, guid: 6f296779cd967c74a96deafe7835ef34, type: 3}
+  speed: 5
+  fireball: {fileID: 3355121617002326493, guid: 6f296779cd967c74a96deafe7835ef34, type: 3}
+  firePoint: {fileID: 1579068097871799719}
+  destroyTime: 2
+  reloading: 0
   reloadTime: 1
 --- !u!1 &2787638651389069151
 GameObject:
@@ -230,7 +233,7 @@ GameObject:
   m_Layer: 0
   m_Name: wallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -242,11 +245,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2787638651389069151}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.7, z: 0}
+  m_LocalPosition: {x: 1, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2787638650661946350}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4387302770454421864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1579068097871799719}
+  m_Layer: 0
+  m_Name: firePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1579068097871799719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4387302770454421864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 2787638650661946350}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7435869669875642818
 GameObject:
@@ -260,7 +293,7 @@ GameObject:
   m_Layer: 0
   m_Name: floorCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

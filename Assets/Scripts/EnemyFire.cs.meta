@@ -4,7 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - fireball: {fileID: 3469624636936143426, guid: 6f296779cd967c74a96deafe7835ef34, type: 3}
+  - fireball: {fileID: 3355121617002326493, guid: 6f296779cd967c74a96deafe7835ef34, type: 3}
+  - firePoint: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

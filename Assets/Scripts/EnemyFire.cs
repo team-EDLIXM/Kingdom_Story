@@ -6,23 +6,12 @@ public class EnemyFire : MonoBehaviour
 {
 
 	public float speed = 10; // скорость пули
-	public GameObject fireball; // префаб нашей пули
+	public Rigidbody2D fireball; // префаб файербола
+	public Transform firePoint; // точка появления файербола
+	public float destroyTime = 2f;
 
-	private bool nowhereToRun;
-	private bool reloading = false;
+	public bool reloading = false;
 	public float reloadTime = 1f;
-
-
-
-	private void Update()
-	{
-		if (reloading) return;
-		nowhereToRun = FindObjectOfType<RunningAwayEnemy>().nowhereToRun;
-		if (nowhereToRun)
-		{
-			Fire();
-		}
-	}
 
 
 	private IEnumerator RealoadTimer()
@@ -31,11 +20,13 @@ public class EnemyFire : MonoBehaviour
 		yield return new WaitForSeconds(reloadTime);
 		reloading = false;
 	}
-	private void Fire()
+	public void Fire()
 	{
 
-		GameObject clone = Instantiate(fireball, transform.position, Quaternion.identity) as GameObject;
-
+		Rigidbody2D clone = Instantiate(fireball, firePoint.transform.position, Quaternion.identity) as Rigidbody2D;
+		clone.velocity = firePoint.transform.right * speed;
+		clone.transform.right = firePoint.transform.right;
+		clone.GetComponent<Fireball>().destroyTime = destroyTime;
 		StartCoroutine(RealoadTimer());
 	}
 }

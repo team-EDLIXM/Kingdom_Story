@@ -12,26 +12,34 @@ public class RunningAwayEnemy : MonoBehaviour
     private GameObject  wallCheck;
     [SerializeField]
     private GameObject floorCheck;
-    [SerializeField]
-    private GameObject player;
+    //[SerializeField]
+    //private GameObject player;
 
     private float radius = 0.01F; // радиус объекта, провер€ющего отсутствие земли
     private bool isHurt = false; // ранен ли персонаж
     public bool nowhereToRun = false; // тупик
     private bool playerIsNear = false; // игрок находитс€ в триггере
     private Rigidbody2D rb;
+    private GameObject player;
+    private EnemyFire EnemyFire; // скрипт стрельбы
 
     private void Start()
     {
+        EnemyFire = GetComponent<EnemyFire>();
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindWithTag("Player");
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H)) // нанесение урона
         {
             isHurt = true;
-        }    
+        }
+        if (nowhereToRun && playerIsNear && !EnemyFire.reloading)
+        {
+            EnemyFire.Fire();
+        }
     }
 
     private void FixedUpdate()
