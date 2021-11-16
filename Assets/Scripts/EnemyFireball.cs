@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyFireball : MonoBehaviour
 {
     public float speed = 5f;
-    private Rigidbody2D rigidbody;
+    new private Rigidbody2D rigidbody;
 
 
     private void Start()

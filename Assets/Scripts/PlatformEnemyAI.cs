@@ -9,33 +9,36 @@ public class PlatformEnemyAI : MonoBehaviour
     [SerializeField] 
     private LayerMask floor;
     [SerializeField]
-    private GameObject rightObject;
-    [SerializeField]
-    private GameObject leftObject;
+    private GameObject floorCheck;
 
-    private int direction = 1; // 1 - вправо, -1 - влево
     private float radius = 0.01F; // радиус объекта, проверяющего отсутствие земли
-
-    private SpriteRenderer sprite;
     
-
-    private void Awake()
-    {
-        sprite = GetComponentInChildren<SpriteRenderer>();
-    }
 
     private void Update()
     {
-        if ((direction > 0 && !Physics2D.OverlapCircle(rightObject.transform.position, radius, floor)) || // направление = вправо и справа нет земли
-            (direction < 0 && !Physics2D.OverlapCircle(leftObject.transform.position, radius, floor)))    // направление = влево и слева нет земли
-            direction *= -1; // меняем направление
+        if (!Physics2D.OverlapCircle(floorCheck.transform.position, radius, floor))  // направление = влево и слева нет земли
+            Flip(); // меняем направление
         Run();
     }
 
+    /// <summary>
+    /// Разворачивает персонажа
+    /// </summary>
     private void Run()
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(direction, 0, 0), speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(transform.right.x, 0, 0), speed * Time.deltaTime);
+    }
 
-        sprite.flipX = direction < 0;
+    /// <summary>
+    /// Разворачивает персонажа
+    /// </summary>
+    private void Flip()
+    {
+        float y = transform.rotation.y;
+        if (y == 0)
+            y = 180;
+        else
+            y = 0;
+        transform.rotation = Quaternion.Euler(0, y, 0);
     }
 }

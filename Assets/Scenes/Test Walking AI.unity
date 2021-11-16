@@ -240,6 +240,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HangingOnPlatformEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 217219653465810245, guid: 154ffbe7307cf0548915786ced20752d, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 217219653465810245, guid: 154ffbe7307cf0548915786ced20752d, type: 3}
+      propertyPath: m_Name
+      value: floorCheck
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154ffbe7307cf0548915786ced20752d, type: 3}
 --- !u!1 &1548454417
