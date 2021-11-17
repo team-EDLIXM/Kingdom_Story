@@ -8,6 +8,7 @@ public class Stats : MonoBehaviour
     public int health;
     public float speed;
     public int dmg;
+    public bool isInvinsible = false;
 
     private void Start()
     {

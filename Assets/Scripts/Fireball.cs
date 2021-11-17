@@ -18,7 +18,8 @@ public class Fireball : MonoBehaviour
             switch (hitObject.tag)
             {
                 case "Enemy":
-                    hitObject.GetComponent<Stats>().health -= dmg;
+                    if (!hitObject.GetComponent<Stats>().isInvinsible)
+                        hitObject.GetComponent<Stats>().health -= dmg;
                     break;
                 case "Player":
                     hitObject.GetComponent<Stats>().health -= dmg;
