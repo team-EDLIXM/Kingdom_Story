@@ -12,7 +12,7 @@ public class RunningAwayEnemy : MonoBehaviour
     private GameObject floorCheck;
 
     private float radius = 0.01F; // радиус объекта, провер€ющего отсутствие земли
-    private bool isHurt = false; // ранен ли персонаж
+    //private bool isHurt = false; // ранен ли персонаж
     public bool nowhereToRun = false; // тупик
     private bool playerIsNear = false; // игрок находитс€ в триггере
     private Rigidbody2D rb;
