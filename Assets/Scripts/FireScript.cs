@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFire : MonoBehaviour
+public class FireScript : MonoBehaviour
 {
 
 	public float speed = 10; // скорость пули
@@ -27,6 +27,7 @@ public class EnemyFire : MonoBehaviour
 		clone.velocity = firePoint.transform.right * speed;
 		clone.transform.right = firePoint.transform.right;
 		clone.GetComponent<Fireball>().destroyTime = destroyTime;
+		clone.GetComponent<Fireball>().dmg = GetComponent<Stats>().dmg;
 		StartCoroutine(RealoadTimer());
 	}
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 217219652743012854}
   - component: {fileID: 9215197374337118930}
   - component: {fileID: 7569799308410638682}
+  - component: {fileID: 502539151739981936}
   m_Layer: 0
   m_Name: HangingOnPlatformEnemy
   m_TagString: Enemy
@@ -94,11 +95,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0267eccf5aa394083063a9b791ee9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   floor:
     serializedVersion: 2
     m_Bits: 8
   floorCheck: {fileID: 217219653465810245}
+--- !u!114 &502539151739981936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217219652743012853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b4032bda0d84b4ab1852d45b197c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 5
+  health: 0
+  speed: 2
+  dmg: 0
 --- !u!1 &217219653465810245
 GameObject:
   m_ObjectHideFlags: 0

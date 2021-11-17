@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 5.0F;
-    [SerializeField]
     private float jumpForce = 15.0F;
     [SerializeField]
     private GameObject groundCheck;
@@ -19,6 +17,8 @@ public class PlayerController : MonoBehaviour
     new private Rigidbody2D rigidbody;
     private Animator animator;
     private SpriteRenderer sprite;
+    private FireScript FireScript; // скрипт стрельбы
+    private Stats stats;
 
 
     private void Awake()
@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        FireScript = GetComponent<FireScript>();
+        stats = GetComponent<Stats>();
     }
 
     private void FixedUpdate()
@@ -35,6 +37,12 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (Input.GetButton("Horizontal")) Run();
+
+        if (Input.GetMouseButton(0) && !FireScript.reloading)
+        {
+            FireScript.Fire();
+        }
+
         if (isGrounded && Input.GetKeyDown(KeyCode.W))
         {
             Jump();
@@ -50,15 +58,29 @@ public class PlayerController : MonoBehaviour
 
     private void Run()
     {
-        Vector3 direction = transform.right * Input.GetAxis("Horizontal");
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, speed * Time.deltaTime);
-
-        sprite.flipX = direction.x < 0.0F;
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            Flip();
+        }
+        float moveVector = Input.GetAxis("Horizontal");
+        rigidbody.velocity = new Vector2(moveVector * stats.speed, rigidbody.velocity.y);
     }
 
     private void Jump()
     {
         rigidbody.AddForce(new Vector2(0F, jumpForce), ForceMode2D.Impulse);
+    }
+
+    private void Flip()
+    {
+        if (Input.GetAxisRaw("Horizontal") == 1)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (Input.GetAxisRaw("Horizontal") == -1)
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 
     private void CheckGround()

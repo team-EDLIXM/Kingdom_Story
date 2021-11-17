@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlatformEnemyAI : MonoBehaviour
 {
-    [SerializeField]
-    private float speed = 1.0F;
     [SerializeField] 
     private LayerMask floor;
     [SerializeField]
     private GameObject floorCheck;
 
+    private Stats stats;
     private float radius = 0.01F; // радиус объекта, провер€ющего отсутствие земли
-    
+
+    private void Awake()
+    {
+        stats = GetComponent<Stats>();
+    }
 
     private void Update()
     {
@@ -26,7 +29,7 @@ public class PlatformEnemyAI : MonoBehaviour
     /// </summary>
     private void Run()
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(transform.right.x, 0, 0), speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(transform.right.x, 0, 0), stats.speed * Time.deltaTime);
     }
 
     /// <summary>

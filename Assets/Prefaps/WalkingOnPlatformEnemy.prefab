@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 3611457923330408538}
   - component: {fileID: 3611457923330408539}
   - component: {fileID: 3611457923330408517}
+  - component: {fileID: 1769345208780260508}
   m_Layer: 0
   m_Name: WalkingOnPlatformEnemy
   m_TagString: Enemy
@@ -176,11 +177,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0267eccf5aa394083063a9b791ee9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
   floor:
     serializedVersion: 2
     m_Bits: 8
   floorCheck: {fileID: 3611457923668641001}
+--- !u!114 &1769345208780260508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611457923330408537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b4032bda0d84b4ab1852d45b197c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 5
+  health: 0
+  speed: 3
+  dmg: 0
 --- !u!1 &3611457923668641001
 GameObject:
   m_ObjectHideFlags: 0

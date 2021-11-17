@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2714569460225388468}
   - component: {fileID: 2714569460225388471}
   - component: {fileID: 2714569460225388469}
+  - component: {fileID: 7195501284490588578}
   m_Layer: 0
   m_Name: RunningAwayEnemy
   m_TagString: Enemy
@@ -196,7 +197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a253886cf855334192e1c8e8f3b2e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
   floor:
     serializedVersion: 2
     m_Bits: 8
@@ -221,6 +221,22 @@ MonoBehaviour:
   destroyTime: 2
   reloading: 0
   reloadTime: 1
+--- !u!114 &7195501284490588578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2787638650661946351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b4032bda0d84b4ab1852d45b197c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 10
+  health: 0
+  speed: 3
+  dmg: 1
 --- !u!1 &2787638651389069151
 GameObject:
   m_ObjectHideFlags: 0

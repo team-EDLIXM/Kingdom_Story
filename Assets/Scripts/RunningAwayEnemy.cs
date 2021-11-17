@@ -5,15 +5,11 @@ using UnityEngine;
 public class RunningAwayEnemy : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 1.0F;
-    [SerializeField]
     private LayerMask floor;
     [SerializeField]
     private GameObject  wallCheck;
     [SerializeField]
     private GameObject floorCheck;
-    //[SerializeField]
-    //private GameObject player;
 
     private float radius = 0.01F; // радиус объекта, проверяющего отсутствие земли
     private bool isHurt = false; // ранен ли персонаж
@@ -21,21 +17,23 @@ public class RunningAwayEnemy : MonoBehaviour
     private bool playerIsNear = false; // игрок находится в триггере
     private Rigidbody2D rb;
     private GameObject player;
-    private EnemyFire EnemyFire; // скрипт стрельбы
+    private FireScript EnemyFire; // скрипт стрельбы
+    private Stats stats;
 
-    private void Start()
+    private void Awake()
     {
-        EnemyFire = GetComponent<EnemyFire>();
+        EnemyFire = GetComponent<FireScript>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
+        stats = GetComponent<Stats>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H)) // нанесение урона
+        /* if (Input.GetKeyDown(KeyCode.H)) // нанесение урона
         {
             isHurt = true;
-        }
+        }*/
         if (nowhereToRun && playerIsNear && !EnemyFire.reloading)
         {
             EnemyFire.Fire();
@@ -44,7 +42,7 @@ public class RunningAwayEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isHurt && playerIsNear)
+        if (stats.health < stats.maxhealth && playerIsNear)
         {
             RunAway();
         }
@@ -87,7 +85,7 @@ public class RunningAwayEnemy : MonoBehaviour
 
         CheckNowhereToRun();
 
-        rb.velocity = new Vector2(transform.right.x * speed, rb.velocity.y);
+        rb.velocity = new Vector2(transform.right.x * stats.speed, rb.velocity.y);
     }
     /// <summary>
     /// Разворачивает персонажа
@@ -112,7 +110,7 @@ public class RunningAwayEnemy : MonoBehaviour
         if (isWall || !isFloor)     // тупик слева
         {
             Flip();
-            speed = 0; // останавливаемся
+            stats.speed = 0; // останавливаемся
             nowhereToRun = true;
         }
     }
