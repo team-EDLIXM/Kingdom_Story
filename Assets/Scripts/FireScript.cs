@@ -5,9 +5,9 @@ using UnityEngine;
 public class FireScript : MonoBehaviour
 {
 
-	public float speed = 10; // скорость пули
-	public Rigidbody2D fireball; // префаб файербола
-	public Transform firePoint; // точка появления файербола
+	public float speed = 10; // fireball speed
+	public Rigidbody2D fireball; // fireball prefab
+	public Transform firePoint; // point where fireball starts moving
 	public float destroyTime = 2f;
 
 	public bool reloading = false;
