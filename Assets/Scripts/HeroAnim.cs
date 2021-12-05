@@ -10,7 +10,7 @@ public class HeroAnim : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        hero wizard = GetComponent<hero>();
+        
 
     }
 
