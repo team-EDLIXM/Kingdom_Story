@@ -18,11 +18,14 @@ public class hero : MonoBehaviour
     private int extraJump;
     public int extraJumpValue;
 
+    public int maxhealth = 5;
+    public int health;
+
     public void Start()
     {
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
-       
+        health = maxhealth;
     }
 
     public void Update()
