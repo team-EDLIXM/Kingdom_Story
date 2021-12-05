@@ -17,8 +17,8 @@ public class HeroAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKey(KeyCode.W) )
+
+        if (Input.GetKeyDown(KeyCode.Space) )
         {
             anim.SetTrigger("Jump");
         }
