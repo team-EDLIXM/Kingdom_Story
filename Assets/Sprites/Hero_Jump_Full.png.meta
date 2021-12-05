@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: 7a3c7794687343041baf480d95ede5cf
+guid: 0c40af0bfa0e3384a8b365046e41f61b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 43456101269994598
-    second: Hero_Running_0
+      213: 1602022736191138418
+    second: Hero_Jump_Full_0
   - first:
-      213: -3434102654391848860
-    second: Hero_Running_1
+      213: 1264042286823526062
+    second: Hero_Jump_Full_1
   - first:
-      213: 8246334076796745830
-    second: Hero_Running_2
+      213: 4333851646104041818
+    second: Hero_Jump_Full_2
   - first:
-      213: -3087067016483446940
-    second: Hero_Running_3
+      213: -413272173325090916
+    second: Hero_Jump_Full_3
   - first:
-      213: -6805619170336824365
-    second: Hero_Running_4
+      213: 6877004453572122364
+    second: Hero_Jump_Full_4
   - first:
-      213: 4988582135151971231
-    second: Hero_Running_5
+      213: -4789876325057565417
+    second: Hero_Jump_Full_5
   - first:
-      213: 2308097146932768705
-    second: Hero_Running_6
+      213: -3544685120420711968
+    second: Hero_Jump_Full_6
   - first:
-      213: -7218938870742208169
-    second: Hero_Running_7
+      213: -1988692113254070956
+    second: Hero_Jump_Full_7
+  - first:
+      213: -3773980469978804455
+    second: Hero_Jump_Full_8
+  - first:
+      213: 6749390327413775027
+    second: Hero_Jump_Full_9
+  - first:
+      213: 8760645195256339881
+    second: Hero_Jump_Full_10
+  - first:
+      213: -2160933919186847536
+    second: Hero_Jump_Full_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,11 +127,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hero_Running_0
+      name: Hero_Jump_Full_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 9
+        y: 200
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27aa5c0d0378b3610800000000000000
+      internalID: 1602022736191138418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 200
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae403f33c7ca8110800000000000000
+      internalID: 1264042286823526062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 198
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59f5434c1fe42c30800000000000000
+      internalID: 4333851646104041818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 198
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f7761e523c34af0800000000000000
+      internalID: -413272173325090916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 119
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf612f55d17007f50800000000000000
+      internalID: 6877004453572122364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 118
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71de3e63cd0f68db0800000000000000
+      internalID: -4789876325057565417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_6
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 118
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1f5bcd9afbecec0800000000000000
+      internalID: -3544685120420711968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 19
+        width: 54
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455cedd3f0fb664e0800000000000000
+      internalID: -1988692113254070956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_8
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 19
+        width: 56
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fc6a902c020abc0800000000000000
+      internalID: -3773980469978804455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 24
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba94f33eb6aaad50800000000000000
+      internalID: 6749390327413775027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jump_Full_10
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 24
         width: 40
         height: 48
       alignment: 0
@@ -129,19 +351,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66c758708136a9000800000000000000
-      internalID: 43456101269994598
+      spriteID: 9ad9c72a360149970800000000000000
+      internalID: 8760645195256339881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hero_Running_1
+      name: Hero_Jump_Full_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 45
+        x: 329
+        y: 24
+        width: 42
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,134 +372,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4607fba94dd9750d0800000000000000
-      internalID: -3434102654391848860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Running_2
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 1
-        width: 47
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6683ba2e62dd07270800000000000000
-      internalID: 8246334076796745830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Running_3
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 0
-        width: 43
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46fddac87e88825d0800000000000000
-      internalID: -3087067016483446940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Running_4
-      rect:
-        serializedVersion: 2
-        x: 253
-        y: 0
-        width: 43
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d32c7b1c659d81a0800000000000000
-      internalID: -6805619170336824365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Running_5
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 0
-        width: 41
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9bc79275010b3540800000000000000
-      internalID: 4988582135151971231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Running_6
-      rect:
-        serializedVersion: 2
-        x: 383
-        y: 1
-        width: 47
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cf25065022080020800000000000000
-      internalID: 2308097146932768705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Running_7
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 0
-        width: 41
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 751b62a385d21db90800000000000000
-      internalID: -7218938870742208169
+      spriteID: 0d876c3bc02d202e0800000000000000
+      internalID: -2160933919186847536
       vertices: []
       indices: 
       edges: []

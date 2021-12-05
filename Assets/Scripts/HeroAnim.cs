@@ -10,30 +10,33 @@ public class HeroAnim : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        hero wizard = GetComponent<hero>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        
+        if (Input.GetKey(KeyCode.W) )
         {
             anim.SetTrigger("Jump");
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            anim.SetBool("IsRun", true);
+            anim.SetBool("IsRunning", true);
         }
         else
         {
-            anim.SetBool("IsRun", false);
+            anim.SetBool("IsRunning", false);
         }
         
     }
 
     
 
-    public void OnCollisionEnter(Collision collision)
+    /*public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Spikes")
         {
@@ -44,7 +47,7 @@ public class HeroAnim : MonoBehaviour
         {
             anim.SetBool("IsHurt", false);
         }
-    }
+    }*/
 
 
 

@@ -11,7 +11,7 @@ public class hero : MonoBehaviour
     private Rigidbody2D rb;
     private bool fRigth = true;
 
-    private bool isGrounded;
+    public bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatisGround;
