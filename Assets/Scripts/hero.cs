@@ -36,14 +36,14 @@ public class hero : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && extraJump > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && extraJump > 0)
         {
             rb.velocity = Vector2.up * jumpHeight;
             extraJump--;
             
         }
 
-        else if (Input.GetKeyDown(KeyCode.W)  && extraJump == 0 && isGrounded == true)
+        else if (Input.GetKeyDown(KeyCode.Space)  && extraJump == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpHeight;
             
