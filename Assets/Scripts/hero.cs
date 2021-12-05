@@ -21,11 +21,14 @@ public class hero : MonoBehaviour
     public int maxhealth = 5;
     public int health;
 
+    public AudioManager AudioManager;
+
     public void Start()
     {
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
         health = maxhealth;
+        AudioManager = GameObject.Find("AudioManager script").GetComponent<AudioManager>();
     }
 
     public void Update()
@@ -40,18 +43,16 @@ public class hero : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpHeight;
             extraJump--;
-            
+            AudioManager.instance.PlaySFX(1);
         }
 
         else if (Input.GetKeyDown(KeyCode.Space)  && extraJump == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpHeight;
-            
+            AudioManager.instance.PlaySFX(1);
         }
 
         ;
-        
-
         
         
     }
@@ -70,6 +71,10 @@ public class hero : MonoBehaviour
         else if (fRigth == true && mInput < 0)
         {
             Flip();
+        }
+        if (rb.velocity.x != 0 && isGrounded && !AudioManager.sounds[0].isPlaying)
+        {
+            AudioManager.instance.PlaySFX(0);
         }
     }
 
