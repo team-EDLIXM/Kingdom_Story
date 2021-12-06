@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class EventScript : MonoBehaviour
 {
+
+    public GameObject PMenu;
+
     void Start()
     {
         
@@ -12,9 +15,19 @@ public class EventScript : MonoBehaviour
 
      void Update()
     {
-        if (Input.GetKey("escape")) // если нажат Esc
-            SceneManager.LoadScene("MainMenu");  // выйти в меню
-
+        if (Input.GetKeyDown("escape"))
+        {
+            if (Time.timeScale == 1.0f)
+            { 
+                Time.timeScale = 0.0f;
+                PMenu.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1.0f;
+                PMenu.SetActive(false);
+            }
+        }
     }
     
 }
