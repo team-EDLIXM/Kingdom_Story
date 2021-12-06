@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using TMPro;
+using UnityEngine.Audio;
 
 public class OptionsScript : MonoBehaviour
 {
     public TMP_Dropdown wmode;
     public TMP_Dropdown resolution;
     private List<Resolution> ress = new List<Resolution>();
-
+    public AudioMixer AMixer;
+    public Slider volume;
     void Start()
     {
         //Window Mode
@@ -30,9 +32,13 @@ public class OptionsScript : MonoBehaviour
             }
 
         resolution.ClearOptions();
-        resolution.AddOptions(ress.Select(x=>x.ToString()).ToList());
+        resolution.AddOptions(ress.Select(x => x.ToString()).ToList());
         resolution.value = PlayerPrefs.HasKey("resolution") ?
             PlayerPrefs.GetInt("resolution") : ress.Count - 1;
+
+        //Audio
+        volume.value = PlayerPrefs.HasKey("volume") ?
+         PlayerPrefs.GetFloat("volume") : -40f;
     }
 
     void Update()
@@ -61,5 +67,11 @@ public class OptionsScript : MonoBehaviour
     {
       Screen.SetResolution(ress[resolution.value].width, ress[resolution.value].height, Screen.fullScreenMode);
             PlayerPrefs.SetInt("resolution", resolution.value);
+    }
+
+    public void volumechange()
+    {
+        AMixer.SetFloat("Volume", volume.value);
+        PlayerPrefs.SetFloat("volume", volume.value);
     }
 }
