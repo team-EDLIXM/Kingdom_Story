@@ -34,7 +34,7 @@ public class OptionsScript : MonoBehaviour
         resolution.ClearOptions();
         resolution.AddOptions(ress.Select(x => x.ToString()).ToList());
         resolution.value = PlayerPrefs.HasKey("resolution") ?
-            PlayerPrefs.GetInt("resolution") : ress.Count - 1;
+            PlayerPrefs.GetInt("resolution") : 0;
 
         //Audio
         volume.value = PlayerPrefs.HasKey("volume") ?
