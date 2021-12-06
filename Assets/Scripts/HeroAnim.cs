@@ -22,7 +22,7 @@ public class HeroAnim : MonoBehaviour
         {
             anim.SetTrigger("Jump");
         }*/
-
+        if (Time.timeScale == 0) return;
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             anim.SetBool("IsRunning", true);
