@@ -21,18 +21,22 @@ public class hero : MonoBehaviour
     public int maxhealth = 5;
     public int health;
 
+    Animator anim;
+
     public AudioManager AudioManager;
 
     public void Start()
     {
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         health = maxhealth;
         AudioManager = GameObject.Find("AudioManager script").GetComponent<AudioManager>();
     }
 
     public void Update()
     {
+        if (Time.timeScale == 0) return;
         if (isGrounded)
         {
             extraJump = extraJumpValue;
@@ -44,12 +48,14 @@ public class hero : MonoBehaviour
             rb.velocity = Vector2.up * jumpHeight;
             extraJump--;
             AudioManager.instance.PlaySFX(1);
+            anim.SetTrigger("Jump");
         }
 
         else if (Input.GetKeyDown(KeyCode.Space)  && extraJump == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpHeight;
             AudioManager.instance.PlaySFX(1);
+            anim.SetTrigger("Jump");
         }
 
         ;
@@ -85,7 +91,7 @@ public class hero : MonoBehaviour
 
     }
 
-
+    
    /* public void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(collision.gameObject);

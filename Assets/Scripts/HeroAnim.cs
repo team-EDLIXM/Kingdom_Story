@@ -18,10 +18,10 @@ public class HeroAnim : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) )
+        /*if (Input.GetKeyDown(KeyCode.Space) )
         {
             anim.SetTrigger("Jump");
-        }
+        }*/
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
