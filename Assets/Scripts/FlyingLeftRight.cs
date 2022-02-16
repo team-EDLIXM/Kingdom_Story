@@ -10,7 +10,6 @@ public class FlyingLeftRight : MonoBehaviour
 
     public float distance;
     private float startPoint;
-    private int direction;
 
     private void Awake()
     {
