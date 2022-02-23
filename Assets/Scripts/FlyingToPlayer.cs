@@ -19,9 +19,11 @@ public class FlyingToPlayer : MonoBehaviour
 
     private void Update()
     {
+        float dx = player.transform.position.x - transform.position.x;
+        float dy = player.transform.position.y - transform.position.y;
         if (playerIsNear)
         {
-            rb.velocity = new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y) * stats.speed;
+            rb.velocity = new Vector2(dx, dy + 2) * stats.speed;
         }
     }
 
