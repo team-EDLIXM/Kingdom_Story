@@ -28,6 +28,7 @@ public class HeroAttack : MonoBehaviour
         if (Input.GetMouseButton(0) && !isAttacking)
          {
              anim.Play("Player_Attack");
+            AudioManager.instance.PlaySFX(3);
             StartCoroutine(DoAttack());
          }
         
