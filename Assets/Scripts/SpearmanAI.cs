@@ -7,9 +7,10 @@ public class SpearmanAI : MonoBehaviour
     public Animator animator;
     Rigidbody2D rb;
     float speed;
-    public float dashTime = 0.5f;
-    public float dashReloadTime = 2f;
+    public float dashTime;
+    public float dashReloadTime;
     public bool isDash = false;
+    public bool dashReloading = false;
 
     void Awake()
     {
@@ -20,10 +21,16 @@ public class SpearmanAI : MonoBehaviour
 
     void Update()
     {
-        if (!isDash)
+        if (!isDash && !dashReloading)
         { 
             Dash();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && !isDash)
+            AttackUp();
     }
 
     public void Dash()
@@ -31,20 +38,34 @@ public class SpearmanAI : MonoBehaviour
         animator.SetBool("isDash", true);
         StartCoroutine(DashTimer());
         rb.velocity = new Vector2(speed, rb.velocity.y);
-        animator.SetBool("isDash", false);
     }
 
     IEnumerator DashTimer()
     {
         isDash = true;
         yield return new WaitForSeconds(dashTime);
+        rb.velocity = new Vector2(0, rb.velocity.y);
+        animator.SetBool("isDash", false);
+        isDash = false;
         StartCoroutine(DashReloadTimer());
     }
 
     IEnumerator DashReloadTimer()
     {
-        rb.velocity = new Vector2(0, rb.velocity.y);
+        dashReloading = true;
         yield return new WaitForSeconds(dashReloadTime);
-        isDash = false;
+        dashReloading = false;
+    }
+
+    public void AttackUp()
+    {
+        animator.SetBool("isAttackUp", true);
+        StartCoroutine(AttackUpTimer());
+    }
+
+    IEnumerator AttackUpTimer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("isAttackUp", false);
     }
 }
