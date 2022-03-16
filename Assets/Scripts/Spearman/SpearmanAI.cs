@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpearmanAI : MonoBehaviour
 {
+    public bool check_AttackUp;
+    public bool check_AttackForward;
     public Animator animator;
     Rigidbody2D rb;
     float speed;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformEnemyAI : MonoBehaviour
+public class Catepillar : MonoBehaviour
 {
     [SerializeField] 
     private LayerMask floor;
@@ -19,10 +19,6 @@ public class PlatformEnemyAI : MonoBehaviour
 
     private void Update()
     {
-        /// Damage
-        if (Input.GetKeyDown(KeyCode.H))
-            stats.TakeDamage(1);
-
         if (!Physics2D.OverlapCircle(floorCheck.transform.position, radius, floor))  // направление = влево и слева нет земли
             Flip(); // меняем направление
         Run();
@@ -48,6 +44,4 @@ public class PlatformEnemyAI : MonoBehaviour
             y = 0;
         transform.rotation = Quaternion.Euler(0, y, 0);
     }
-
-    
 }

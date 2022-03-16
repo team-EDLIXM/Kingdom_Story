@@ -20,4 +20,10 @@ public class Stats : MonoBehaviour
         if (health <= 0)
             Destroy(gameObject);
     }
+
+    public void TakeDamage(int dmg)
+    {
+        health -= dmg;
+        GetComponent<Animator>().SetBool("isHurt", true);
+    }
 }
