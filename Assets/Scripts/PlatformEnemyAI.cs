@@ -19,10 +19,6 @@ public class PlatformEnemyAI : MonoBehaviour
 
     private void Update()
     {
-        /// Damage
-        if (Input.GetKeyDown(KeyCode.H))
-            stats.TakeDamage(1);
-
         if (!Physics2D.OverlapCircle(floorCheck.transform.position, radius, floor))  // направление = влево и слева нет земли
             Flip(); // меняем направление
         Run();
