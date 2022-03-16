@@ -720,6 +720,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8618287277060587157, guid: 47076b6daea64544482baaa8a3d6e183, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8618287277060587177, guid: 47076b6daea64544482baaa8a3d6e183, type: 3}
       propertyPath: m_Name
       value: FlyingUpDown

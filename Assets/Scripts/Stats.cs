@@ -21,9 +21,9 @@ public class Stats : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void TakeDamage(int dmg)
+    public void TakeDamage(int damage)
     {
-        health -= dmg;
+        health -= damage;
         GetComponent<Animator>().SetBool("isHurt", true);
     }
 }
