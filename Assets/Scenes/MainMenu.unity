@@ -404,8 +404,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wmode: {fileID: 243492365}
   resolution: {fileID: 1507660296}
-  AMixer: {fileID: 24100000, guid: 24d2093e6abfb62419518787f9a96734, type: 2}
-  volume: {fileID: 836544553}
 --- !u!1 &171100208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,7 +3657,7 @@ AudioSource:
   m_GameObject: {fileID: 1420435223}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 24d2093e6abfb62419518787f9a96734, type: 2}
+  OutputAudioMixerGroup: {fileID: -4520856010586421767, guid: 24d2093e6abfb62419518787f9a96734, type: 2}
   m_audioClip: {fileID: 8300000, guid: eb60c428bf3041a4386f7ffe7a61b894, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

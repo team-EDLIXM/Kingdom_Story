@@ -11,8 +11,10 @@ public class OptionsScript : MonoBehaviour
     public TMP_Dropdown wmode;
     public TMP_Dropdown resolution;
     private List<Resolution> ress = new List<Resolution>();
+    /*
     public AudioMixer AMixer;
-    public Slider volume;
+    public Slider sounds;
+    public AudioMixerGroup MusGroup;*/
     void Start()
     {
         //Window Mode
@@ -35,10 +37,10 @@ public class OptionsScript : MonoBehaviour
         resolution.AddOptions(ress.Select(x => x.ToString()).ToList());
         resolution.value = PlayerPrefs.HasKey("resolution") ?
             PlayerPrefs.GetInt("resolution") : 0;
-
+        /*
         //Audio
-        volume.value = PlayerPrefs.HasKey("volume") ?
-         PlayerPrefs.GetFloat("volume") : -40f;
+        sounds.value = PlayerPrefs.HasKey("volume") ?
+         PlayerPrefs.GetFloat("volume") : -40f;*/
     }
 
     void Update()
@@ -68,10 +70,22 @@ public class OptionsScript : MonoBehaviour
       Screen.SetResolution(ress[resolution.value].width, ress[resolution.value].height, Screen.fullScreenMode);
             PlayerPrefs.SetInt("resolution", resolution.value);
     }
-
-    public void volumechange()
+    /*
+    public void SoundsVChange()
     {
-        AMixer.SetFloat("Volume", volume.value);
-        PlayerPrefs.SetFloat("volume", volume.value);
+        AMixer.SetFloat("Volume", sounds.value);
+        PlayerPrefs.SetFloat("volume", sounds.value);
     }
+
+    public void MusicVChange()
+    {
+        AMixer.SetFloat("Volume", sounds.value);
+        PlayerPrefs.SetFloat("volume", sounds.value);
+    }
+
+    public void OtherVChange()
+    {
+        AMixer.SetFloat("Volume", sounds.value);
+        PlayerPrefs.SetFloat("volume", sounds.value);
+    }*/
 }

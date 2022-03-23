@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
+    public static DontDestroy instance; 
     private void Awake()
     {
-        DontDestroyOnLoad(this);     // объект меню не будет разрушаться при загрузке новых сцен
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else 
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }
