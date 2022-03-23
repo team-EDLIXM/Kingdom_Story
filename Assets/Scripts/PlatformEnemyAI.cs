@@ -10,7 +10,7 @@ public class PlatformEnemyAI : MonoBehaviour
     private GameObject floorCheck;
 
     private Stats stats;
-    private float radius = 0.01F; // радиус объекта, провер€ющего отсутствие земли
+    private float radius = 0.13F; // радиус объекта, провер€ющего отсутствие земли
 
     private void Awake()
     {

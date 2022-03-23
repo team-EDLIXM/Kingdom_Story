@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour
 
     public void Start()
     {
-        ForestMusic.Play();
+        //ForestMusic.Play();
     }
 
     public void PlaySFX(int sound)

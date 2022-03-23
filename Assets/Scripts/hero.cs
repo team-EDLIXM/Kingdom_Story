@@ -31,7 +31,7 @@ public class hero : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         health = maxhealth;
-        AudioManager = GameObject.Find("AudioManager script").GetComponent<AudioManager>();
+        AudioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     public void Update()

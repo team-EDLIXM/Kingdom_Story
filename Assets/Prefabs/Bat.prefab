@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8618287277060587156}
   - component: {fileID: 8618287277060587159}
   - component: {fileID: 8618287277060587158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0026111603, y: -0.028927267}
@@ -146,11 +146,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b4032bda0d84b4ab1852d45b197c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 8618287277060587158}
   maxhealth: 10
   health: 10
   speed: 2
   dmg: 0
-  isInvinsible: 0
+  isInvulnerable: 0
+  InvulnerableTime: 0.5
 --- !u!114 &8618287277060587159
 MonoBehaviour:
   m_ObjectHideFlags: 0
