@@ -11,8 +11,10 @@ public class OptionsScript : MonoBehaviour
     public TMP_Dropdown wmode;
     public TMP_Dropdown resolution;
     private List<Resolution> ress = new List<Resolution>();
+    private List<string> SoundPrefs = new List<string>() { "Master", "Music", "OtherSounds" };
+
+    public AudioMixer mixer;
     /*
-    public AudioMixer AMixer;
     public Slider sounds;
     public AudioMixerGroup MusGroup;*/
     void Start()
@@ -37,10 +39,12 @@ public class OptionsScript : MonoBehaviour
         resolution.AddOptions(ress.Select(x => x.ToString()).ToList());
         resolution.value = PlayerPrefs.HasKey("resolution") ?
             PlayerPrefs.GetInt("resolution") : 0;
-        /*
+
         //Audio
-        sounds.value = PlayerPrefs.HasKey("volume") ?
-         PlayerPrefs.GetFloat("volume") : -40f;*/
+        foreach (var s in SoundPrefs)
+        {
+           mixer.SetFloat(s,PlayerPrefs.GetFloat(s, 0f));
+        }
     }
 
     void Update()

@@ -29,7 +29,7 @@ public class VolumeControl : MonoBehaviour
     {
         _volumeValue = PlayerPrefs.GetFloat(MixerGroup, 0f);
         slider.value = _volumeValue == 0 ?
-            0 : Mathf.Pow(10f, _volumeValue / _volumeValue);
+            0 : Mathf.Pow(10f, _volumeValue / _multiplier);
     }
 
     private void OnDisable()
