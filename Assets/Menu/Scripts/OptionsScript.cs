@@ -11,8 +11,10 @@ public class OptionsScript : MonoBehaviour
     public TMP_Dropdown wmode;
     public TMP_Dropdown resolution;
     private List<Resolution> ress = new List<Resolution>();
-    public AudioMixer AMixer;
-    public Slider volume;
+    private List<string> SoundPrefs = new List<string>() { "Master", "Music", "OtherSounds" };
+
+    public AudioMixer mixer;
+
     void Start()
     {
         //Window Mode
@@ -37,8 +39,10 @@ public class OptionsScript : MonoBehaviour
             PlayerPrefs.GetInt("resolution") : 0;
 
         //Audio
-        volume.value = PlayerPrefs.HasKey("volume") ?
-         PlayerPrefs.GetFloat("volume") : -40f;
+        foreach (var s in SoundPrefs)
+        {
+           mixer.SetFloat(s,PlayerPrefs.GetFloat(s, 0f));
+        }
     }
 
     void Update()
@@ -68,10 +72,5 @@ public class OptionsScript : MonoBehaviour
       Screen.SetResolution(ress[resolution.value].width, ress[resolution.value].height, Screen.fullScreenMode);
             PlayerPrefs.SetInt("resolution", resolution.value);
     }
-
-    public void volumechange()
-    {
-        AMixer.SetFloat("Volume", volume.value);
-        PlayerPrefs.SetFloat("volume", volume.value);
-    }
+  
 }

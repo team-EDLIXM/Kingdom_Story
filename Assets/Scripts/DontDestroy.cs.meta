@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Scripts/Bat.cs.meta
-guid: 6552069f7d9664340a07a27c61f5339e
-=======
-guid: 09108ebee67f32e4c8d88ed832a72271
->>>>>>> UI:Assets/Menu/Scripts/VolumeControl.cs.meta
+guid: ed7b8de2697469e458e6b15c2e9c0d64
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
