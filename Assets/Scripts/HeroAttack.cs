@@ -37,6 +37,8 @@ public class HeroAttack : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0) return;
+
         if (TimeBtwHits <= 0)
         {
             if (Input.GetMouseButton(0))
