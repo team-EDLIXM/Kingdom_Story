@@ -14,9 +14,7 @@ public class OptionsScript : MonoBehaviour
     private List<string> SoundPrefs = new List<string>() { "Master", "Music", "OtherSounds" };
 
     public AudioMixer mixer;
-    /*
-    public Slider sounds;
-    public AudioMixerGroup MusGroup;*/
+
     void Start()
     {
         //Window Mode
@@ -74,22 +72,5 @@ public class OptionsScript : MonoBehaviour
       Screen.SetResolution(ress[resolution.value].width, ress[resolution.value].height, Screen.fullScreenMode);
             PlayerPrefs.SetInt("resolution", resolution.value);
     }
-    /*
-    public void SoundsVChange()
-    {
-        AMixer.SetFloat("Volume", sounds.value);
-        PlayerPrefs.SetFloat("volume", sounds.value);
-    }
-
-    public void MusicVChange()
-    {
-        AMixer.SetFloat("Volume", sounds.value);
-        PlayerPrefs.SetFloat("volume", sounds.value);
-    }
-
-    public void OtherVChange()
-    {
-        AMixer.SetFloat("Volume", sounds.value);
-        PlayerPrefs.SetFloat("volume", sounds.value);
-    }*/
+  
 }
