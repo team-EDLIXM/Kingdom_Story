@@ -24,6 +24,7 @@ public class Dryad_SoundShoot : MonoBehaviour
 	public void Fire()
 	{
 		Rigidbody2D cloneLeft = Instantiate(fireball, firePointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
+		cloneLeft.GetComponent<SpriteRenderer>().flipX = true;
 		cloneLeft.velocity = -firePointLeft.transform.right * speed;
 		cloneLeft.transform.right = firePointLeft.transform.right;
 		cloneLeft.GetComponent<Fireball>().destroyTime = destroyTime;

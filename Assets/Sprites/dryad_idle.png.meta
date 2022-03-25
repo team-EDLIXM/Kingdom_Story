@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 420ac3ff8ce3d1a4f9825699c670c9da
+guid: 143fea9df6d8b3a4abf61de087c19f60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7513703738448305236
-    second: Dryad_SoundAttack
-  - first:
-      213: -1975098827200729440
-    second: Dryad_SlapAttack2
-  - first:
-      213: -1265698412391940941
-    second: Dryad_SlapAttack1
-  - first:
-      213: -7977098504503049850
-    second: Dryad_UndergroundAttack
-  - first:
-      213: 4981136776264325755
-    second: Dryad_Sound
+      213: -1549973297195274187
+    second: dryad_idle_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,8 +49,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 59, y: 0, z: 158, w: 49}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -106,97 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dryad_SoundAttack
+      name: dryad_idle_0
       rect:
         serializedVersion: 2
-        x: 306
-        y: 157
-        width: 129
-        height: 203
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45c5cb5adb9064860800000000000000
-      internalID: 7513703738448305236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dryad_SlapAttack2
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 796
-        width: 276
-        height: 221
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0aee868c41a0794e0800000000000000
-      internalID: -1975098827200729440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dryad_SlapAttack1
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 781
-        width: 261
-        height: 201
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bc3a98fff55f6ee0800000000000000
-      internalID: -1265698412391940941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dryad_UndergroundAttack
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 510
-        width: 123
-        height: 161
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 681cbc4bc27ab4190800000000000000
-      internalID: -7977098504503049850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dryad_Sound
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 230
-        width: 137
-        height: 83
+        x: 59
+        y: 0
+        width: 46
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7a9edeb18d802540800000000000000
-      internalID: 4981136776264325755
+      spriteID: 530b5519f736d7ae0800000000000000
+      internalID: -1549973297195274187
       vertices: []
       indices: 
       edges: []

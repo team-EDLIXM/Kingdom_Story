@@ -419,7 +419,7 @@ GameObject:
   m_Layer: 0
   m_Name: bulletPointRight
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -844,7 +844,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7977098504503049850, guid: 420ac3ff8ce3d1a4f9825699c670c9da, type: 3}
+  m_Sprite: {fileID: -1549973297195274187, guid: 143fea9df6d8b3a4abf61de087c19f60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -883,7 +883,7 @@ Transform:
   m_GameObject: {fileID: 1763282702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.4933, y: -2.7989, z: 0}
-  m_LocalScale: {x: 1.5411, y: 0.9678, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2139689553}
   - {fileID: 937690457}
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  fireball: {fileID: 3355121617002326493, guid: 6f296779cd967c74a96deafe7835ef34, type: 3}
+  fireball: {fileID: 1530817911825920221, guid: 0b53470fccc82ca4a83cd8fa1be22160, type: 3}
   firePointLeft: {fileID: 2139689553}
   firePointRight: {fileID: 937690457}
   destroyTime: 2
@@ -949,7 +949,7 @@ GameObject:
   m_Layer: 0
   m_Name: bulletPointLeft
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
