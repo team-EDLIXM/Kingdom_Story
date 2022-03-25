@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
     
-public class Dryad_SoundAttack : StateMachineBehaviour
+public class Dryad_SoundAttackBehavior : StateMachineBehaviour
 {
     private Dryad_SoundShoot fireScript; // скрипт стрельбы
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
