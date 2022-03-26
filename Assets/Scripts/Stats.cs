@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
+    Animator anim;
     public int maxhealth;
     public int health;
     public float speed;
     public int dmg;
-    public bool isInvinsible = false;
+    public bool isInvulnerable = false;
+    public float InvulnerableTime = 0.5f;
 
     private void Start()
     {
         health = maxhealth;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -21,9 +24,25 @@ public class Stats : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void TakeDamage(int damage)
+    /// <summary>
+    /// Получение урона
+    /// </summary>
+    public void TakeDamage(int value)
     {
-        health -= damage;
-        GetComponent<Animator>().SetBool("isHurt", true);
+        if (!isInvulnerable)
+        {
+            anim.SetTrigger("IsTakingDamage");
+            health -= value;
+            StartCoroutine(Invulnerability());
+        }
+    }
+
+    private IEnumerator Invulnerability()
+    {
+        isInvulnerable = true;
+        speed /= 4;
+        yield return new WaitForSeconds(InvulnerableTime);
+        speed *= 4;
+        isInvulnerable = false;
     }
 }

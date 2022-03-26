@@ -12,15 +12,15 @@ public class Dryad_SoundShoot : MonoBehaviour
 	public float destroyTime = 2f;
 	public int dmg;
 
-	public bool endedAttacking = false;
-	public float attackTime = 2f;
+	//public bool endedAttacking = false;
+	//public float attackTime = 2f;
 
 
-	private IEnumerator RealoadTimer()
+	/*private IEnumerator RealoadTimer()
 	{
 		yield return new WaitForSeconds(attackTime);
 		endedAttacking = true;
-	}
+	}*/
 	public void Fire()
 	{
 		Rigidbody2D cloneLeft = Instantiate(fireball, firePointLeft.transform.position, Quaternion.identity) as Rigidbody2D;

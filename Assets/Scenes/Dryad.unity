@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb5455ea240d0240b41629badb1baed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIsInTrigger: 0
 --- !u!61 &790611287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -867,8 +868,8 @@ GameObject:
   - component: {fileID: 1763282703}
   - component: {fileID: 1763282706}
   - component: {fileID: 1763282707}
-  - component: {fileID: 1763282709}
   - component: {fileID: 1763282708}
+  - component: {fileID: 1763282709}
   m_Layer: 0
   m_Name: Dryad
   m_TagString: Enemy
@@ -975,11 +976,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b4032bda0d84b4ab1852d45b197c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   maxhealth: 15
   health: 0
   speed: 0
   dmg: 0
-  isInvinsible: 0
+  isInvulnerable: 0
+  InvulnerableTime: 0.5
 --- !u!114 &1763282707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,9 +1000,7 @@ MonoBehaviour:
   firePointLeft: {fileID: 2139689553}
   firePointRight: {fileID: 937690457}
   destroyTime: 2
-  dmg: 0
-  endedAttacking: 0
-  attackTime: 2
+  dmg: 1
 --- !u!114 &1763282708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,6 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7c839949e46fb44a63cf0f5a320b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &1763282709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1029,7 +1031,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4375, y: 2.84375}
+    oldSize: {x: 4.6, y: 3.6833334}
     newSize: {x: 2.46, y: 3.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -18,11 +18,12 @@ public class Fireball : MonoBehaviour
             switch (hitObject.tag)
             {
                 case "Enemy":
-                    if (!hitObject.GetComponent<Stats>().isInvinsible)
-                        hitObject.GetComponent<Stats>().health -= dmg;
+                    if (!hitObject.GetComponent<Stats>().isInvulnerable)
+                        hitObject.GetComponent<Stats>().TakeDamage(dmg);
                     break;
                 case "Player":
-                    hitObject.GetComponent<Stats>().health -= dmg;
+                    if (!hitObject.GetComponent<Stats>().isInvulnerable)
+                        hitObject.GetComponent<Stats>().TakeDamage(dmg);
                     break;
             }
             Destroy(gameObject);

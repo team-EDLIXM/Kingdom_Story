@@ -55,10 +55,10 @@ public class ShootingEnemy : MonoBehaviour
     private IEnumerator RealoadAttackTimer()
     {
         reloadingAttack = true;
-        stats.isInvinsible = true;
+        stats.isInvulnerable = true;
         yield return new WaitForSeconds(reloadAttackTime);
         reloadingAttack = false;
-        stats.isInvinsible = false;
+        stats.isInvulnerable = false;
         currentAttack = 0;
     }
 

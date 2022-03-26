@@ -5,6 +5,7 @@ using UnityEngine;
 public class Dryad : MonoBehaviour
 {
     GameObject player;
+    public int damage;
 
     private void Awake()
     {
@@ -31,5 +32,11 @@ public class Dryad : MonoBehaviour
         else
             y = 0;
         transform.rotation = Quaternion.Euler(0, y, 0);
+    }
+
+    public void Attack()
+    {
+        if (GetComponentInChildren<HitZoneCheck>().playerIsInTrigger)
+            player.GetComponent<Stats>().TakeDamage(damage);
     }
 }
