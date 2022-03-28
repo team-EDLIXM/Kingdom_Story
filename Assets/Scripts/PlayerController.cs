@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
         float moveVector = Input.GetAxis("Horizontal");
+        //Debug.Log(moveVector);
         rigidbody.velocity = new Vector2(moveVector * stats.speed, rigidbody.velocity.y);
     }
 

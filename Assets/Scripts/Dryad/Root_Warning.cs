@@ -23,6 +23,7 @@ public class Root_Warning : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.transform.position += new Vector3(0, -1.5f, 0);
+        animator.SetTrigger("isMoving");
         animator.SetBool("isWarning", false);
     }
 
