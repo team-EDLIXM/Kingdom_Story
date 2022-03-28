@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    public Animator anim;
+    Animator anim;
     public int maxhealth;
     public int health;
     public float speed;
@@ -15,6 +15,7 @@ public class Stats : MonoBehaviour
     private void Start()
     {
         health = maxhealth;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -32,6 +33,10 @@ public class Stats : MonoBehaviour
         {
             anim.SetTrigger("IsTakingDamage");
             health -= value;
+
+            //if (health <= 0)
+            //    Die();
+
             StartCoroutine(Invulnerability());
         }
     }
@@ -44,4 +49,12 @@ public class Stats : MonoBehaviour
         speed *= 4;
         isInvulnerable = false;
     }
+
+    //public void Die()
+    //{
+    //    anim.SetTrigger("IsDead");
+    //    GetComponent<Rigidbody2D>().simulated = false;
+    //    GetComponent<Collider2D>().enabled = false;
+    //    this.enabled = false;
+    //}
 }
