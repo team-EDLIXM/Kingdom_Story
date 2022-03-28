@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: 4981136776264325755
     second: Dryad_Sound
+  - first:
+      213: 1492621174264544619
+    second: Root_Growing
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -198,7 +201,7 @@ TextureImporter:
         width: 137
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,6 +209,27 @@ TextureImporter:
       bones: []
       spriteID: b7a9edeb18d802540800000000000000
       internalID: 4981136776264325755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root_Growing
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 489
+        width: 34
+        height: 68
+      alignment: 9
+      pivot: {x: 0.51538086, y: 0.056628507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6db34cbc0bd6b410800000000000000
+      internalID: 1492621174264544619
       vertices: []
       indices: 
       edges: []

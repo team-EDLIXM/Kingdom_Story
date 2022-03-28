@@ -18,11 +18,6 @@ public class Stats : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (health <= 0)
-            Destroy(gameObject);
-    }
 
     /// <summary>
     /// Получение урона
@@ -33,6 +28,10 @@ public class Stats : MonoBehaviour
         {
             anim.SetTrigger("IsTakingDamage");
             health -= value;
+
+            if (health <= 0)
+                Die();
+
             StartCoroutine(Invulnerability());
         }
     }
@@ -44,5 +43,13 @@ public class Stats : MonoBehaviour
         yield return new WaitForSeconds(InvulnerableTime);
         speed *= 4;
         isInvulnerable = false;
+    }
+
+    public void Die()
+    {
+        anim.SetTrigger("IsDead");
+        GetComponent<Rigidbody2D>().simulated = false;
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
     }
 }

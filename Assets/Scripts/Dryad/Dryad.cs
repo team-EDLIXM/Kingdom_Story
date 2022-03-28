@@ -5,11 +5,12 @@ using UnityEngine;
 public class Dryad : MonoBehaviour
 {
     GameObject player;
-    public int damage;
+    private int damage;
 
     private void Awake()
     {
         player = GameObject.FindWithTag("Player");
+        damage = GetComponent<Stats>().dmg;
     }
 
     private void Update()
