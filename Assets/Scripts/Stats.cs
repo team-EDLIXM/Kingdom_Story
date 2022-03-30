@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    Animator anim;
+    private Animator anim;
     public int maxhealth;
     public int health;
     public float speed;
     public int dmg;
     public bool isInvulnerable = false;
     public float InvulnerableTime = 0.5f;
-
     private void Start()
     {
         health = maxhealth;
@@ -31,13 +30,31 @@ public class Stats : MonoBehaviour
     {
         if (!isInvulnerable)
         {
-            anim.SetTrigger("IsTakingDamage");
-            health -= value;
+            if (this.tag == "Player")
+            {
+                //anim.SetTrigger("IsTakingDamage");
 
-            //if (health <= 0)
-            //    Die();
+                /*var sr = this.GetComponent<SpriteRenderer>();
 
-            StartCoroutine(Invulnerability());
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);*/
+                StartCoroutine(InvulnerabilityP());
+            }
+            else
+            {
+                anim.SetTrigger("IsTakingDamage");
+                health -= value;
+
+                if (health <= 0)
+                {
+                    //anim.Play("Die");
+
+                    //Destroy(gameObject);
+                }
+                else
+                {
+                    StartCoroutine(Invulnerability());
+                }
+            }
         }
     }
 
@@ -47,6 +64,13 @@ public class Stats : MonoBehaviour
         speed /= 4;
         yield return new WaitForSeconds(InvulnerableTime);
         speed *= 4;
+        isInvulnerable = false;
+    }
+
+    private IEnumerator InvulnerabilityP()
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(InvulnerableTime);
         isInvulnerable = false;
     }
 

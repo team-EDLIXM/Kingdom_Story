@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 2ed22b414b43fef41bf9a5ecb75da5dd
+guid: e0a30807495b3eb42ac1ac96caa3fdb8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1333883553099996508
-    second: catepillar_hit_0
+      213: -4255971495028334473
+    second: caterpillar_die_0
   - first:
-      213: -4750541530549849371
-    second: catepillar_hit_1
+      213: -6348511760144642426
+    second: caterpillar_die_1
   - first:
-      213: -5500833476783819045
-    second: catepillar_hit_2
+      213: -5204879130871316185
+    second: caterpillar_die_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,64 +100,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: catepillar_hit_0
+      name: caterpillar_die_0
       rect:
         serializedVersion: 2
         x: 16
         y: 0
-        width: 55
-        height: 29
+        width: 63
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a22db5c9f71d7de0800000000000000
-      internalID: -1333883553099996508
+      spriteID: 770e5a07970cfe4c0800000000000000
+      internalID: -4255971495028334473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catepillar_hit_1
+      name: caterpillar_die_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 0
-        width: 55
-        height: 29
+        width: 57
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e2f5dcb5afa21eb0800000000000000
-      internalID: -4750541530549849371
+      spriteID: 68e4034a03e85e7a0800000000000000
+      internalID: -6348511760144642426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catepillar_hit_2
+      name: caterpillar_die_2
       rect:
         serializedVersion: 2
-        x: 144
+        x: 176
         y: 0
-        width: 55
-        height: 29
+        width: 58
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd639b7f81d19a3b0800000000000000
-      internalID: -5500833476783819045
+      spriteID: 7214291d10e84c7b0800000000000000
+      internalID: -5204879130871316185
       vertices: []
       indices: 
       edges: []

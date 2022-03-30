@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class hero : MonoBehaviour
 {
-    public float speed;
     public float jumpHeight;
     private float mInput;
     private Rigidbody2D rb;
@@ -18,10 +17,8 @@ public class hero : MonoBehaviour
     private int extraJump;
     public int extraJumpValue;
 
-    public int maxhealth = 5;
-    public int health;
-
-    Animator anim;
+    private Animator anim;
+    private Stats stats;
 
     public AudioManager AudioManager;
 
@@ -30,8 +27,8 @@ public class hero : MonoBehaviour
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        health = maxhealth;
         AudioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        stats = GetComponent<Stats>();
     }
 
     public void Update()
@@ -68,7 +65,7 @@ public class hero : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatisGround);
         mInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(mInput * speed, rb.velocity.y);
+        rb.velocity = new Vector2(mInput * stats.speed, rb.velocity.y);
 
         if (fRigth == false && mInput > 0 )
         {

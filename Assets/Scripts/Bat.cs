@@ -31,4 +31,12 @@ public class Bat : MonoBehaviour
         else
             direction *= -1;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            other.GetComponent<Stats>().TakeDamage(stats.dmg);
+        }
+    }
 }

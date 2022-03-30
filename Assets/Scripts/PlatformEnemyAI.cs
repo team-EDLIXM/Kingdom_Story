@@ -44,4 +44,12 @@ public class PlatformEnemyAI : MonoBehaviour
             y = 0;
         transform.rotation = Quaternion.Euler(0, y, 0);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            other.GetComponent<Stats>().TakeDamage(stats.dmg);
+        }
+    }
 }
