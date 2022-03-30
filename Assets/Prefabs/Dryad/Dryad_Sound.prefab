@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1530817911825920216}
   - component: {fileID: 1530817911825920219}
-  - component: {fileID: 1530817911825920218}
+  - component: {fileID: -4728136953152516837}
   - component: {fileID: 1530817911825920221}
   - component: {fileID: 312784210998844427}
+  - component: {fileID: 5242280706388942542}
   m_Layer: 0
   m_Name: Dryad_Sound
   m_TagString: Weapon
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4981136776264325755, guid: 420ac3ff8ce3d1a4f9825699c670c9da, type: 3}
+  m_Sprite: {fileID: 3942493292274757706, guid: ca9f0e44736a285408fd16bfb14941a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,8 +86,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1530817911825920218
-CircleCollider2D:
+--- !u!70 &-4728136953152516837
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -98,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23411347, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.73411345
+  m_Offset: {x: -0.027140325, y: -0.013774393}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 1
 --- !u!50 &1530817911825920221
 Rigidbody2D:
   serializedVersion: 4
@@ -136,3 +137,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   dmg: 0
+--- !u!95 &5242280706388942542
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530817911825920220}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79c79264f40165e439047f125443b662, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
