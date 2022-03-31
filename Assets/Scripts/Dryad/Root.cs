@@ -5,23 +5,24 @@ using UnityEngine;
 public class Root : MonoBehaviour
 {
     public int damage;
-    public float speed;
+    //public float speed;
     private Animator animator;
-    public float spawnY;
-    private Rigidbody2D rb;
-    public GameObject topPoint;
-    public GameObject bottomPoint;
+    //public float spawnY;
+    //private Rigidbody2D rb;
+    //public GameObject topPoint;
+    //public GameObject bottomPoint;
 
     private void Awake()
     {
-        spawnY = transform.position.y;
+        //spawnY = transform.position.y;
     }
     private void Start()
     {
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        //animator = GetComponent<Animator>();
+        //rb = GetComponent<Rigidbody2D>();
     }
 
+    /*
     private void FixedUpdate()
     {
         if (animator.GetBool("isMoving"))
@@ -36,10 +37,11 @@ public class Root : MonoBehaviour
                 animator.SetBool("isMoving", false);
             }
         }
-    }
+    }*/
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!animator.GetBool("isWarning"))
+        //if (!animator.GetBool("isWarning"))
             if (collision.tag == "Player")
                 if (!collision.GetComponent<Stats>().isInvulnerable)
                     collision.GetComponent<Stats>().TakeDamage(damage);

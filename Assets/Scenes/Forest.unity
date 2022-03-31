@@ -990,10 +990,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 533230860}
     m_Modifications:
+    - target: {fileID: 4168802969720200202, guid: 59d7ba877cc76084cbdb6d4b2e4a0b6b, type: 3}
+      propertyPath: InvulnerableTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4168802969720200206, guid: 59d7ba877cc76084cbdb6d4b2e4a0b6b, type: 3}
       propertyPath: m_Name
       value: Dryad
       objectReference: {fileID: 0}
+    - target: {fileID: 4168802969720200207, guid: 59d7ba877cc76084cbdb6d4b2e4a0b6b, type: 3}
+      propertyPath: root
+      value: 
+      objectReference: {fileID: 4213497024868648459, guid: a1b96930e714639418c02b448f2bf068, type: 3}
     - target: {fileID: 4168802969720200246, guid: 59d7ba877cc76084cbdb6d4b2e4a0b6b, type: 3}
       propertyPath: m_RootOrder
       value: 9

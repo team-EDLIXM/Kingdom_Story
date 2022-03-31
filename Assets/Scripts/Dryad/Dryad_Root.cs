@@ -8,7 +8,7 @@ public class Dryad_Root : MonoBehaviour
 	public Transform rootPointLeft; // min positiom
 	public Transform rootPointRight; // max position
 	private int dmg;
-	public int curRoot, rootCount;
+	public int rootCount;
 	private float x, y, z;
 	private float xl, xr;
 
@@ -21,15 +21,16 @@ public class Dryad_Root : MonoBehaviour
 		z = rootPointLeft.transform.position.z;
 	}
 
-	public IEnumerator GrowRoots()
+	public void GrowRoots()
     {
-		curRoot = 0;
-		while (curRoot < rootCount)
+		//curRoot = 0;
+		for (int i = 0; i < rootCount; i++)
         {
 			x = Random.Range(xl, xr);
-			Instantiate(root, new Vector3(x, y, z), Quaternion.identity);
-			yield return new WaitForSeconds(0.005f);
-			curRoot++;
+			GameObject clone = Instantiate(root, new Vector3(x, y, z), Quaternion.identity) as GameObject;
+			clone.GetComponent<Animator>().SetInteger("Root_Variant", Random.Range(0, 3));
+			//yield return new WaitForSeconds(0.005f);
+			//curRoot++;
         }
     }
 }
