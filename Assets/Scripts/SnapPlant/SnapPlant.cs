@@ -2,23 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingEnemy : MonoBehaviour
+public class SnapPlant : MonoBehaviour
 {
+    private Animator anim;
     private bool playerIsNear = false; // игрок находится в триггере
     private Rigidbody2D rb;
     private GameObject player;
-    private FireScript fireScript; // скрипт стрельбы
+    private SnapPlantShot fireScript; // скрипт стрельбы
     private Stats stats;
 
     private bool reloadingAttack = false;
     public float reloadAttackTime = 2;
     public int attacksInRow = 3;
 
-    private int currentAttack = 0;
+    public int currentAttack = 0;
 
     private void Awake()
     {
-        fireScript = GetComponent<FireScript>();
+        anim = GetComponent<Animator>();
+        fireScript = GetComponent<SnapPlantShot>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         stats = GetComponent<Stats>();
@@ -28,10 +30,14 @@ public class ShootingEnemy : MonoBehaviour
     {
         if (playerIsNear && !reloadingAttack && !fireScript.reloading)
         {
-            fireScript.Fire();
-            currentAttack++;
-            if (currentAttack == attacksInRow)
+            //fireScript.Fire();
+            anim.SetBool("IsAttacking", true);
+            //currentAttack++;
+            if (currentAttack >= attacksInRow)
+            {
+                anim.SetBool("IsAttacking", false);
                 StartCoroutine(RealoadAttackTimer());
+            }
         }
     }
 
