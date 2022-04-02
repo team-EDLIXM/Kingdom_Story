@@ -4,55 +4,49 @@ using UnityEngine;
 
 public class HeroAttack : MonoBehaviour
 {
-    public float StartTimeBtwHits;
-    private float TimeBtwHits;
+    public float respiteTime = 0.5f;
+    public bool isRespite = false;
+    /*public float fireballReloadTime = 2f;
+    private bool isReload = false;*/
 
     public Animator anim;
     public Transform attackPos;
     public float attackRange;
     public LayerMask enemy;
-
-    // Update is called once per frame
-    /*void Update()
-    {
-        if (Time.timeScale == 0) return;
-        
-        if (Input.GetMouseButton(0))
-         {
-             anim.Play("Player_Attack");
-            AudioManager.instance.PlaySFX(3);
-            StartCoroutine(DoAttack());
-         }
-        
-    }
-
-    IEnumerator DoAttack()
-    {
-        AttackHitbox.SetActive(true);
-        yield return new WaitForSeconds(0.7f);
-        AttackHitbox.SetActive(false);
-
-        isAttacking = false;
-    }*/
+    /*public Transform fireballPos;
+    public GameObject fireball;*/
 
     private void Update()
     {
         if (Time.timeScale == 0) return;
 
-        if (TimeBtwHits <= 0)
+        if (Input.GetMouseButton(0) && !isRespite)
         {
-            if (Input.GetMouseButton(0))
-            {
-                anim.SetTrigger("Attack");
-                AudioManager.instance.PlaySFX(3);
-            }
-            TimeBtwHits = StartTimeBtwHits;
+            anim.SetTrigger("Attack");
+            AudioManager.instance.PlaySFX(3);
+            StartCoroutine(RespiteTime());
         }
-        else
-        {
-            TimeBtwHits -= StartTimeBtwHits;
-        }
+        /*else if (Input.GetMouseButton(1) && !isReload)
+        {   
+            var newSeed = Instantiate(seed, fireballPos.position, fireballPos.rotation);
+            StartCoroutine(RespiteTime());
+        }*/
     }
+
+    /*private IEnumerator FireballReloadTime()
+    {
+        isReload = true;
+        yield return new WaitForSeconds(fireballReloadTime);
+        isReload = false;
+    }*/
+
+    private IEnumerator RespiteTime()
+    {
+        isRespite = true;
+        yield return new WaitForSeconds(respiteTime);
+        isRespite = false;
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

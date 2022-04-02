@@ -17,12 +17,6 @@ public class Stats : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (health <= 0)
-            Destroy(gameObject);
-    }
-
     /// <summary>
     /// Получение урона
     /// </summary>
@@ -30,25 +24,20 @@ public class Stats : MonoBehaviour
     {
         if (!isInvulnerable)
         {
+            anim.SetTrigger("isTakingDamage");
             if (this.tag == "Player")
             {
-                //anim.SetTrigger("IsTakingDamage");
-
-                /*var sr = this.GetComponent<SpriteRenderer>();
-
-                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);*/
                 StartCoroutine(InvulnerabilityP());
             }
             else
             {
-                anim.SetTrigger("IsTakingDamage");
                 health -= value;
 
                 if (health <= 0)
                 {
                     //anim.Play("Die");
 
-                    //Destroy(gameObject);
+                    Destroy(gameObject);
                 }
                 else
                 {
@@ -69,8 +58,16 @@ public class Stats : MonoBehaviour
 
     private IEnumerator InvulnerabilityP()
     {
+        this.GetComponent<SpriteRenderer>().color = new Color(
+            this.GetComponent<SpriteRenderer>().color.r,
+            this.GetComponent<SpriteRenderer>().color.g,
+            this.GetComponent<SpriteRenderer>().color.b, 0.5f);
         isInvulnerable = true;
         yield return new WaitForSeconds(InvulnerableTime);
+        this.GetComponent<SpriteRenderer>().color = new Color(
+            this.GetComponent<SpriteRenderer>().color.r,
+            this.GetComponent<SpriteRenderer>().color.g,
+            this.GetComponent<SpriteRenderer>().color.b, 1f);
         isInvulnerable = false;
     }
 
