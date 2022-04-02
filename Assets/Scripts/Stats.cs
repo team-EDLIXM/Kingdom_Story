@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stats : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Stats : MonoBehaviour
     public int dmg;
     public bool isInvulnerable = false;
     public float InvulnerableTime = 0.5f;
+    
+    public AudioSource sound;
     private void Start()
     {
         health = maxhealth;
@@ -20,11 +23,11 @@ public class Stats : MonoBehaviour
     private void Update()
     {
         if (health <= 0)
-            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     /// <summary>
-    /// Получение урона
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     public void TakeDamage(int value)
     {
@@ -43,7 +46,7 @@ public class Stats : MonoBehaviour
             {
                 anim.SetTrigger("IsTakingDamage");
                 health -= value;
-
+                sound.Play();
                 if (health <= 0)
                 {
                     //anim.Play("Die");

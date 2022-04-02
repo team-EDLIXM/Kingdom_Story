@@ -5,16 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PMScript : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void Play()
     {
         Time.timeScale = 1.0f;

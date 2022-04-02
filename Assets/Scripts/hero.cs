@@ -55,9 +55,6 @@ public class hero : MonoBehaviour
             anim.SetTrigger("Jump");
         }
 
-        ;
-        
-        
     }
 
 
