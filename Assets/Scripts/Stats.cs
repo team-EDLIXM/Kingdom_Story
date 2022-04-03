@@ -27,6 +27,7 @@ public class Stats : MonoBehaviour
             anim.SetTrigger("isTakingDamage");
             if (this.tag == "Player")
             {
+                health -= value;
                 StartCoroutine(InvulnerabilityP());
             }
             else
