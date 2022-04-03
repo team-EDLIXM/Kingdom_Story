@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Weapon
   - checkpoints
+  - bosses
   layers:
   - Default
   - TransparentFX

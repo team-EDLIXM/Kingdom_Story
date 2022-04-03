@@ -8,11 +8,13 @@ public class SaveData
     public Player player;
 
     public bool[] checkpoints;
-    
+
+    public bool[] isBossesAlive;
     public SaveData()
     {
         player = new Player();
         checkpoints = null;
+        isBossesAlive = null;
     }
 }
 

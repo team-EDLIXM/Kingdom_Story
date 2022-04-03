@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class hero : MonoBehaviour
 {
@@ -34,12 +34,14 @@ public class hero : MonoBehaviour
     public void Update()
     {
         if (Time.timeScale == 0) return;
+        
+        if(stats.health<=0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
         if (isGrounded)
         {
             extraJump = extraJumpValue;
             
         }
-
         if (Input.GetKeyDown(KeyCode.Space) && extraJump > 0)
         {
             rb.velocity = Vector2.up * jumpHeight;

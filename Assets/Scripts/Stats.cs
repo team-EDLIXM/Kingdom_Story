@@ -23,7 +23,8 @@ public class Stats : MonoBehaviour
     private void Update()
     {
         if (health <= 0)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if(gameObject!= null)
+                gameObject.SetActive(false);
     }
 
     /// <summary>

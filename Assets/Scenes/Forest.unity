@@ -998,6 +998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dryad
       objectReference: {fileID: 0}
+    - target: {fileID: 4168802969720200206, guid: 59d7ba877cc76084cbdb6d4b2e4a0b6b, type: 3}
+      propertyPath: m_TagString
+      value: bosses
+      objectReference: {fileID: 0}
     - target: {fileID: 4168802969720200207, guid: 59d7ba877cc76084cbdb6d4b2e4a0b6b, type: 3}
       propertyPath: root
       value: 

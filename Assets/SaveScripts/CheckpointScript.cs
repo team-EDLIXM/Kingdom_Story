@@ -14,17 +14,27 @@ public class CheckpointScript : MonoBehaviour
     private GameObject _sPoint;
 
     private GameObject[] _allCheckpoints;
+    
+    private GameObject[] _allBosses;
 
     public Animator anim;
 
     private void Awake()
     {
         _allCheckpoints = GameObject.FindGameObjectsWithTag("checkpoints");
+        _allBosses = GameObject.FindGameObjectsWithTag("bosses");
         _sPoint = gameObject;
         _player = GameObject.Find("Player");
         _sSystem = new JsonSaveSystem();
         _data = _sSystem.Load();
         if (_data.checkpoints.Length != _allCheckpoints.Length) _data.checkpoints = new bool[_allCheckpoints.Length];
+        if (_data.isBossesAlive.Length != _allBosses.Length)
+        {
+            _data.isBossesAlive = new bool[_allBosses.Length];
+            for (int i = 0; i < _data.isBossesAlive.Length; i++)
+                _data.isBossesAlive[i] = true;
+
+        }
         ApplyLoad(_data);
     }
 
@@ -33,6 +43,7 @@ public class CheckpointScript : MonoBehaviour
         if (Vector3.Distance(_player.transform.position, _sPoint.transform.position) <= 1.5f)
         {
             anim.SetBool("near", true);
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
                 for (int i = 0; i < _allCheckpoints.Length; i++)
@@ -46,6 +57,14 @@ public class CheckpointScript : MonoBehaviour
                         _allCheckpoints[i].GetComponent<Animator>().SetBool("active", false);
                         _data.checkpoints[i] = false;
                     }
+
+                for (int i = 0; i < _allBosses.Length; i++)
+                {
+                    print(_allBosses[i].GetComponent<Stats>().health);
+                    _data.isBossesAlive[i] = _allBosses[i].GetComponent<Stats>().health > 0;
+                }
+
+
 
                 _data.player.extraJumpValue = _player.GetComponent<hero>().extraJumpValue;
                 _data.player.position = _player.transform.position;
@@ -80,11 +99,15 @@ public class CheckpointScript : MonoBehaviour
     {
         for (int i = 0; i < _allCheckpoints.Length; i++)
             _allCheckpoints[i].GetComponent<Animator>().SetBool("active", data.checkpoints[i]);
+        
+        for (int i = 0; i < _allBosses.Length; i++)
+            if(_allBosses[i] != null)
+                _allBosses[i].SetActive(_data.isBossesAlive[i]);
 
         _player.GetComponent<hero>().extraJumpValue = data.player.extraJumpValue;
         GameObject.Find("Player").transform.position = data.player.position;
-        GameObject.Find("DoubleJump").SetActive(data.player.extraJumpValue==0);
+        if (GameObject.Find("DoubleJump") != null)
+            GameObject.Find("DoubleJump").SetActive(data.player.extraJumpValue == 0);
     }
-    
 }
 
