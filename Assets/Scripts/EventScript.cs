@@ -8,12 +8,7 @@ public class EventScript : MonoBehaviour
 
     public GameObject PMenu;
 
-    void Start()
-    {
-        
-    }
-
-     void Update()
+    void Update()
     {
         if (Input.GetKeyDown("escape"))
         {

@@ -10,7 +10,7 @@ public class PlatformEnemyAI : MonoBehaviour
     private GameObject floorCheck;
 
     private Stats stats;
-    private float radius = 0.01F; // радиус объекта, провер€ющего отсутствие земли
+    private float radius = 0.13F; // радиус объекта, провер€ющего отсутствие земли
 
     private void Awake()
     {
@@ -43,5 +43,13 @@ public class PlatformEnemyAI : MonoBehaviour
         else
             y = 0;
         transform.rotation = Quaternion.Euler(0, y, 0);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            other.GetComponent<Stats>().TakeDamage(stats.dmg);
+        }
     }
 }

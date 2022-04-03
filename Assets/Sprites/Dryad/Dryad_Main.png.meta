@@ -1,0 +1,1617 @@
+fileFormatVersion: 2
+guid: ca9f0e44736a285408fd16bfb14941a4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2117630472152501907
+    second: Driade_Ma
+  - first:
+      213: -5391508656418919258
+    second: Driade_Main_1
+  - first:
+      213: -570542052344936965
+    second: Driade_Main_2
+  - first:
+      213: -1043811523984504079
+    second: Driade_Main_3
+  - first:
+      213: 357253937228012595
+    second: Driade_Main_4
+  - first:
+      213: -168070737790149724
+    second: Driade_Main_5
+  - first:
+      213: 7516752642100989881
+    second: Driade_Main_6
+  - first:
+      213: 3492853064392956358
+    second: Driade_Main_7
+  - first:
+      213: -6063712087299955884
+    second: Driade_Main_8
+  - first:
+      213: 6576885887892030540
+    second: Driade_Main_9
+  - first:
+      213: 4263894425928607246
+    second: Driade_Main_10
+  - first:
+      213: -8682173681380532424
+    second: Driade_Main_11
+  - first:
+      213: 8043766021654446563
+    second: Driade_Main_12
+  - first:
+      213: -2927872648927754979
+    second: Driade_Main_13
+  - first:
+      213: -7124063847524455332
+    second: Driade_Main_14
+  - first:
+      213: 3766981477182997978
+    second: Driade_Main_15
+  - first:
+      213: -1161324146323833920
+    second: Driade_Main_16
+  - first:
+      213: 4490481890506086376
+    second: Driade_Main_17
+  - first:
+      213: 40668597189363417
+    second: Driade_Main_18
+  - first:
+      213: -5461795253979497297
+    second: Driade_Main_19
+  - first:
+      213: -2828190096130691629
+    second: Driade_Main_20
+  - first:
+      213: -189680416714125629
+    second: Driade_Main_21
+  - first:
+      213: 5082512069457801549
+    second: Driade_Main_22
+  - first:
+      213: -2521520176536050672
+    second: Driade_Main_23
+  - first:
+      213: 5183801810456558519
+    second: Driade_Main_24
+  - first:
+      213: -6148942697482512103
+    second: Driade_Main_25
+  - first:
+      213: 3610907014259607555
+    second: Driade_Main_26
+  - first:
+      213: 6945031880580271374
+    second: Driade_Main_27
+  - first:
+      213: 4319036403781078954
+    second: Driade_Main_28
+  - first:
+      213: 947080567458702055
+    second: Driade_Main_29
+  - first:
+      213: 6865727524994639880
+    second: Driade_Main_30
+  - first:
+      213: 3459912326041517524
+    second: Driade_Main_31
+  - first:
+      213: 4386351408730566539
+    second: Driade_Main_32
+  - first:
+      213: -891634919651671389
+    second: Driade_Main_33
+  - first:
+      213: 4443683914216891012
+    second: Driade_Main_34
+  - first:
+      213: 1866302183301767641
+    second: Driade_Main_35
+  - first:
+      213: -2754092009161106625
+    second: Driade_Main_36
+  - first:
+      213: 167252059906392496
+    second: Driade_Main_37
+  - first:
+      213: -3966939592239639979
+    second: Driade_Main_38
+  - first:
+      213: 6276726460482715991
+    second: Driade_Main_39
+  - first:
+      213: -4475131537081411104
+    second: Driade_Main_40
+  - first:
+      213: 7738312584972801169
+    second: Driade_Main_41
+  - first:
+      213: -1447640987224429703
+    second: Driade_Main_42
+  - first:
+      213: 6953086391805014327
+    second: Driade_Main_43
+  - first:
+      213: 650172895674404572
+    second: Driade_Main_44
+  - first:
+      213: -6586647587120094915
+    second: Driade_Main_45
+  - first:
+      213: 9178842951338046635
+    second: Driade_Main_46
+  - first:
+      213: -7407030228801141752
+    second: Driade_Main_47
+  - first:
+      213: -2207076135846221141
+    second: Driade_Main_48
+  - first:
+      213: 2449532976396726497
+    second: Driade_Main_49
+  - first:
+      213: 2847759353975735873
+    second: Driade_Main_50
+  - first:
+      213: 2306182708226249095
+    second: Driade_Main_51
+  - first:
+      213: 7034821617709011375
+    second: Driade_Main_52
+  - first:
+      213: 6554130483739032857
+    second: Driade_Main_53
+  - first:
+      213: 451599309750798470
+    second: Dryad_Idle_1
+  - first:
+      213: 5456744050511194070
+    second: Dryad_Idle_2
+  - first:
+      213: 2489127919630981165
+    second: Dryad_Idle_3
+  - first:
+      213: -4194267077188913069
+    second: Dryad_Idle_4
+  - first:
+      213: -2256137388674405646
+    second: Root1_1
+  - first:
+      213: 832643053335830269
+    second: Root1_3
+  - first:
+      213: 1319274782580213686
+    second: Root1_4
+  - first:
+      213: 120472512580258084
+    second: Root1_5
+  - first:
+      213: 2728388945529037289
+    second: Root1_6
+  - first:
+      213: -6962480917739140184
+    second: Dryad_UndergroundAttack_1
+  - first:
+      213: 7870202317651029339
+    second: Dryad_UndergroundAttack_2
+  - first:
+      213: -4643053815736435251
+    second: Dryad_UndergroundAttack_3
+  - first:
+      213: -6019212139755472769
+    second: Dryad_UndergroundAttack_4
+  - first:
+      213: 2896159364355845328
+    second: Dryad_UndergroundAttack_5
+  - first:
+      213: -8020769365454286181
+    second: Root2_1
+  - first:
+      213: 2020143544620292229
+    second: Root2_3
+  - first:
+      213: -5052388720280558930
+    second: Root2_4
+  - first:
+      213: 4873836307078342018
+    second: Root2_5
+  - first:
+      213: -9187208825817481372
+    second: Root2_6
+  - first:
+      213: -5416985012301601479
+    second: SoundWave_Right_3
+  - first:
+      213: -8666577530142612536
+    second: Root3_2
+  - first:
+      213: -5664150262337923444
+    second: Root3_3
+  - first:
+      213: 5065973233203706159
+    second: Root3_4
+  - first:
+      213: -4597821712293164010
+    second: Root3_5
+  - first:
+      213: -3051396365748777502
+    second: Root3_6
+  - first:
+      213: 3195757988434456800
+    second: Dryad_SoundAttack_1
+  - first:
+      213: 1184670896102605557
+    second: Dryad_SoundAttack_2
+  - first:
+      213: 2180675975292557965
+    second: Dryad_SoundAttack_3
+  - first:
+      213: -8890913073275647896
+    second: Dryad_SoundAttack_4
+  - first:
+      213: 985964447718117632
+    second: SoundWave_Right_1
+  - first:
+      213: 3942493292274757706
+    second: SoundWave_Right_2
+  - first:
+      213: -3388762444302047958
+    second: SoundWave_Left_1
+  - first:
+      213: 3178709570132243201
+    second: SoundWave_Left_2
+  - first:
+      213: -6101694302767289409
+    second: SoundWave_Left_3
+  - first:
+      213: 3053875558240807663
+    second: Dryad_IsTakingDamage_1
+  - first:
+      213: -2492490067840781658
+    second: Dryad_IsTakingDamage_2
+  - first:
+      213: -7068949415048440668
+    second: Dryad_IsTakingDamage_3
+  - first:
+      213: 3071959036574984874
+    second: Dryad_SlapAttack_1
+  - first:
+      213: 8096984731236101544
+    second: Dryad_SlapAttack_2
+  - first:
+      213: -1657995984382931335
+    second: Dryad_SlapAttack_3
+  - first:
+      213: -3368762917335980925
+    second: Dryad_SlapAttack_4
+  - first:
+      213: 2561643672198171570
+    second: Dryad_SlapAttack_5
+  - first:
+      213: -1504033820133402201
+    second: Dryad_Death_5
+  - first:
+      213: 7749618906721367423
+    second: Dryad_SlapAttack_6
+  - first:
+      213: -1211403106289984351
+    second: Dryad_SlapAttack_7
+  - first:
+      213: -3244477579591532673
+    second: Dryad_SlapAttack_8
+  - first:
+      213: 3460783887491259485
+    second: Dryad_SlapAttack_9
+  - first:
+      213: -4126793898567703852
+    second: Dryad_Main_47
+  - first:
+      213: 6259731525264756568
+    second: Dryad_SlapAttack_10
+  - first:
+      213: -6542163478830492263
+    second: Dryad_SlapAttack_11
+  - first:
+      213: 5926947792565234219
+    second: Dryad_Death_1
+  - first:
+      213: -845911358620989519
+    second: Dryad_Death_2
+  - first:
+      213: 220534271510141674
+    second: Dryad_Death_3
+  - first:
+      213: 6414627325936425588
+    second: Dryad_Death_4
+  - first:
+      213: 679834793660385207
+    second: Root1_2
+  - first:
+      213: -8068328058553431864
+    second: Root2_2
+  - first:
+      213: 1991219285009501724
+    second: Root3_1
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dryad_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 749
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6880286fd27644600800000000000000
+      internalID: 451599309750798470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 749
+        width: 45
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d722f88dcf3abb40800000000000000
+      internalID: 5456744050511194070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 749
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d289c1aa7a82b8220800000000000000
+      internalID: 2489127919630981165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 749
+        width: 47
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358f903c058fac5c0800000000000000
+      internalID: -4194267077188913069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root1_1
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 781
+        width: 19
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2faa59f9ff690b0e0800000000000000
+      internalID: -2256137388674405646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root1_3
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 781
+        width: 19
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe57ca02742e8b00800000000000000
+      internalID: 832643053335830269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root1_4
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 781
+        width: 21
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b703d8cc610f4210800000000000000
+      internalID: 1319274782580213686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root1_5
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 781
+        width: 31
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4298b85ac110ca100800000000000000
+      internalID: 120472512580258084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root1_6
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 781
+        width: 21
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e16c535a4f2dd520800000000000000
+      internalID: 2728388945529037289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_UndergroundAttack_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 637
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab09be7e7c406f90800000000000000
+      internalID: -6962480917739140184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_UndergroundAttack_2
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 637
+        width: 49
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dab0e4f43983d60800000000000000
+      internalID: 7870202317651029339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_UndergroundAttack_3
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 637
+        width: 84
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdf100972f809fb0800000000000000
+      internalID: -4643053815736435251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_UndergroundAttack_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 637
+        width: 43
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78f7263376777ca0800000000000000
+      internalID: -6019212139755472769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_UndergroundAttack_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 637
+        width: 43
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dce95de899313820800000000000000
+      internalID: 2896159364355845328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root2_1
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 701
+        width: 19
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9213ca02c080b090800000000000000
+      internalID: -8020769365454286181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root2_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 701
+        width: 19
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5881464c9ddf80c10800000000000000
+      internalID: 2020143544620292229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root2_4
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 701
+        width: 22
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2ac744a3f42e9b0800000000000000
+      internalID: -5052388720280558930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root2_5
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 701
+        width: 21
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2856ec07c4853a340800000000000000
+      internalID: 4873836307078342018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root2_6
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 701
+        width: 22
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fb0d3bf3a708080800000000000000
+      internalID: -9187208825817481372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundWave_Right_3
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 561
+        width: 61
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935e52ce4d003d4b0800000000000000
+      internalID: -5416985012301601479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root3_2
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 621
+        width: 19
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3a77167a12ab780800000000000000
+      internalID: -8666577530142612536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root3_3
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 621
+        width: 19
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8699eaa855e461b0800000000000000
+      internalID: -5664150262337923444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root3_4
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 621
+        width: 20
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f297ebe90d3fd4640800000000000000
+      internalID: 5065973233203706159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root3_5
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 621
+        width: 20
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c003253814130c0800000000000000
+      internalID: -4597821712293164010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root3_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 621
+        width: 20
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed40ae1c2347a5d0800000000000000
+      internalID: -3051396365748777502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SoundAttack_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 509
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0b0c865fc995c20800000000000000
+      internalID: 3195757988434456800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SoundAttack_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 509
+        width: 46
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f280f147ebc07010800000000000000
+      internalID: 1184670896102605557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SoundAttack_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 509
+        width: 64
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a9a8dee31534e10800000000000000
+      internalID: 2180675975292557965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SoundAttack_4
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 509
+        width: 68
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868478a7aa12d9480800000000000000
+      internalID: -8890913073275647896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundWave_Right_1
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 567
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001176bf079dead00800000000000000
+      internalID: 985964447718117632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundWave_Right_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 560
+        width: 62
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40b567d2cc86b630800000000000000
+      internalID: 3942493292274757706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundWave_Left_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 518
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a252137e282b8f0d0800000000000000
+      internalID: -3388762444302047958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundWave_Left_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 497
+        width: 63
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103fdd3338b0d1c20800000000000000
+      internalID: 3178709570132243201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundWave_Left_3
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 498
+        width: 64
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbe78b1c5d625ba0800000000000000
+      internalID: -6101694302767289409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_IsTakingDamage_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 397
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feae03dd3ab816a20800000000000000
+      internalID: 3053875558240807663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_IsTakingDamage_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 397
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a239243d75e86dd0800000000000000
+      internalID: -2492490067840781658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_IsTakingDamage_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 396
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a415dcb5fb06ed90800000000000000
+      internalID: -7068949415048440668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 269
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa6a93c77ac1aa20800000000000000
+      internalID: 3071959036574984874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 269
+        width: 60
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ade611a6b44e5070800000000000000
+      internalID: 8096984731236101544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 269
+        width: 112
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ec4d7cf6d9df8e0800000000000000
+      internalID: -1657995984382931335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_4
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 269
+        width: 106
+        height: 90
+      alignment: 9
+      pivot: {x: 0.2688679, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3842ea3a9ffbf31d0800000000000000
+      internalID: -3368762917335980925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_5
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 269
+        width: 169
+        height: 96
+      alignment: 9
+      pivot: {x: 0.6745562, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbcf720959cc8320800000000000000
+      internalID: 2561643672198171570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_6
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 269
+        width: 194
+        height: 90
+      alignment: 9
+      pivot: {x: 0.6005155, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7537cf165d2c8b60800000000000000
+      internalID: 7749618906721367423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 141
+        width: 112
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acd7c90b4b303fe0800000000000000
+      internalID: -1211403106289984351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_8
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 141
+        width: 102
+        height: 90
+      alignment: 9
+      pivot: {x: 0.23039216, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f3ab2d4dc49f2d0800000000000000
+      internalID: -3244477579591532673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 141
+        width: 172
+        height: 85
+      alignment: 9
+      pivot: {x: 0.61918604, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cdf421c9c270030800000000000000
+      internalID: 3460783887491259485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_10
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 141
+        width: 189
+        height: 90
+      alignment: 9
+      pivot: {x: 0.58465606, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f48b028a80fd650800000000000000
+      internalID: 6259731525264756568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SlapAttack_11
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 141
+        width: 112
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99556c55af09535a0800000000000000
+      internalID: -6542163478830492263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_Death_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 29
+        width: 46
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ae2227d9fb04250800000000000000
+      internalID: 5926947792565234219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_Death_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 29
+        width: 46
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b78de5e918b244f0800000000000000
+      internalID: -845911358620989519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_Death_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 29
+        width: 46
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea592260ce7f0300800000000000000
+      internalID: 220534271510141674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_Death_4
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 29
+        width: 53
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5754717, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a54f81195550950800000000000000
+      internalID: 6414627325936425588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root1_2
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 781
+        width: 20
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7041694224f6900800000000000000
+      internalID: 679834793660385207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root2_2
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 701
+        width: 19
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c80b9ae06a870090800000000000000
+      internalID: -8068328058553431864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root3_1
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 621
+        width: 19
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e06e8c36b32ab10800000000000000
+      internalID: 1991219285009501724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_Death_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 84
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a956c49539902be0800000000000000
+      internalID: -1504033820133402201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,41 +4,62 @@ using UnityEngine;
 
 public class HeroAttack : MonoBehaviour
 {
+    public float respiteTime = 0.5f;
+    public bool isRespite = false;
+    /*public float fireballReloadTime = 2f;
+    private bool isReload = false;*/
 
+    public Animator anim;
+    public Transform attackPos;
+    public float attackRange;
+    public LayerMask enemy;
+    /*public Transform fireballPos;
+    public GameObject fireball;*/
 
-    public float StartTimeBtwHits;
-    private float TimeBtwHits;
-    bool isAttacking = false;
-    private Animator anim;
-    public GameObject AttackHitbox;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        AttackHitbox.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Time.timeScale == 0) return;
-        
-        if (Input.GetMouseButton(0) && !isAttacking)
-         {
-             anim.Play("Player_Attack");
-            StartCoroutine(DoAttack());
-         }
-        
+
+        if (Input.GetMouseButton(0) && !isRespite)
+        {
+            anim.SetTrigger("Attack");
+            AudioManager.instance.PlaySFX(3);
+            StartCoroutine(RespiteTime());
+        }
+        /*else if (Input.GetMouseButton(1) && !isReload)
+        {   
+            var newSeed = Instantiate(seed, fireballPos.position, fireballPos.rotation);
+            StartCoroutine(RespiteTime());
+        }*/
     }
 
-    IEnumerator DoAttack()
+    /*private IEnumerator FireballReloadTime()
     {
-        AttackHitbox.SetActive(true);
-        yield return new WaitForSeconds(0.7f);
-        AttackHitbox.SetActive(false);
+        isReload = true;
+        yield return new WaitForSeconds(fireballReloadTime);
+        isReload = false;
+    }*/
 
-        isAttacking = false;
+    private IEnumerator RespiteTime()
+    {
+        isRespite = true;
+        yield return new WaitForSeconds(respiteTime);
+        isRespite = false;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
+    private void OnAttack()
+    {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
+        for (int i = 0; i < enemies.Length; ++i)
+        {
+            enemies[i].GetComponent<Stats>().TakeDamage(1);
+        }
+    }
+
 }

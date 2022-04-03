@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class hero : MonoBehaviour
 {
-    public float speed;
     public float jumpHeight;
     private float mInput;
     private Rigidbody2D rb;
@@ -18,10 +17,8 @@ public class hero : MonoBehaviour
     private int extraJump;
     public int extraJumpValue;
 
-    public int maxhealth = 5;
-    public int health;
-
-    Animator anim;
+    private Animator anim;
+    private Stats stats;
 
     public AudioManager AudioManager;
 
@@ -30,19 +27,20 @@ public class hero : MonoBehaviour
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        health = maxhealth;
-        AudioManager = GameObject.Find("AudioManager script").GetComponent<AudioManager>();
+        AudioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        stats = GetComponent<Stats>();
     }
 
     public void Update()
     {
         if (Time.timeScale == 0) return;
+        
+        if(stats.health<=0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
         if (isGrounded)
         {
             extraJump = extraJumpValue;
-            
         }
-
         if (Input.GetKeyDown(KeyCode.Space) && extraJump > 0)
         {
             rb.velocity = Vector2.up * jumpHeight;
@@ -58,9 +56,6 @@ public class hero : MonoBehaviour
             anim.SetTrigger("Jump");
         }
 
-        ;
-        
-        
     }
 
 
@@ -68,7 +63,7 @@ public class hero : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatisGround);
         mInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(mInput * speed, rb.velocity.y);
+        rb.velocity = new Vector2(mInput * stats.speed, rb.velocity.y);
 
         if (fRigth == false && mInput > 0 )
         {
