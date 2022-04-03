@@ -29,20 +29,21 @@ public class JsonSaveSystem
     public SaveData Load()
     {
         MonoBehaviour.print("loaded");
-        
+
         string json = "";
-        using (var reader = new StreamReader(_filePath))
-        {
-            string line;
-            while ((line = reader.ReadLine()) != null)
+        if (File.Exists(_filePath))
+            using (var reader = new StreamReader(_filePath))
             {
-                json += line;
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    json += line;
+                }
             }
-        }
 
         if (string.IsNullOrEmpty(json))
             return new SaveData();
-        
+
         return JsonUtility.FromJson<SaveData>(json);
     }
 /*
