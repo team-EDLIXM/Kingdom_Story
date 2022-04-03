@@ -15,8 +15,8 @@ public class SaveData
     public SaveData()
     {
         player = new Player();
-        checkpoints = null;
-        isBossesAlive = null;
+        checkpoints = Array.Empty<bool>();
+        isBossesAlive = Array.Empty<bool>();
         isNewGame = true;
     }
 }

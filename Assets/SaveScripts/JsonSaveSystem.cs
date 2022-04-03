@@ -31,6 +31,7 @@ public class JsonSaveSystem
         MonoBehaviour.print("loaded");
 
         string json = "";
+        
         if (File.Exists(_filePath))
             using (var reader = new StreamReader(_filePath))
             {
