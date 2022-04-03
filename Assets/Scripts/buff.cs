@@ -10,7 +10,7 @@ public class buff : MonoBehaviour
     {
         Destroy(this.gameObject);
         FindObjectOfType<hero>().extraJumpValue = 1;
-        FindObjectOfType<NotifyScript>().Notify("������ ��� �������� ����� �������� ������: SPACE+SPACE");
+        FindObjectOfType<NotifyScript>().Notify("Вы получили навык двойного прыжка, нажмите: SPACE+SPACE");
     }
 
 }
