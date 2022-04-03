@@ -10,11 +10,14 @@ public class SaveData
     public bool[] checkpoints;
 
     public bool[] isBossesAlive;
+    
+    public bool isNewGame;
     public SaveData()
     {
         player = new Player();
         checkpoints = null;
         isBossesAlive = null;
+        isNewGame = true;
     }
 }
 

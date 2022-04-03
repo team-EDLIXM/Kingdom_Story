@@ -59,10 +59,8 @@ public class CheckpointScript : MonoBehaviour
                     }
 
                 for (int i = 0; i < _allBosses.Length; i++)
-                {
-                    print(_allBosses[i].GetComponent<Stats>().health);
                     _data.isBossesAlive[i] = _allBosses[i].GetComponent<Stats>().health > 0;
-                }
+
 
 
 
@@ -75,20 +73,7 @@ public class CheckpointScript : MonoBehaviour
         {
             anim.SetBool("near",false);
         }
-/*
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            _data.player.position = _player.transform.position;
-            _sSystem.Save(_data);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            _data = _sSystem.Load();
-            ApplyLoad(_data);
-        }
-*/
-
+        
         if (Input.GetKeyDown(KeyCode.U))
         {
             _sSystem.SaveRestart(new SaveData());

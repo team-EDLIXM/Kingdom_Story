@@ -40,7 +40,6 @@ public class hero : MonoBehaviour
         if (isGrounded)
         {
             extraJump = extraJumpValue;
-            
         }
         if (Input.GetKeyDown(KeyCode.Space) && extraJump > 0)
         {
