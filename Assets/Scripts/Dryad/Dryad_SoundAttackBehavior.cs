@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+
     
 public class Dryad_SoundAttackBehavior : StateMachineBehaviour
 {
-    private Dryad_SoundShoot fireScript; // скрипт стрельбы
+    private Dryad_SoundShoot fireScript; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

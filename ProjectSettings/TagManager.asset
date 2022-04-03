@@ -8,6 +8,9 @@ TagManager:
   - Fireball
   - Solid
   - Enemy
+  - Weapon
+  - checkpoints
+  - bosses
   layers:
   - Default
   - TransparentFX

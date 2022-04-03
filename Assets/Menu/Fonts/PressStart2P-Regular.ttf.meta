@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a945c78697fa9b48b3f113e2f8a6e2b
+guid: 83d1b91e272ac6c4bb53707398674ebd
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Banff
+  - Press Start 2P
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
