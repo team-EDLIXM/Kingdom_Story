@@ -111,7 +111,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4168802969720200206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6060ed3216357b94ab0100e8f9c9ada9, type: 2}
   m_CullingMode: 0
@@ -283,7 +283,6 @@ MonoBehaviour:
   root: {fileID: 3194588329996964984, guid: 9d5f40e53b8974f4fab1b75a8c233079, type: 3}
   rootPointLeft: {fileID: 4168802969946448559}
   rootPointRight: {fileID: 4168802970142500034}
-  curRoot: 0
   rootCount: 8
 --- !u!1 &4168802969946448558
 GameObject:
