@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class FlyingToPlayer : MonoBehaviour
 {
-    private bool playerIsNear = false; // player is in trigger
+    
     private Rigidbody2D rb;
     private GameObject player;
     private Stats stats;
+    private PlayerCheck playerCheck;
 
 
     private void Awake()
@@ -15,33 +16,26 @@ public class FlyingToPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         stats = GetComponent<Stats>();
+        playerCheck = GetComponentInChildren<PlayerCheck>();
     }
 
     private void Update()
     {
-        float dx = player.transform.position.x - transform.position.x;
-        float dy = player.transform.position.y - transform.position.y;
-        if (playerIsNear)
+        //float dx = player.transform.position.x - transform.position.x;
+        //float dy = player.transform.position.y - transform.position.y;
+        float x = player.transform.position.x;
+        float y = player.transform.position.y;
+        if (playerCheck.playerIsNear)
         {
-            rb.velocity = new Vector2(dx, dy + 2) * stats.speed;
+            //rb.velocity = new Vector2(dx, dy + 2) * stats.speed;
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(x, y + 1), stats.speed/55f);
         }
     }
 
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
-        if (playerIsNear && !CheckFacingPlayer())
+        if (playerCheck.playerIsNear && !CheckFacingPlayer())
             Flip();
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-            playerIsNear = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-            playerIsNear = false;
     }
 
     private bool CheckFacingPlayer()
@@ -59,5 +53,5 @@ public class FlyingToPlayer : MonoBehaviour
         else
             y = 0;
         transform.rotation = Quaternion.Euler(0, y, 0);
-    }
+    }*/
 }
