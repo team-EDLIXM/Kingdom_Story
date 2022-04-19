@@ -17,6 +17,18 @@ TextureImporter:
   - first:
       213: 1284593036618238296
     second: dragon_intro
+  - first:
+      213: 2630638477016955818
+    second: dragon_RightHead_Hit
+  - first:
+      213: 3882194283577183912
+    second: dragon_stomp_1
+  - first:
+      213: -8334837670336803960
+    second: dragon_stomp_2
+  - first:
+      213: 7591742993644914627
+    second: wave
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,9 +163,9 @@ TextureImporter:
       name: dragon_LeftHead_Hit
       rect:
         serializedVersion: 2
-        x: 107
-        y: 246
-        width: 278
+        x: 129
+        y: 247
+        width: 256
         height: 316
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -206,6 +218,90 @@ TextureImporter:
       bones: []
       spriteID: 859029c8f8ac3d110800000000000000
       internalID: 1284593036618238296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_RightHead_Hit
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 247
+        width: 249
+        height: 315
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabf113d1c7e18420800000000000000
+      internalID: 2630638477016955818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_stomp_1
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 261
+        width: 197
+        height: 306
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae8ba5d12350e530800000000000000
+      internalID: 3882194283577183912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_stomp_2
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 259
+        width: 200
+        height: 306
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bc7077c45b45c80800000000000000
+      internalID: -8334837670336803960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 602
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7044aa70a4b5960800000000000000
+      internalID: 7591742993644914627
       vertices: []
       indices: 
       edges: []

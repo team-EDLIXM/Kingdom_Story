@@ -11,6 +11,11 @@ public class Dragon : MonoBehaviour
     public bool isInvulnerable = false;
     public float InvulnerableTime = 0.5f;
 
+    public float stompWaveSpeed = 3;
+    public Rigidbody2D stompWave;
+    public Transform stompWavePoint;
+    public float stompWaveDestroyTime = 2f;
+
     private void Update()
     {
         
@@ -64,5 +69,22 @@ public class Dragon : MonoBehaviour
     {
         if (GameObject.Find("headRight").GetComponent<playerCheck>().playerIsInTrigger)
             GameObject.Find("Player").GetComponent<Stats>().TakeDamage(damage);
+    }
+
+    public void Stomp()
+    {
+        Rigidbody2D cloneLeft = Instantiate(stompWave, stompWavePoint.transform.position, Quaternion.identity) as Rigidbody2D;
+        cloneLeft.GetComponent<SpriteRenderer>().flipX = true;
+        cloneLeft.velocity = -stompWavePoint.transform.right * stompWaveSpeed;
+        cloneLeft.transform.right = stompWavePoint.transform.right;
+        cloneLeft.GetComponent<StompWave>().destroyTime = stompWaveDestroyTime;
+        cloneLeft.GetComponent<StompWave>().dmg = damage;
+
+        Rigidbody2D cloneRight = Instantiate(stompWave, stompWavePoint.transform.position, Quaternion.identity) as Rigidbody2D;
+        cloneRight.GetComponent<SpriteRenderer>().flipX = true;
+        cloneRight.velocity = stompWavePoint.transform.right * stompWaveSpeed;
+        cloneRight.transform.right = stompWavePoint.transform.right;
+        cloneRight.GetComponent<StompWave>().destroyTime = stompWaveDestroyTime;
+        cloneRight.GetComponent<StompWave>().dmg = damage;
     }
 }

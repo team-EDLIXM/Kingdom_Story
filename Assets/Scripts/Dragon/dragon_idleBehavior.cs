@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dragon_HeadHit : StateMachineBehaviour
+public class dragon_idleBehavior : StateMachineBehaviour
 {
     private int rand;
     public float timer;
@@ -13,7 +13,7 @@ public class dragon_HeadHit : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetTrigger("idle");
-        if (_timer <= 0 && animator.GetInteger("headHitCount") == 0)
+        if (_timer <= 0 && (animator.GetInteger("headHitCount") == 0 || animator.GetInteger("headHitCount") >= 3))
             _timer = timer;
     }
 
@@ -22,17 +22,24 @@ public class dragon_HeadHit : StateMachineBehaviour
     {
         if (_timer <= 0)
         {
-            playerPos = GameObject.FindGameObjectWithTag("Player").transform.position.x;
-            headLeft = Mathf.Abs(playerPos - GameObject.Find("headLeft").transform.position.x);
-            headMiddle = Mathf.Abs(playerPos - GameObject.Find("headMiddle").transform.position.x);
-            headRight = Mathf.Abs(playerPos - GameObject.Find("headRight").transform.position.x);
-            float min = Mathf.Min(headLeft, headMiddle, headRight);
-            if (headLeft == min)
-                animator.SetInteger("head", 1);
-            else if (headMiddle == min)
-                animator.SetInteger("head", 2);
-            else
-                animator.SetInteger("head", 3);
+            if (animator.GetInteger("headHitCount") < 3)
+            {
+                playerPos = GameObject.FindGameObjectWithTag("Player").transform.position.x;
+                headLeft = Mathf.Abs(playerPos - GameObject.Find("headLeft").transform.position.x);
+                headMiddle = Mathf.Abs(playerPos - GameObject.Find("headMiddle").transform.position.x);
+                headRight = Mathf.Abs(playerPos - GameObject.Find("headRight").transform.position.x);
+                float min = Mathf.Min(headLeft, headMiddle, headRight);
+                if (headLeft == min)
+                    animator.SetInteger("head", 1);
+                else if (headMiddle == min)
+                    animator.SetInteger("head", 2);
+                else
+                    animator.SetInteger("head", 3);
+            }
+            else if (!animator.GetBool("stompDone"))
+            {
+                animator.SetTrigger("stomp");
+            }
         }
         else
         {
