@@ -29,6 +29,9 @@ TextureImporter:
   - first:
       213: 7591742993644914627
     second: wave
+  - first:
+      213: -5685498966254118996
+    second: dragon_fireball
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -186,7 +189,7 @@ TextureImporter:
         serializedVersion: 2
         x: 560
         y: 641
-        width: 252
+        width: 285
         height: 259
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -302,6 +305,27 @@ TextureImporter:
       bones: []
       spriteID: 3c7044aa70a4b5960800000000000000
       internalID: 7591742993644914627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_fireball
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 644
+        width: 169
+        height: 70
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7929130dc0911b0800000000000000
+      internalID: -5685498966254118996
       vertices: []
       indices: 
       edges: []

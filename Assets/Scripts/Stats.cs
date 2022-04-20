@@ -24,7 +24,11 @@ public class Stats : MonoBehaviour
     {
         if (!isInvulnerable)
         {
-            anim.SetTrigger("isTakingDamage");
+            try
+            {
+                anim.SetTrigger("isTakingDamage");
+            }
+            catch { }
             if (this.tag == "Player")
             {
                 health -= value;

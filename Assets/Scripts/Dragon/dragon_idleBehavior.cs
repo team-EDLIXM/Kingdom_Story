@@ -11,10 +11,10 @@ public class dragon_idleBehavior : StateMachineBehaviour
     {
         timer = animator.GetComponent<Dragon>().IdleTimer;
 
-        animator.SetTrigger("idle");
         if (_timer <= 0
             && (animator.GetBool("headHitDone") || animator.GetComponent<Dragon>().headHitCount == 0)
-            && (animator.GetBool("stompDone") || animator.GetComponent<Dragon>().stompCount == 0))
+            && (animator.GetBool("stompDone") || animator.GetComponent<Dragon>().stompCount == 0)
+            && (animator.GetBool("fireAttackDone") || animator.GetComponent<Dragon>().fireAttackCount == 0))
             _timer = timer;
     }
 
@@ -31,6 +31,10 @@ public class dragon_idleBehavior : StateMachineBehaviour
             {
                 animator.SetTrigger("stomp");
             }
+            else
+            {
+                animator.SetTrigger("fireAttack");
+            }
         }
         else
         {
@@ -39,10 +43,10 @@ public class dragon_idleBehavior : StateMachineBehaviour
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        animator.SetBool("idle", false);
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

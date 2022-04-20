@@ -13,6 +13,10 @@ public class dragon_stage1 : StateMachineBehaviour
     public int stompCountMax;
     public float stompWaveSpeed;
     public float stompWaveDestroyTime;
+    public int fireAttackCountMax;
+    public float fireSpeed;
+    public float fireDestroyTime;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -37,6 +41,11 @@ public class dragon_stage1 : StateMachineBehaviour
         animator.SetBool("stompDone", false);
         dragon.stompWaveSpeed = stompWaveSpeed;
         dragon.stompWaveDestroyTime = stompWaveDestroyTime;
+
+        dragon.fireAttackCountMax = fireAttackCountMax;
+        animator.SetBool("fireAttackDone", false);
+        dragon.fireSpeed = fireSpeed;
+        dragon.fireDestroyTime = fireDestroyTime;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

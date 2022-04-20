@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StompWave : MonoBehaviour
+public class DragonFire : MonoBehaviour
 {
     public float destroyTime;
     public int dmg;

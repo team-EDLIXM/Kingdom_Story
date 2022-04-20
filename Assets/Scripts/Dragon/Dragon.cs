@@ -26,7 +26,14 @@ public class Dragon : MonoBehaviour
     public Transform stompWavePoint;
     public float stompWaveDestroyTime;
 
-    
+    public int fireAttackCountMax;
+    public int fireAttackCount = 0;
+    public Rigidbody2D fire;
+    public Transform fireLeftPoint;
+    public float fireSpeed;
+    public float fireDestroyTime;
+
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -45,6 +52,15 @@ public class Dragon : MonoBehaviour
         if (stompCount == stompCountMax)
         {
             animator.SetBool("stompDone", true);
+        }
+        if (fireAttackCount == fireAttackCountMax)
+        {
+            animator.SetBool("headHitDone", false);
+            headHitCount = 0;
+            animator.SetBool("stompDone", false);
+            stompCount = 0;
+            animator.SetBool("fireAttack", false);
+            fireAttackCount = 0;
         }
         if (headLeft.GetComponent<Stats>().health <= 0)
             animator.SetTrigger("stage1Done");
@@ -99,6 +115,22 @@ public class Dragon : MonoBehaviour
         if (headRight.GetComponent<playerCheck>().playerIsInTrigger)
             player.GetComponent<Stats>().TakeDamage(damage);
     }
+    public int ChooseHead()
+    {
+        float playerPos = player.transform.position.x;
+        float headLeftDx = Mathf.Abs(playerPos - headLeft.transform.position.x);
+        float headMiddleDx = Mathf.Abs(playerPos - headMiddle.transform.position.x);
+        float headRightDx = Mathf.Abs(playerPos - headRight.transform.position.x);
+        float min = Mathf.Min(headLeftDx, headMiddleDx, headRightDx);
+        if (headLeft.GetComponent<Stats>().health > 0 && headLeftDx == min)
+            return 1;
+        else if (headMiddle.GetComponent<Stats>().health > 0 && headMiddleDx < headRightDx)
+            return 2;
+        else if (headRight.GetComponent<Stats>().health > 0)
+            return 3;
+        else
+            return 0;
+    }
 
     public void Stomp()
     {
@@ -117,20 +149,12 @@ public class Dragon : MonoBehaviour
         cloneRight.GetComponent<StompWave>().dmg = damage;
     }
 
-    public int ChooseHead()
+    public void FireLeftHead()
     {
-        float playerPos = player.transform.position.x;
-        float headLeftDx = Mathf.Abs(playerPos - headLeft.transform.position.x);
-        float headMiddleDx = Mathf.Abs(playerPos - headMiddle.transform.position.x);
-        float headRightDx = Mathf.Abs(playerPos - headRight.transform.position.x);
-        float min = Mathf.Min(headLeftDx, headMiddleDx, headRightDx);
-        if (headLeft.GetComponent<Stats>().health > 0 && headLeftDx == min)
-            return 1;
-        else if (headMiddle.GetComponent<Stats>().health > 0 && headMiddleDx < headRightDx)
-            return 2;
-        else if (headRight.GetComponent<Stats>().health > 0)
-            return 3;
-        else
-            return 0;
+        Rigidbody2D clone = Instantiate(fire, fireLeftPoint.transform.position, Quaternion.identity) as Rigidbody2D;
+        clone.velocity = fireLeftPoint.transform.right * fireSpeed;
+        clone.transform.right = fireLeftPoint.transform.right;
+        clone.GetComponent<DragonFire>().destroyTime = fireDestroyTime;
+        clone.GetComponent<DragonFire>().dmg = damage;
     }
 }
