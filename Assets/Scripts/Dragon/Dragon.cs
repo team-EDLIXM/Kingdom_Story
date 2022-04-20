@@ -55,6 +55,7 @@ public class Dragon : MonoBehaviour
         }
         if (fireAttackCount == fireAttackCountMax)
         {
+            animator.SetInteger("head", 0);
             animator.SetBool("headHitDone", false);
             headHitCount = 0;
             animator.SetBool("stompDone", false);
