@@ -10,6 +10,7 @@ public class dragon_stage1 : StateMachineBehaviour
     public int damage;
     public float IdleTimer;
     public int headHitCountMax;
+    public int stompCountMax;
     public float stompWaveSpeed;
     public float stompWaveDestroyTime;
 
@@ -32,6 +33,8 @@ public class dragon_stage1 : StateMachineBehaviour
 
         dragon.IdleTimer = IdleTimer;
 
+        dragon.stompCountMax = stompCountMax;
+        animator.SetBool("stompDone", false);
         dragon.stompWaveSpeed = stompWaveSpeed;
         dragon.stompWaveDestroyTime = stompWaveDestroyTime;
     }

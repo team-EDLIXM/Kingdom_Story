@@ -12,7 +12,9 @@ public class dragon_idleBehavior : StateMachineBehaviour
         timer = animator.GetComponent<Dragon>().IdleTimer;
 
         animator.SetTrigger("idle");
-        if (_timer <= 0 && (animator.GetBool("headHitDone") || animator.GetComponent<Dragon>().headHitCount == 0))
+        if (_timer <= 0
+            && (animator.GetBool("headHitDone") || animator.GetComponent<Dragon>().headHitCount == 0)
+            && (animator.GetBool("stompDone") || animator.GetComponent<Dragon>().stompCount == 0))
             _timer = timer;
     }
 

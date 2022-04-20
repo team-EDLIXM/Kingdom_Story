@@ -17,8 +17,10 @@ public class Dragon : MonoBehaviour
 
     public int headHitCountMax;
     public int headHitCount = 0;
-    public bool headHitDone = false;
+    //public bool headHitDone = false;
 
+    public int stompCountMax;
+    public int stompCount = 0;
     public float stompWaveSpeed;
     public Rigidbody2D stompWave;
     public Transform stompWavePoint;
@@ -39,6 +41,10 @@ public class Dragon : MonoBehaviour
         if (headHitCount == headHitCountMax)
         {
             animator.SetBool("headHitDone", true);
+        }
+        if (stompCount == stompCountMax)
+        {
+            animator.SetBool("stompDone", true);
         }
         if (headLeft.GetComponent<Stats>().health <= 0)
             animator.SetTrigger("stage1Done");
