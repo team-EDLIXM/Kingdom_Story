@@ -30,6 +30,11 @@ public class Stats : MonoBehaviour
                 health -= value;
                 StartCoroutine(InvulnerabilityP());
             }
+            else if (this.tag == "Boss")
+            {
+                health -= value;
+                StartCoroutine(InvulnerabilityB());
+            }
             else
             {
                 health -= value;
@@ -69,6 +74,21 @@ public class Stats : MonoBehaviour
             this.GetComponent<SpriteRenderer>().color.r,
             this.GetComponent<SpriteRenderer>().color.g,
             this.GetComponent<SpriteRenderer>().color.b, 1f);
+        isInvulnerable = false;
+    }
+
+    private IEnumerator InvulnerabilityB()
+    {
+        this.GetComponentInParent<SpriteRenderer>().color = new Color(
+            this.GetComponentInParent<SpriteRenderer>().color.r,
+            this.GetComponentInParent<SpriteRenderer>().color.g,
+            this.GetComponentInParent<SpriteRenderer>().color.b, 0.5f);
+        isInvulnerable = true;
+        yield return new WaitForSeconds(InvulnerableTime);
+        this.GetComponentInParent<SpriteRenderer>().color = new Color(
+            this.GetComponentInParent<SpriteRenderer>().color.r,
+            this.GetComponentInParent<SpriteRenderer>().color.g,
+            this.GetComponentInParent<SpriteRenderer>().color.b, 1f);
         isInvulnerable = false;
     }
 

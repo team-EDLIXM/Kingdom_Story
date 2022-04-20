@@ -4,71 +4,94 @@ using UnityEngine;
 
 public class Dragon : MonoBehaviour
 {
+    private GameObject player;
+    private Animator animator;
+
     public int damage;
-    public int headLeftHealth;
-    public int headMiddleHealth;
-    public int headRightHealth;
+    public GameObject headLeft;
+    public GameObject headMiddle;
+    public GameObject headRight;
     public bool isInvulnerable = false;
     public float InvulnerableTime = 0.5f;
+    public float IdleTimer;
 
-    public float stompWaveSpeed = 3;
+    public int headHitCountMax;
+    public int headHitCount = 0;
+    public bool headHitDone = false;
+
+    public float stompWaveSpeed;
     public Rigidbody2D stompWave;
     public Transform stompWavePoint;
-    public float stompWaveDestroyTime = 2f;
+    public float stompWaveDestroyTime;
+
+    
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        headLeft.GetComponent<Stats>().isInvulnerable = true;
+        headMiddle.GetComponent<Stats>().isInvulnerable = true;
+        headRight.GetComponent<Stats>().isInvulnerable = true;
+    }
 
     private void Update()
     {
-        
+        if (headHitCount == headHitCountMax)
+        {
+            animator.SetBool("headHitDone", true);
+        }
+        if (headLeft.GetComponent<Stats>().health <= 0)
+            animator.SetTrigger("stage1Done");
     }
 
-    public void TakeDamage(int head, int dmg)
-    {
-        if (!isInvulnerable)
-        {
-            switch (head)
-            {
-                case 1: 
-                    headLeftHealth -= dmg;
-                    break;
-                case 2:
-                    headMiddleHealth -= dmg;
-                    break;
-                case 3:
-                    headRightHealth -= dmg;
-                    break;
-            }
-            StartCoroutine(Invulnerability());
-        }
-    }
-    private IEnumerator Invulnerability()
-    {
-        this.GetComponent<SpriteRenderer>().color = new Color(
-            this.GetComponent<SpriteRenderer>().color.r,
-            this.GetComponent<SpriteRenderer>().color.g,
-            this.GetComponent<SpriteRenderer>().color.b, 0.5f);
-        isInvulnerable = true;
-        yield return new WaitForSeconds(InvulnerableTime);
-        this.GetComponent<SpriteRenderer>().color = new Color(
-            this.GetComponent<SpriteRenderer>().color.r,
-            this.GetComponent<SpriteRenderer>().color.g,
-            this.GetComponent<SpriteRenderer>().color.b, 1f);
-        isInvulnerable = false;
-    }
+    //public void TakeDamage(int head, int dmg)
+    //{
+    //    if (!isInvulnerable)
+    //    {
+    //        switch (head)
+    //        {
+    //            case 1: 
+    //                //headLeftHealth -= dmg;
+    //                break;
+    //            case 2:
+    //                headMiddleHealth -= dmg;
+    //                break;
+    //            case 3:
+    //                headRightHealth -= dmg;
+    //                break;
+    //        }
+    //        StartCoroutine(Invulnerability());
+    //    }
+    //}
+    //private IEnumerator Invulnerability()
+    //{
+    //    this.GetComponent<SpriteRenderer>().color = new Color(
+    //        this.GetComponent<SpriteRenderer>().color.r,
+    //        this.GetComponent<SpriteRenderer>().color.g,
+    //        this.GetComponent<SpriteRenderer>().color.b, 0.5f);
+    //    isInvulnerable = true;
+    //    yield return new WaitForSeconds(InvulnerableTime);
+    //    this.GetComponent<SpriteRenderer>().color = new Color(
+    //        this.GetComponent<SpriteRenderer>().color.r,
+    //        this.GetComponent<SpriteRenderer>().color.g,
+    //        this.GetComponent<SpriteRenderer>().color.b, 1f);
+    //    isInvulnerable = false;
+    //}
 
     public void HeadLeftHit()
     {
-        if (GameObject.Find("headLeft").GetComponent<playerCheck>().playerIsInTrigger)
-            GameObject.Find("Player").GetComponent<Stats>().TakeDamage(damage);
+        if (headLeft.GetComponent<playerCheck>().playerIsInTrigger)
+            player.GetComponent<Stats>().TakeDamage(damage);
     }
     public void HeadMiddleHit()
     {
-        if (GameObject.Find("headMiddle").GetComponent<playerCheck>().playerIsInTrigger)
-            GameObject.Find("Player").GetComponent<Stats>().TakeDamage(damage);
+        if (headMiddle.GetComponent<playerCheck>().playerIsInTrigger)
+            player.GetComponent<Stats>().TakeDamage(damage);
     }
     public void HeadRightHit()
     {
-        if (GameObject.Find("headRight").GetComponent<playerCheck>().playerIsInTrigger)
-            GameObject.Find("Player").GetComponent<Stats>().TakeDamage(damage);
+        if (headRight.GetComponent<playerCheck>().playerIsInTrigger)
+            player.GetComponent<Stats>().TakeDamage(damage);
     }
 
     public void Stomp()
@@ -86,5 +109,22 @@ public class Dragon : MonoBehaviour
         cloneRight.transform.right = stompWavePoint.transform.right;
         cloneRight.GetComponent<StompWave>().destroyTime = stompWaveDestroyTime;
         cloneRight.GetComponent<StompWave>().dmg = damage;
+    }
+
+    public int ChooseHead()
+    {
+        float playerPos = player.transform.position.x;
+        float headLeftDx = Mathf.Abs(playerPos - headLeft.transform.position.x);
+        float headMiddleDx = Mathf.Abs(playerPos - headMiddle.transform.position.x);
+        float headRightDx = Mathf.Abs(playerPos - headRight.transform.position.x);
+        float min = Mathf.Min(headLeftDx, headMiddleDx, headRightDx);
+        if (headLeft.GetComponent<Stats>().health > 0 && headLeftDx == min)
+            return 1;
+        else if (headMiddle.GetComponent<Stats>().health > 0 && headMiddleDx < headRightDx)
+            return 2;
+        else if (headRight.GetComponent<Stats>().health > 0)
+            return 3;
+        else
+            return 0;
     }
 }
