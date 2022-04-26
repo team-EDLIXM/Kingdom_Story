@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dragon_stage1 : StateMachineBehaviour
+public class dragon_stage2 : StateMachineBehaviour
 {
     private Dragon dragon;
 
@@ -23,8 +23,7 @@ public class dragon_stage1 : StateMachineBehaviour
     {
         dragon = animator.GetComponent<Dragon>();
 
-        dragon.headLeft.GetComponent<Stats>().maxhealth = maxHealth;
-        dragon.headLeft.GetComponent<Stats>().health = maxHealth;
+        dragon.headLeft.GetComponent<Stats>().isInvulnerable = true;
         dragon.headMiddle.GetComponent<Stats>().maxhealth = maxHealth;
         dragon.headMiddle.GetComponent<Stats>().health = maxHealth;
         dragon.headRight.GetComponent<Stats>().maxhealth = maxHealth;
@@ -33,17 +32,23 @@ public class dragon_stage1 : StateMachineBehaviour
         dragon.damage = damage;
 
         dragon.headHitCountMax = headHitCountMax;
+        animator.SetInteger("head", 0);
         animator.SetBool("headHitDone", false);
+        dragon.headHitCount = 0;             
 
         dragon.IdleTimer = IdleTimer;
 
         dragon.stompCountMax = stompCountMax;
+        animator.SetBool("stomp", false);
         animator.SetBool("stompDone", false);
+        dragon.stompCount = 0;
         dragon.stompWaveSpeed = stompWaveSpeed;
         dragon.stompWaveDestroyTime = stompWaveDestroyTime;
 
         dragon.fireAttackCountMax = fireAttackCountMax;
+        animator.SetBool("fireAttack", false);
         animator.SetBool("fireAttackDone", false);
+        dragon.fireAttackCount = 0;
         dragon.fireSpeed = fireSpeed;
         dragon.fireDestroyTime = fireDestroyTime;
     }
@@ -57,7 +62,7 @@ public class dragon_stage1 : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("stage1Done");
+        animator.ResetTrigger("stage2Done");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

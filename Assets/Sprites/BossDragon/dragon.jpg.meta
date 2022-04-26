@@ -32,6 +32,9 @@ TextureImporter:
   - first:
       213: -5685498966254118996
     second: dragon_fireball
+  - first:
+      213: 2908348714287734447
+    second: dragon_RightHead_Fire
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -187,8 +190,8 @@ TextureImporter:
       name: dragon_LeftHead_Fire
       rect:
         serializedVersion: 2
-        x: 560
-        y: 641
+        x: 562
+        y: 642
         width: 285
         height: 259
       alignment: 7
@@ -326,6 +329,27 @@ TextureImporter:
       bones: []
       spriteID: ca7929130dc0911b0800000000000000
       internalID: -5685498966254118996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_RightHead_Fire
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 775
+        width: 284
+        height: 260
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae951e1fb78c5820800000000000000
+      internalID: 2908348714287734447
       vertices: []
       indices: 
       edges: []

@@ -30,6 +30,7 @@ public class Dragon : MonoBehaviour
     public int fireAttackCount = 0;
     public Rigidbody2D fire;
     public Transform fireLeftPoint;
+    public Transform fireRightPoint;
     public float fireSpeed;
     public float fireDestroyTime;
 
@@ -65,6 +66,8 @@ public class Dragon : MonoBehaviour
         }
         if (headLeft.GetComponent<Stats>().health <= 0)
             animator.SetTrigger("stage1Done");
+        if (headRight.GetComponent<Stats>().health <= 0)
+            animator.SetTrigger("stage2Done");
     }
 
     //public void TakeDamage(int head, int dmg)
@@ -155,6 +158,15 @@ public class Dragon : MonoBehaviour
         Rigidbody2D clone = Instantiate(fire, fireLeftPoint.transform.position, Quaternion.identity) as Rigidbody2D;
         clone.velocity = fireLeftPoint.transform.right * fireSpeed;
         clone.transform.right = fireLeftPoint.transform.right;
+        clone.GetComponent<DragonFire>().destroyTime = fireDestroyTime;
+        clone.GetComponent<DragonFire>().dmg = damage;
+    }
+    public void FireRightHead()
+    {
+        Rigidbody2D clone = Instantiate(fire, fireRightPoint.transform.position, Quaternion.Euler(0, 180, 0)) as Rigidbody2D;
+        //clone.transform.rotation = Quaternion.Euler(0, 180, 0);
+        clone.velocity = -fireRightPoint.transform.right * fireSpeed;
+        //clone.transform.right = fireRightPoint.transform.right;
         clone.GetComponent<DragonFire>().destroyTime = fireDestroyTime;
         clone.GetComponent<DragonFire>().dmg = damage;
     }
