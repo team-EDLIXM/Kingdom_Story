@@ -14,7 +14,7 @@ public class HeroAttack : MonoBehaviour
     public float attackRange;
     public LayerMask enemy;
     public Transform fireballPos;
-    public GameObject fireball;
+    public Transform fireball;
 
     private void Update()
     {
@@ -28,7 +28,8 @@ public class HeroAttack : MonoBehaviour
         }
         else if (Input.GetMouseButton(1) && !isReload)
         {
-            var newFireball = Instantiate(fireball, fireballPos.position, fireballPos.rotation);
+            anim.SetTrigger("Fire");
+
             StartCoroutine(FireballReloadTime());
         }
     }
@@ -62,4 +63,17 @@ public class HeroAttack : MonoBehaviour
         }
     }
 
+    private void OnFire()
+    {
+        var newFireball = Instantiate(fireball) as Transform;
+
+        newFireball.position = fireballPos.position;
+
+        MoveScript move = newFireball.gameObject.GetComponent<MoveScript>();
+
+        if (move != null)
+        {
+            move.direction = this.transform.right;
+        }
+    }
 }
