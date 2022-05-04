@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: f163d711107b41f4fa1193a647570b47
+guid: ec486ae1dd98a12419db7c9d48bff355
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4418480767046140320
-    second: dragon_headMiddle_FireAttack
+      213: 1096349201093855864
+    second: dragon_idle1
   - first:
-      213: -8602550843782568440
-    second: dragon_headMiddle
-  - first:
-      213: -3512792391063117781
-    second: dragon_fire
+      213: 4361899394690547647
+    second: dragon_idle2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,64 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dragon_headMiddle_FireAttack
+      name: dragon_idle1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1292
-        width: 214
-        height: 307
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06eb15907276ea2c0800000000000000
-      internalID: -4418480767046140320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dragon_headMiddle
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 1463
-        width: 57
-        height: 136
+        x: 38
+        y: 59
+        width: 278
+        height: 206
       alignment: 9
-      pivot: {x: 0.5156202, y: 0.3427941}
+      pivot: {x: 0.31654677, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8066a1af5999d9880800000000000000
-      internalID: -8602550843782568440
+      spriteID: 87a8bf82ac3073f00800000000000000
+      internalID: 1096349201093855864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dragon_fire
+      name: dragon_idle2
       rect:
         serializedVersion: 2
-        x: 297
-        y: 1416
-        width: 41
-        height: 179
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 354
+        y: 59
+        width: 278
+        height: 204
+      alignment: 9
+      pivot: {x: 0.31654677, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b20ecf09eed004fc0800000000000000
-      internalID: -3512792391063117781
+      spriteID: fbf758e9364988c30800000000000000
+      internalID: 4361899394690547647
       vertices: []
       indices: 
       edges: []
