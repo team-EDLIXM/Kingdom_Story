@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlatformEnemyAI : MonoBehaviour
 {
@@ -21,7 +22,8 @@ public class PlatformEnemyAI : MonoBehaviour
     {
         if (!Physics2D.OverlapCircle(floorCheck.transform.position, radius, floor))  // направление = влево и слева нет земли
             Flip(); // меняем направление
-        Run();
+        if(!stats.isInvulnerable)
+            Run();
     }
 
     /// <summary>
@@ -47,9 +49,15 @@ public class PlatformEnemyAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (/*!stats.isInvulnerable && */other.tag == "Player")
         {
-            other.GetComponent<Stats>().TakeDamage(stats.dmg);
+            var otherStats = other.GetComponent<Stats>();
+            otherStats.TakeDamage(stats.dmg);
+            var v = new Vector2(other.transform.position.x - transform.position.x,
+                other.transform.position.y - transform.position.y);
+            v.Normalize();
+            print(v);
+            otherStats.Push(v);
         }
     }
 }
