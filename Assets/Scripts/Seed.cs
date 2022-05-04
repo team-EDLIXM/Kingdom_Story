@@ -23,8 +23,7 @@ public class Seed : MonoBehaviour
         if (other.tag == "Player")
         {
             other.GetComponent<Stats>().TakeDamage(dmg);
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
     }
 }

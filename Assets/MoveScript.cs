@@ -10,7 +10,7 @@ public class MoveScript : MonoBehaviour
     /// <summary>
     /// Скорость объекта
     /// </summary>
-    public Vector2 speed = new Vector2(10, 0);
+    public Vector2 speed = new Vector2(5, 0);
 
     /// <summary>
     /// Направление движения

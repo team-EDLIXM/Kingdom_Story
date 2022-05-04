@@ -6,9 +6,10 @@ using UnityEngine;
 public class HeroAttack : MonoBehaviour
 {
     public float respiteTime = 0.5f;
-
     public bool isRespite = false;
     public bool isAttacking;
+    public float fireballReloadTime = 2f;
+    private bool isReload = false;
 
     public Animator anim;
     public float activeAttackTime = 0.5f;
@@ -17,7 +18,10 @@ public class HeroAttack : MonoBehaviour
     private Dictionary<string, Collider2D> attacks;
     private ContactFilter2D filter;
     private string currentAttack;
-    
+
+    public Transform fireballPos;
+    public Transform fireball;
+
     private void Start()
     {
         attacks = new Dictionary<string, Collider2D>();
@@ -73,6 +77,12 @@ public class HeroAttack : MonoBehaviour
             StartCoroutine(RespiteTime());
             StartCoroutine(AttackTime());
         }
+        else if (Input.GetMouseButton(1) && !isReload)
+        {
+            anim.SetTrigger("Fire");
+
+            StartCoroutine(FireballReloadTime());
+        }
 
         if (isAttacking)
             Attack(currentAttack);
@@ -108,10 +118,24 @@ public class HeroAttack : MonoBehaviour
         isRespite = false;
     }
 
-    /*private IEnumerator FireballReloadTime()
+    private IEnumerator FireballReloadTime()
     {
         isReload = true;
         yield return new WaitForSeconds(fireballReloadTime);
         isReload = false;
-    }*/
+    }
+
+    private void OnFire()
+    {
+        var newFireball = Instantiate(fireball) as Transform;
+
+        newFireball.position = fireballPos.position;
+
+        MoveScript move = newFireball.gameObject.GetComponent<MoveScript>();
+
+        if (move != null)
+        {
+            move.direction = this.transform.right;
+        }
+    }
 }
