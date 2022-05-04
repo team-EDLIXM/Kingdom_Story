@@ -13,11 +13,15 @@ public class StompWave : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitObject)
     {
-        if (!hitObject.isTrigger && hitObject.tag == "Player")
+        if (!hitObject.isTrigger)
         {
-            if (!hitObject.GetComponent<Stats>().isInvulnerable)
-                hitObject.GetComponent<Stats>().TakeDamage(dmg);
-            //Destroy(gameObject);
+            if (hitObject.tag == "Player")
+            {
+                if (!hitObject.GetComponent<Stats>().isInvulnerable)
+                    hitObject.GetComponent<Stats>().TakeDamage(dmg);
+            }
+            else
+                Destroy(gameObject);
         }
     }
 }

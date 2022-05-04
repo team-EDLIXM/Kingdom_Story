@@ -46,28 +46,38 @@ public class Dragon : MonoBehaviour
 
     private void Update()
     {
-        if (headHitCount == headHitCountMax)
+        if (!animator.GetBool("stage2Done"))
         {
-            animator.SetBool("headHitDone", true);
+            if (headHitCount == headHitCountMax)
+            {
+                animator.SetBool("headHitDone", true);
+            }
+            if (stompCount == stompCountMax)
+            {
+                animator.SetBool("stompDone", true);
+            }
+            if (fireAttackCount == fireAttackCountMax)
+            {
+                animator.SetInteger("head", 0);
+                animator.SetBool("headHitDone", false);
+                headHitCount = 0;
+                animator.SetBool("stompDone", false);
+                stompCount = 0;
+                animator.SetBool("fireAttack", false);
+                fireAttackCount = 0;
+            }
+            if (headLeft.GetComponent<Stats>().health <= 0)
+                animator.SetTrigger("stage1Done");
+            if (headRight.GetComponent<Stats>().health <= 0)
+                animator.SetTrigger("stage2Done");
         }
-        if (stompCount == stompCountMax)
+        else 
         {
-            animator.SetBool("stompDone", true);
+            if (fireAttackCount == fireAttackCountMax)
+            {
+                animator.SetBool("fireAttackDone", true);
+            }
         }
-        if (fireAttackCount == fireAttackCountMax)
-        {
-            animator.SetInteger("head", 0);
-            animator.SetBool("headHitDone", false);
-            headHitCount = 0;
-            animator.SetBool("stompDone", false);
-            stompCount = 0;
-            animator.SetBool("fireAttack", false);
-            fireAttackCount = 0;
-        }
-        if (headLeft.GetComponent<Stats>().health <= 0)
-            animator.SetTrigger("stage1Done");
-        if (headRight.GetComponent<Stats>().health <= 0)
-            animator.SetTrigger("stage2Done");
     }
 
     //public void TakeDamage(int head, int dmg)
