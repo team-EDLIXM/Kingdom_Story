@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,64 +20,89 @@ public class hero : MonoBehaviour
 
     private Animator anim;
     private Stats stats;
+    private HeroAttack heroAttack;
 
     public AudioManager AudioManager;
 
+    private float normalGravity; 
     public void Start()
     {
         extraJump = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
+        normalGravity = rb.gravityScale;
         anim = GetComponent<Animator>();
         AudioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         stats = GetComponent<Stats>();
+        heroAttack = GetComponent<HeroAttack>();
     }
 
     public void Update()
     {
         if (Time.timeScale == 0) return;
-        
-        if(stats.health<=0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
+
+        if (stats.health <= 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         if (isGrounded)
         {
             extraJump = extraJumpValue;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && extraJump > 0)
-        {
-            rb.velocity = Vector2.up * jumpHeight;
-            extraJump--;
-            AudioManager.instance.PlaySFX(1);
-            anim.SetTrigger("Jump");
-        }
 
-        else if (Input.GetKeyDown(KeyCode.Space)  && extraJump == 0 && isGrounded == true)
+        if (!stats.isPushed)
         {
-            rb.velocity = Vector2.up * jumpHeight;
-            AudioManager.instance.PlaySFX(1);
-            anim.SetTrigger("Jump");
+            if (Input.GetKeyDown(KeyCode.Space) && extraJump > 0)
+            {
+                rb.velocity = Vector2.up * jumpHeight;
+                extraJump--;
+                AudioManager.instance.PlaySFX(1);
+                anim.SetTrigger("Jump");
+            }
+            else if (Input.GetKeyDown(KeyCode.Space) && extraJump == 0 && isGrounded == true)
+            {
+                rb.velocity = Vector2.up * jumpHeight;
+                AudioManager.instance.PlaySFX(1);
+                anim.SetTrigger("Jump");
+            }
         }
-
     }
 
+
+    public Vector2 otherVelocity = Vector2.zero;
 
     public void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatisGround);
         mInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(mInput * stats.speed, rb.velocity.y);
+        if (stats.isPushed) mInput = 0;
+        var v = new Vector2(mInput * stats.speed, rb.velocity.y);
+        if (stats.isPushed)
+        {
+            v.x += otherVelocity.x;
+            v.y += otherVelocity.y;
+        }
 
-        if (fRigth == false && mInput > 0 )
+        rb.velocity = v;
+        if (!heroAttack.isAttacking)
         {
-            Flip();
+            if (!fRigth && mInput > 0)
+            {
+                Flip();
+            }
+            else if (fRigth && mInput < 0)
+            {
+                Flip();
+            }
         }
-        else if (fRigth == true && mInput < 0)
-        {
-            Flip();
-        }
+
         if (rb.velocity.x != 0 && isGrounded && !AudioManager.sounds[0].isPlaying)
         {
             AudioManager.instance.PlaySFX(0);
         }
+
+        float fallAxis = Input.GetAxisRaw("Vertical");
+        if (fallAxis < 0)
+            rb.gravityScale = normalGravity * 1.8f;
+        else
+            rb.gravityScale = normalGravity;
     }
 
     void Flip() 

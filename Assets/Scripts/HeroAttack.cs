@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,40 +6,99 @@ using UnityEngine;
 public class HeroAttack : MonoBehaviour
 {
     public float respiteTime = 0.5f;
+
     public bool isRespite = false;
-    public float fireballReloadTime = 2f;
-    private bool isReload = false;
+    public bool isAttacking;
 
     public Animator anim;
-    public Transform attackPos;
-    public float attackRange;
+    public float activeAttackTime = 0.5f;
     public LayerMask enemy;
-    public Transform fireballPos;
-    public Transform fireball;
+
+    private Dictionary<string, Collider2D> attacks;
+    private ContactFilter2D filter;
+    private string currentAttack;
+    
+    private void Start()
+    {
+        attacks = new Dictionary<string, Collider2D>();
+        foreach (var x in GetComponentsInChildren<Collider2D>())
+            attacks[x.name] = x;
+
+        filter = new ContactFilter2D().NoFilter();
+        filter.SetLayerMask(enemy);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        if (isAttacking)
+            Gizmos.DrawCube(transform.position, new Vector3(1, 1, 1));
+    }
 
     private void Update()
     {
         if (Time.timeScale == 0) return;
 
-        if (Input.GetMouseButton(0) && !isRespite)
+        if (Input.GetMouseButton(0) && !isRespite && !isAttacking)
         {
-            anim.SetTrigger("Attack");
-            AudioManager.instance.PlaySFX(3);
-            StartCoroutine(RespiteTime());
-        }
-        else if (Input.GetMouseButton(1) && !isReload)
-        {
-            anim.SetTrigger("Fire");
+            float verticalPress = Input.GetAxisRaw("Vertical");
+            float horizontalPress = Input.GetAxisRaw("Horizontal");
 
-            StartCoroutine(FireballReloadTime());
+            if (!GetComponent<hero>().isGrounded)
+            {
+                if (verticalPress != 0)
+                {
+                    if (verticalPress > 0)
+                        currentAttack = "airNeutralAttack";
+                    if (verticalPress < 0)
+                        currentAttack = "airBottomAttack";
+                }
+                else if (horizontalPress != 0)
+                    currentAttack = "airSideAttack";
+                else
+                    currentAttack = "airNeutralAttack";
+            }
+            else
+            {
+                if (verticalPress > 0)
+                    currentAttack = "neutralAttack";
+                else if (horizontalPress != 0)
+                    currentAttack = "sideAttack";
+                else
+                    currentAttack = "neutralAttack";
+            }
+
+            AudioManager.instance.PlaySFX(3);
+            anim.SetTrigger(currentAttack);
+            StartCoroutine(RespiteTime());
+            StartCoroutine(AttackTime());
+        }
+
+        if (isAttacking)
+            Attack(currentAttack);
+
+    }
+
+    private void Attack(string attackType)
+    {
+        currentAttack = attackType;
+        var enemies = new List<Collider2D>();
+        for (int i = 0; i < attacks[attackType].OverlapCollider(filter, enemies); ++i)
+        {
+            var st = enemies[i].GetComponent<Stats>();
+            st.TakeDamage(1);
+            
+            var v = new Vector2(enemies[i].transform.position.x - transform.position.x,
+                enemies[i].transform.position.y - transform.position.y);
+            st.Push(v);
         }
     }
 
-    private IEnumerator FireballReloadTime()
+    private IEnumerator AttackTime()
     {
-        isReload = true;
-        yield return new WaitForSeconds(fireballReloadTime);
-        isReload = false;
+        isAttacking = true;
+        yield return new WaitForSeconds(activeAttackTime);
+        isAttacking = false;
     }
 
     private IEnumerator RespiteTime()
@@ -48,32 +108,10 @@ public class HeroAttack : MonoBehaviour
         isRespite = false;
     }
 
-    private void OnDrawGizmosSelected()
+    /*private IEnumerator FireballReloadTime()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
-    }
-
-    private void OnAttack()
-    {
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
-        for (int i = 0; i < enemies.Length; ++i)
-        {
-            enemies[i].GetComponent<Stats>().TakeDamage(1);
-        }
-    }
-
-    private void OnFire()
-    {
-        var newFireball = Instantiate(fireball) as Transform;
-
-        newFireball.position = fireballPos.position;
-
-        MoveScript move = newFireball.gameObject.GetComponent<MoveScript>();
-
-        if (move != null)
-        {
-            move.direction = this.transform.right;
-        }
-    }
+        isReload = true;
+        yield return new WaitForSeconds(fireballReloadTime);
+        isReload = false;
+    }*/
 }

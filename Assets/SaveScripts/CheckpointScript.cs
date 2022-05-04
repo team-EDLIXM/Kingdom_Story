@@ -33,7 +33,6 @@ public class CheckpointScript : MonoBehaviour
             _data.isBossesAlive = new bool[_allBosses.Length];
             for (int i = 0; i < _data.isBossesAlive.Length; i++)
                 _data.isBossesAlive[i] = true;
-
         }
         ApplyLoad(_data);
     }
@@ -49,6 +48,7 @@ public class CheckpointScript : MonoBehaviour
                 for (int i = 0; i < _allCheckpoints.Length; i++)
                     if (_allCheckpoints[i] == gameObject)
                     {
+                        //anim.SetTrigger("pressed"); 
                         anim.SetBool("active", true);
                         _data.checkpoints[i] = true;
                     }
@@ -60,9 +60,6 @@ public class CheckpointScript : MonoBehaviour
 
                 for (int i = 0; i < _allBosses.Length; i++)
                     _data.isBossesAlive[i] = _allBosses[i].GetComponent<Stats>().health > 0;
-
-
-
 
                 _data.player.extraJumpValue = _player.GetComponent<hero>().extraJumpValue;
                 _data.player.position = _player.transform.position;
