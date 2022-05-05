@@ -37,6 +37,11 @@ public class Dragon : MonoBehaviour
     public float fireSpeed;
     public float fireDestroyTime;
 
+    public int magicalSphereAttackCountMax;
+    public int magicalSphereAttackCount = 0;
+    public Rigidbody2D magicalSphere;
+    public Transform magicalSpherePoint;
+
 
     private void Awake()
     {
@@ -80,6 +85,13 @@ public class Dragon : MonoBehaviour
             {
                 animator.SetBool("fireAttackDone", true);
             }
+            if (magicalSphereAttackCount == magicalSphereAttackCountMax)
+            {
+                animator.SetBool("magicalSphereAttackDone", true);
+            }
+
+            if (headMiddle.GetComponent<Stats>().health <= 0)
+                animator.SetTrigger("stage3Done");
         }
     }
 
@@ -161,5 +173,11 @@ public class Dragon : MonoBehaviour
         var direction = heading / distance; // This is now the normalized direction.
         clone.velocity = direction * fireballSpeed;
         clone.GetComponent<DragonFireball>().dmg = damage;
+    }
+    
+    public void MagicalSphereAttack()
+    {
+        Rigidbody2D clone = Instantiate(magicalSphere, magicalSpherePoint.transform.position, Quaternion.identity) as Rigidbody2D;
+        clone.GetComponent<DragonMagicalSphere>().dmg = damage;
     }
 }

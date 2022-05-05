@@ -12,7 +12,8 @@ public class dragon_stage3_idleBehavior : StateMachineBehaviour
         timer = animator.GetComponent<Dragon>().IdleTimer;
 
         if (_timer <= 0
-            && (animator.GetBool("fireAttackDone") || animator.GetComponent<Dragon>().fireAttackCount == 0))
+            && (animator.GetBool("fireAttackDone") || animator.GetComponent<Dragon>().fireAttackCount == 0)
+            && (animator.GetBool("magicalSphereAttackDone") || animator.GetComponent<Dragon>().magicalSphereAttackCount == 0))
             _timer = timer;
     }
 
@@ -24,6 +25,10 @@ public class dragon_stage3_idleBehavior : StateMachineBehaviour
             if (!animator.GetBool("fireAttackDone"))
             {
                 animator.SetTrigger("fireAttack");
+            }
+            else if (!animator.GetBool("magicalSphereAttackDone"))
+            {
+                animator.SetTrigger("magicalSphereAttack");
             }
         }
         else

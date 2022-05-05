@@ -11,6 +11,9 @@ public class dragon_stage3 : StateMachineBehaviour
     public float IdleTimer;
     public float fireballSpeed;
 
+    public int fireAttackCountMax;
+    public int magicalSphereAttackCountMax;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -31,11 +34,16 @@ public class dragon_stage3 : StateMachineBehaviour
 
         dragon.stompCountMax = 0;
 
-        dragon.fireAttackCountMax = 1;
+        dragon.fireAttackCountMax = fireAttackCountMax;
         animator.SetBool("fireAttack", false);
         animator.SetBool("fireAttackDone", false);
         dragon.fireAttackCount = 0;
         dragon.fireballSpeed = fireballSpeed;
+
+        dragon.magicalSphereAttackCountMax = magicalSphereAttackCountMax;
+        animator.SetBool("magicalSphereAttack", false);
+        animator.SetBool("magicalSphereAttackDone", false);
+        dragon.magicalSphereAttackCount = 0;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

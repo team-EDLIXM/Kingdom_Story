@@ -17,6 +17,12 @@ TextureImporter:
   - first:
       213: -1808622188060990092
     second: dragon3_headMiddleDown
+  - first:
+      213: -2517105743581476736
+    second: dragon3_MagicalSphere
+  - first:
+      213: -8122226928687849314
+    second: dragon3_MagicAttack
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -172,10 +178,10 @@ TextureImporter:
       name: dragon3_fireball
       rect:
         serializedVersion: 2
-        x: 240
-        y: 1417
-        width: 31
-        height: 32
+        x: 233
+        y: 1412
+        width: 41
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,6 +212,48 @@ TextureImporter:
       bones: []
       spriteID: 4752cb3d3bb76e6e0800000000000000
       internalID: -1808622188060990092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon3_MagicalSphere
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1315
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0880bb399a1711dd0800000000000000
+      internalID: -2517105743581476736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon3_MagicAttack
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1289
+        width: 225
+        height: 263
+      alignment: 9
+      pivot: {x: 0.54385966, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90e27a44ad084f80800000000000000
+      internalID: -8122226928687849314
       vertices: []
       indices: 
       edges: []

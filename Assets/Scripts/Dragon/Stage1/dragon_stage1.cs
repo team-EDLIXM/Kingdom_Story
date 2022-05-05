@@ -32,6 +32,8 @@ public class dragon_stage1 : StateMachineBehaviour
         dragon.headLeft.GetComponent<Stats>().isInvulnerable = true;
         dragon.headMiddle.GetComponent<Stats>().isInvulnerable = true;
         dragon.headRight.GetComponent<Stats>().isInvulnerable = true;
+        animator.ResetTrigger("stage3Done");
+
 
         dragon.damage = damage;
 
