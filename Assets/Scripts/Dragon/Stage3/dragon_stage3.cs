@@ -9,6 +9,7 @@ public class dragon_stage3 : StateMachineBehaviour
     public int maxHealth;
     public int damage;
     public float IdleTimer;
+    public float fireballSpeed;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -16,9 +17,10 @@ public class dragon_stage3 : StateMachineBehaviour
     {
         dragon = animator.GetComponent<Dragon>();
 
-        dragon.headLeft.GetComponent<Stats>().isInvulnerable = true;
         dragon.headMiddle.GetComponent<Stats>().maxhealth = maxHealth;
         dragon.headMiddle.GetComponent<Stats>().health = maxHealth;
+        dragon.headLeft.GetComponent<Stats>().isInvulnerable = true;
+        dragon.headMiddle.GetComponent<Stats>().isInvulnerable = true;
         dragon.headRight.GetComponent<Stats>().isInvulnerable = true;
 
         dragon.damage = damage;
@@ -33,6 +35,7 @@ public class dragon_stage3 : StateMachineBehaviour
         animator.SetBool("fireAttack", false);
         animator.SetBool("fireAttackDone", false);
         dragon.fireAttackCount = 0;
+        dragon.fireballSpeed = fireballSpeed;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

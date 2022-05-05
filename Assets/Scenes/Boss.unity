@@ -816,7 +816,7 @@ MonoBehaviour:
   health: 0
   speed: 0
   dmg: 0
-  isInvulnerable: 0
+  isInvulnerable: 1
   InvulnerableTime: 0.5
 --- !u!1 &674062046
 GameObject:
@@ -2498,7 +2498,7 @@ MonoBehaviour:
   health: 0
   speed: 0
   dmg: 0
-  isInvulnerable: 0
+  isInvulnerable: 1
   InvulnerableTime: 0.5
 --- !u!1 &1398029573
 GameObject:
@@ -2719,6 +2719,9 @@ MonoBehaviour:
   fire: {fileID: 7222845430719346564, guid: ff863d9291ea5694daf17f42533d991c, type: 3}
   fireLeftPoint: {fileID: 1350371186}
   fireRightPoint: {fileID: 1646841673}
+  fireMiddlePoint: {fileID: 339698410}
+  fireball: {fileID: 5695847337215736069, guid: 08be9d8aeffef514ba393ed6716028f2, type: 3}
+  fireballSpeed: 0
   fireSpeed: 0
   fireDestroyTime: 0
 --- !u!1 &1407254599
@@ -2810,7 +2813,7 @@ MonoBehaviour:
   health: 0
   speed: 0
   dmg: 0
-  isInvulnerable: 0
+  isInvulnerable: 1
   InvulnerableTime: 0.5
 --- !u!1 &1611420905
 GameObject:

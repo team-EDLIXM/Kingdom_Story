@@ -22,12 +22,14 @@ public class dragon_stage2 : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         dragon = animator.GetComponent<Dragon>();
-
-        dragon.headLeft.GetComponent<Stats>().isInvulnerable = true;
+        
         dragon.headMiddle.GetComponent<Stats>().maxhealth = maxHealth;
         dragon.headMiddle.GetComponent<Stats>().health = maxHealth;
         dragon.headRight.GetComponent<Stats>().maxhealth = maxHealth;
         dragon.headRight.GetComponent<Stats>().health = maxHealth;
+        dragon.headLeft.GetComponent<Stats>().isInvulnerable = true;
+        dragon.headMiddle.GetComponent<Stats>().isInvulnerable = true;
+        dragon.headRight.GetComponent<Stats>().isInvulnerable = true;
 
         dragon.damage = damage;
 

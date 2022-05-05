@@ -93,7 +93,8 @@ public class Stats : MonoBehaviour
             this.GetComponentInParent<SpriteRenderer>().color.r,
             this.GetComponentInParent<SpriteRenderer>().color.g,
             this.GetComponentInParent<SpriteRenderer>().color.b, 1f);
-        isInvulnerable = false;
+        if (this.health > 0)
+            isInvulnerable = false;
     }
 
     //public void Die()

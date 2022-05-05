@@ -31,6 +31,9 @@ public class Dragon : MonoBehaviour
     public Rigidbody2D fire;
     public Transform fireLeftPoint;
     public Transform fireRightPoint;
+    public Transform fireMiddlePoint;
+    public Rigidbody2D fireball;
+    public float fireballSpeed;
     public float fireSpeed;
     public float fireDestroyTime;
 
@@ -79,40 +82,6 @@ public class Dragon : MonoBehaviour
             }
         }
     }
-
-    //public void TakeDamage(int head, int dmg)
-    //{
-    //    if (!isInvulnerable)
-    //    {
-    //        switch (head)
-    //        {
-    //            case 1: 
-    //                //headLeftHealth -= dmg;
-    //                break;
-    //            case 2:
-    //                headMiddleHealth -= dmg;
-    //                break;
-    //            case 3:
-    //                headRightHealth -= dmg;
-    //                break;
-    //        }
-    //        StartCoroutine(Invulnerability());
-    //    }
-    //}
-    //private IEnumerator Invulnerability()
-    //{
-    //    this.GetComponent<SpriteRenderer>().color = new Color(
-    //        this.GetComponent<SpriteRenderer>().color.r,
-    //        this.GetComponent<SpriteRenderer>().color.g,
-    //        this.GetComponent<SpriteRenderer>().color.b, 0.5f);
-    //    isInvulnerable = true;
-    //    yield return new WaitForSeconds(InvulnerableTime);
-    //    this.GetComponent<SpriteRenderer>().color = new Color(
-    //        this.GetComponent<SpriteRenderer>().color.r,
-    //        this.GetComponent<SpriteRenderer>().color.g,
-    //        this.GetComponent<SpriteRenderer>().color.b, 1f);
-    //    isInvulnerable = false;
-    //}
 
     public void HeadLeftHit()
     {
@@ -171,6 +140,7 @@ public class Dragon : MonoBehaviour
         clone.GetComponent<DragonFire>().destroyTime = fireDestroyTime;
         clone.GetComponent<DragonFire>().dmg = damage;
     }
+
     public void FireRightHead()
     {
         Rigidbody2D clone = Instantiate(fire, fireRightPoint.transform.position, Quaternion.Euler(0, 180, 0)) as Rigidbody2D;
@@ -179,5 +149,17 @@ public class Dragon : MonoBehaviour
         //clone.transform.right = fireRightPoint.transform.right;
         clone.GetComponent<DragonFire>().destroyTime = fireDestroyTime;
         clone.GetComponent<DragonFire>().dmg = damage;
+    }
+
+    public void FireMiddleHead()
+    {
+        Rigidbody2D clone = Instantiate(fireball, fireMiddlePoint.transform.position, Quaternion.identity) as Rigidbody2D;
+        //transform.position = Vector2.MoveTowards(transform.position, new Vector2(x, y + 1), stats.speed / 55f);
+        //clone.transform.right = fireRightPoint.transform.right;
+        var heading = player.transform.position - fireMiddlePoint.transform.position;
+        var distance = heading.magnitude;
+        var direction = heading / distance; // This is now the normalized direction.
+        clone.velocity = direction * fireballSpeed;
+        clone.GetComponent<DragonFireball>().dmg = damage;
     }
 }

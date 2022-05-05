@@ -11,6 +11,12 @@ TextureImporter:
   - first:
       213: -3512792391063117781
     second: dragon_fire
+  - first:
+      213: 7017840680024779489
+    second: dragon3_fireball
+  - first:
+      213: -1808622188060990092
+    second: dragon3_headMiddleDown
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -158,6 +164,48 @@ TextureImporter:
       bones: []
       spriteID: b20ecf09eed004fc0800000000000000
       internalID: -3512792391063117781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon3_fireball
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1417
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaa9279ae0646160800000000000000
+      internalID: 7017840680024779489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon3_headMiddleDown
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1291
+        width: 199
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4752cb3d3bb76e6e0800000000000000
+      internalID: -1808622188060990092
       vertices: []
       indices: 
       edges: []
