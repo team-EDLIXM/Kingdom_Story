@@ -13,6 +13,8 @@ public class dragon_stage3 : StateMachineBehaviour
 
     public int fireAttackCountMax;
     public int magicalSphereAttackCountMax;
+    public int portalAttackCountMax;
+    public float lightningSpeed;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -44,6 +46,12 @@ public class dragon_stage3 : StateMachineBehaviour
         animator.SetBool("magicalSphereAttack", false);
         animator.SetBool("magicalSphereAttackDone", false);
         dragon.magicalSphereAttackCount = 0;
+
+        dragon.lightningSpeed = lightningSpeed;
+        dragon.portalAttackCountMax = portalAttackCountMax;
+        animator.SetBool("portalAttack", false);
+        animator.SetBool("portalAttackDone", false);
+        dragon.portalAttackCount = 0;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

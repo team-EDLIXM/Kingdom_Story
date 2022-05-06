@@ -13,7 +13,8 @@ public class dragon_stage3_idleBehavior : StateMachineBehaviour
 
         if (_timer <= 0
             && (animator.GetBool("fireAttackDone") || animator.GetComponent<Dragon>().fireAttackCount == 0)
-            && (animator.GetBool("magicalSphereAttackDone") || animator.GetComponent<Dragon>().magicalSphereAttackCount == 0))
+            && (animator.GetBool("magicalSphereAttackDone") || animator.GetComponent<Dragon>().magicalSphereAttackCount == 0)
+            && (animator.GetBool("portalAttackDone") || animator.GetComponent<Dragon>().portalAttackCount == 0))
             _timer = timer;
     }
 
@@ -29,6 +30,10 @@ public class dragon_stage3_idleBehavior : StateMachineBehaviour
             else if (!animator.GetBool("magicalSphereAttackDone"))
             {
                 animator.SetTrigger("magicalSphereAttack");
+            }
+            else
+            {
+                animator.SetTrigger("portalAttack");
             }
         }
         else

@@ -42,6 +42,13 @@ public class Dragon : MonoBehaviour
     public Rigidbody2D magicalSphere;
     public Transform magicalSpherePoint;
 
+    public int portalAttackCountMax;
+    public int portalAttackCount = 0;
+    public Transform PortalBottom;
+    public Transform PortalTop;
+    public Rigidbody2D lightning;
+    public float lightningSpeed;
+
 
     private void Awake()
     {
@@ -88,6 +95,15 @@ public class Dragon : MonoBehaviour
             if (magicalSphereAttackCount == magicalSphereAttackCountMax)
             {
                 animator.SetBool("magicalSphereAttackDone", true);
+            }
+            if (portalAttackCount == portalAttackCountMax)
+            {
+                animator.SetBool("fireAttackDone", false);
+                fireAttackCount = 0;
+                animator.SetBool("magicalSphereAttackDone", false);
+                magicalSphereAttackCount = 0;
+                animator.SetBool("portalAttack", false);
+                portalAttackCount = 0;
             }
 
             if (headMiddle.GetComponent<Stats>().health <= 0)
@@ -179,5 +195,30 @@ public class Dragon : MonoBehaviour
     {
         Rigidbody2D clone = Instantiate(magicalSphere, magicalSpherePoint.transform.position, Quaternion.identity) as Rigidbody2D;
         clone.GetComponent<DragonMagicalSphere>().dmg = damage;
+    }
+
+    public void PushPlayer()
+    {
+        //player.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100f, 0), ForceMode2D.Impulse);
+        //player.GetComponent<Rigidbody2D>().velocity = new Vector2(-10f, 0);
+        //player.GetComponent<Rigidbody2D>().MovePosition(headLeft.transform.position);
+        // idk how, so the portal will kill player, if he is in right part of portal
+    }
+
+    public IEnumerator PortalAttack()
+    {
+        int lightningCount = Random.Range(5, 11);
+        float time = 5f / lightningCount;
+        int curLightning = 0;
+        var pos = PortalBottom.position;
+        while (curLightning <= lightningCount)
+        {
+            float y = Random.Range(PortalBottom.position.y, PortalTop.position.y);
+            Rigidbody2D clone = Instantiate(lightning, new Vector3(pos.x, y, pos.z), Quaternion.identity) as Rigidbody2D;
+            clone.GetComponent<DragonLightning>().dmg = damage;
+            clone.velocity = new Vector2(-lightningSpeed, 0);
+            yield return new WaitForSeconds(time);
+            curLightning++;
+        }
     }
 }
