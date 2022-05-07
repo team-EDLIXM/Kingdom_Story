@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8618287277060587156}
   - component: {fileID: 8618287277060587159}
   - component: {fileID: 8618287277060587158}
+  - component: {fileID: 4324899269935128625}
   m_Layer: 9
   m_Name: Bat
   m_TagString: Enemy
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0012638569, y: -0.00817436}
+  m_Offset: {x: 0.00000023841858, y: -0.0072643384}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.66546667, y: 0.31744707}
+  m_Size: {x: 0.7424009, y: 0.39237183}
   m_EdgeRadius: 0
 --- !u!50 &8618287277060587157
 Rigidbody2D:
@@ -152,6 +153,11 @@ MonoBehaviour:
   dmg: 0
   isInvulnerable: 0
   InvulnerableTime: 0.5
+  PushingForce: {x: 1.2, y: 1.2}
+  PushingTime: 0.2
+  isPushed: 0
+  freezeHP: 0
+  velocity: {x: 0, y: 0}
 --- !u!114 &8618287277060587159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,3 +190,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &4324899269935128625
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618287277060587177}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6666667, y: 0.3125}
+    newSize: {x: 0.32, y: 0.15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6762196, y: 0.32319176}
+  m_EdgeRadius: 0

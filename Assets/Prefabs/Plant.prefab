@@ -180,6 +180,11 @@ MonoBehaviour:
   dmg: 1
   isInvulnerable: 0
   InvulnerableTime: 0.5
+  PushingForce: {x: 0, y: 0}
+  PushingTime: 0.5
+  isPushed: 0
+  freezeHP: 0
+  velocity: {x: 0, y: 0}
 --- !u!95 &272531247
 Animator:
   serializedVersion: 3

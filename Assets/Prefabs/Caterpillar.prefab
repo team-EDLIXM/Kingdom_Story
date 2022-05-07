@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 8656402408506057821}
   - component: {fileID: 8656402408506057822}
   - component: {fileID: 8656402408506057823}
-  - component: {fileID: 3173385663968457841}
   - component: {fileID: 2842137507613531409}
+  - component: {fileID: 3173385663968457841}
   - component: {fileID: 5993699561029646604}
   - component: {fileID: 5993699561029646605}
   m_Layer: 9
@@ -153,11 +153,30 @@ MonoBehaviour:
   dmg: 1
   isInvulnerable: 0
   InvulnerableTime: 0.75
-  PushingForce: {x: 0.5, y: 0.5}
+  PushingForce: {x: 4, y: 2}
   PushingTime: 0.5
   isPushed: 0
   freezeHP: 0
   velocity: {x: 0, y: 0}
+--- !u!95 &2842137507613531409
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656402408506057816}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a275b06cd6f53a498dd9b5df717518f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &3173385663968457841
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -184,25 +203,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1, y: 0.58}
   m_EdgeRadius: 0
---- !u!95 &2842137507613531409
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8656402408506057816}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7a275b06cd6f53a498dd9b5df717518f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &5993699561029646604
 Rigidbody2D:
   serializedVersion: 4
