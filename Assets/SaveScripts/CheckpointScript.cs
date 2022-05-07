@@ -61,8 +61,9 @@ public class CheckpointScript : MonoBehaviour
                 for (int i = 0; i < _allBosses.Length; i++)
                     _data.isBossesAlive[i] = _allBosses[i].GetComponent<Stats>().health > 0;
 
-                _data.player.extraJumpValue = _player.GetComponent<hero>().extraJumpValue;
                 _data.player.position = _player.transform.position;
+                _data.player.extraJumpValue = _player.GetComponent<hero>().extraJumpValue;
+                _data.player.FireballUnlocked = _player.GetComponent<HeroAttack>().FireballUnlocked;
                 _sSystem.SaveRestart(_data);
             }
         }
@@ -85,11 +86,13 @@ public class CheckpointScript : MonoBehaviour
         for (int i = 0; i < _allBosses.Length; i++)
             if(_allBosses[i] != null)
                 _allBosses[i].SetActive(_data.isBossesAlive[i]);
-
-        _player.GetComponent<hero>().extraJumpValue = data.player.extraJumpValue;
         GameObject.Find("Player").transform.position = data.player.position;
+        _player.GetComponent<hero>().extraJumpValue = data.player.extraJumpValue;
+        _player.GetComponent<HeroAttack>().FireballUnlocked = data.player.FireballUnlocked;
         if (GameObject.Find("DoubleJump") != null)
             GameObject.Find("DoubleJump").SetActive(data.player.extraJumpValue == 0);
+        if (GameObject.Find("Fireball") != null)
+            GameObject.Find("Fireball").SetActive(!data.player.FireballUnlocked);
     }
 }
 

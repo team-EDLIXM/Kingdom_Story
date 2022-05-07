@@ -28,10 +28,13 @@ public class Player
 
     public int extraJumpValue;
 
+    public bool FireballUnlocked;
+
     public Player()
     {
         position = new Vector3(50f, 1.5f, 0f);
         extraJumpValue = 0;
+        FireballUnlocked = false;
     }
 }
 

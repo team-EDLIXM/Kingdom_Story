@@ -10,6 +10,7 @@ public class HeroAttack : MonoBehaviour
     public bool isAttacking;
     public float fireballReloadTime = 2f;
     private bool isReload = false;
+    public bool FireballUnlocked;
 
     public Animator anim;
     public float activeAttackTime = 0.5f;
@@ -77,7 +78,7 @@ public class HeroAttack : MonoBehaviour
             StartCoroutine(RespiteTime());
             StartCoroutine(AttackTime());
         }
-        else if (Input.GetMouseButton(1) && !isReload)
+        else if (FireballUnlocked && Input.GetMouseButton(1) && !isReload)
         {
             anim.SetTrigger("Fire");
 
