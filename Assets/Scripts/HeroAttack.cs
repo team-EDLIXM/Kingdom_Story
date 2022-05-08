@@ -102,6 +102,8 @@ public class HeroAttack : MonoBehaviour
             var v = new Vector2(enemies[i].transform.position.x - transform.position.x,
                 enemies[i].transform.position.y - transform.position.y);
             st.Push(v);
+
+            if(attackType == "airBottomAttack") GetComponent<Rigidbody2D>().velocity = Vector2.up * 15;
         }
     }
 

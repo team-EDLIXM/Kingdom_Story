@@ -56,7 +56,7 @@ public class hero : MonoBehaviour
                 AudioManager.instance.PlaySFX(1);
                 anim.SetTrigger("Jump");
             }
-            else if (Input.GetKeyDown(KeyCode.Space) && extraJump == 0 && isGrounded == true)
+            else if (Input.GetKeyDown(KeyCode.Space) && extraJump == 0 && isGrounded)
             {
                 rb.velocity = Vector2.up * jumpHeight;
                 AudioManager.instance.PlaySFX(1);
