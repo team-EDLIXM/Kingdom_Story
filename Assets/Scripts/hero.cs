@@ -25,6 +25,9 @@ public class hero : MonoBehaviour
     public AudioManager AudioManager;
 
     private float normalGravity; 
+    
+    //cheats
+    private HolderScript holder;
     public void Start()
     {
         extraJump = extraJumpValue;
@@ -34,6 +37,10 @@ public class hero : MonoBehaviour
         AudioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         stats = GetComponent<Stats>();
         heroAttack = GetComponent<HeroAttack>();
+        
+        holder = FindObjectOfType<HolderScript>();
+        stats.dmg = holder.Damage;
+        stats.freezeHP = holder.areFreeze;
     }
 
     public void Update()

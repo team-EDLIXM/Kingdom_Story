@@ -19,6 +19,7 @@ public class HeroAttack : MonoBehaviour
     private Dictionary<string, Collider2D> attacks;
     private ContactFilter2D filter;
     private string currentAttack;
+    private Stats _stats;
 
     public Transform fireballPos;
     public Transform fireball;
@@ -31,6 +32,8 @@ public class HeroAttack : MonoBehaviour
 
         filter = new ContactFilter2D().NoFilter();
         filter.SetLayerMask(enemy);
+
+        _stats = GetComponent<Stats>();
     }
 
     private void OnDrawGizmos()
@@ -97,7 +100,7 @@ public class HeroAttack : MonoBehaviour
         for (int i = 0; i < attacks[attackType].OverlapCollider(filter, enemies); ++i)
         {
             var st = enemies[i].GetComponent<Stats>();
-            st.TakeDamage(1);
+            st.TakeDamage(_stats.dmg);
             
             var v = new Vector2(enemies[i].transform.position.x - transform.position.x,
                 enemies[i].transform.position.y - transform.position.y);
