@@ -24,8 +24,7 @@ public class Bat : MonoBehaviour
     void Update()
     {
         float nextPosition = transform.position.y + stats.speed * direction;
-        if ((direction < 0 && startPoint - distance <= nextPosition)
-            || (direction > 0 && startPoint + distance >= nextPosition))
+        if ((direction < 0 && startPoint - distance <= nextPosition) || (direction > 0 && startPoint + distance >= nextPosition))
             rb.velocity = direction * transform.up * stats.speed;
         //transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(transform.right.x, 0, 0), stats.speed * Time.deltaTime);
         else
@@ -38,5 +37,6 @@ public class Bat : MonoBehaviour
         {
             other.GetComponent<Stats>().TakeDamage(stats.dmg);
         }
+        direction *= -1;
     }
 }
