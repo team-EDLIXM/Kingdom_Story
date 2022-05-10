@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: 7472bf39a3a32d445bdeef8e6cf1c832
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7563424741025924065
+    second: Dragon_MagicBallAttack_0
+  - first:
+      213: 8205357021847473449
+    second: Dragon_MagicBallAttack_1
+  - first:
+      213: 3098326260759967256
+    second: Dragon_MagicBallAttack_2
+  - first:
+      213: 4788001687147380758
+    second: Dragon_MagicBallAttack_3
+  - first:
+      213: -6660481646906860373
+    second: Dragon_MagicBallAttack_4
+  - first:
+      213: 3833903855038268786
+    second: Dragon_MagicBallAttack_6
+  - first:
+      213: -2676786154543555788
+    second: Dragon_MagicBallAttack_7
+  - first:
+      213: -8961545790314649597
+    second: Dragon_MagicBallAttack_8
+  - first:
+      213: -32413952357024964
+    second: Dragon_MagicBallAttack_9
+  - first:
+      213: 5615976989777679162
+    second: Dragon_MagicBallAttack_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 495
+        width: 286
+        height: 135
+      alignment: 9
+      pivot: {x: 0.33566433, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cbfb15541590790800000000000000
+      internalID: -7563424741025924065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 495
+        width: 297
+        height: 135
+      alignment: 9
+      pivot: {x: 0.36026937, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dc97eccb84fd170800000000000000
+      internalID: 8205357021847473449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 335
+        width: 297
+        height: 135
+      alignment: 9
+      pivot: {x: 0.36026937, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816bcda81577ffa20800000000000000
+      internalID: 3098326260759967256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_3
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 335
+        width: 297
+        height: 135
+      alignment: 9
+      pivot: {x: 0.36026937, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6100462aa26627240800000000000000
+      internalID: 4788001687147380758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 175
+        width: 342
+        height: 135
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac9b1b1b373193a0800000000000000
+      internalID: -6660481646906860373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_6
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 175
+        width: 353
+        height: 135
+      alignment: 9
+      pivot: {x: 0.46175638, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2758e864e33c43530800000000000000
+      internalID: 3833903855038268786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_7
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 15
+        width: 355
+        height: 135
+      alignment: 9
+      pivot: {x: 0.46478873, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b5fb6bc252adad0800000000000000
+      internalID: -2676786154543555788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_8
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 82
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308e5e1859132a380800000000000000
+      internalID: -8961545790314649597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_9
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 79
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b3efb9ea7dc8ff0800000000000000
+      internalID: -32413952357024964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MagicBallAttack_10
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 79
+        width: 28
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3357764155ffed40800000000000000
+      internalID: 5615976989777679162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
