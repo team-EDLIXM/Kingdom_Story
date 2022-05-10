@@ -103,7 +103,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   speed: 10
-  destroyTime: 30
+  destroyTime: 2
   dmg: 1
 --- !u!58 &-3366352839559671475
 CircleCollider2D:

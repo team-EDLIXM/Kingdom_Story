@@ -8,11 +8,12 @@ public class Fireball : MonoBehaviour
 
     public float speed = 5;
     public float destroyTime;
-    public int dmg = 1;
+    private int dmg = 1;
 
     void Start()
     {
         Destroy(gameObject, destroyTime);
+        dmg = GameObject.Find("Player").GetComponent<Stats>().dmg;
     }
 
     void Update()
