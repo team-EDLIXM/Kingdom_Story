@@ -64,7 +64,7 @@ public class HeroAttack : MonoBehaviour
                 else if (horizontalPress != 0)
                     currentAttack = "airSideAttack";
                 else
-                    currentAttack = "airNeutralAttack";
+                    currentAttack = "airSideAttack";
             }
             else
             {
@@ -73,7 +73,7 @@ public class HeroAttack : MonoBehaviour
                 else if (horizontalPress != 0)
                     currentAttack = "sideAttack";
                 else
-                    currentAttack = "neutralAttack";
+                    currentAttack = "sideAttack";
             }
 
             AudioManager.instance.PlaySFX(3);
