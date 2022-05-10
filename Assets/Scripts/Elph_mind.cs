@@ -15,11 +15,9 @@ public class Elph_mind : MonoBehaviour
     public float shotReloadTime = 3f;
     public GameObject fireball;
     public Transform fireballPoint;
-    public float shotDistance = 10f;
 
     private bool swapReload = false;
     public float swapReloadTime = 5f;
-    public float swapDistance = 5f;
 
     private void Awake()
     {
@@ -29,13 +27,13 @@ public class Elph_mind : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(theElph.position, thePlayer.transform.position);
-        if (distance < shotDistance && !shotReload && !isDelay)
+        if (distance < 30 && !shotReload && !isDelay)
         {
+            if (distance < 15 && !swapReload)
+            {
+                swap();
+            }
             shot();
-        }
-        if (distance < swapDistance && !swapReload)
-        {
-            swap();
         }
     }
 
@@ -83,13 +81,5 @@ public class Elph_mind : MonoBehaviour
         isDelay = true;
         yield return new WaitForSeconds(shotDelay);
         isDelay = false;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(gameObject.transform.position, swapDistance);
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(gameObject.transform.position, shotDistance);
     }
 }
