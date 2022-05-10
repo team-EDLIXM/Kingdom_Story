@@ -145,17 +145,17 @@ public class Dragon : MonoBehaviour
 
     public void Stomp()
     {
-        Rigidbody2D cloneLeft = Instantiate(stompWave, stompWavePoint.transform.position, Quaternion.identity) as Rigidbody2D;
-        cloneLeft.GetComponent<SpriteRenderer>().flipX = true;
+        Rigidbody2D cloneLeft = Instantiate(stompWave, stompWavePoint.transform.position, Quaternion.Euler(0, 180, 0)) as Rigidbody2D;
+        //cloneLeft.GetComponent<SpriteRenderer>().flipX = true;
         cloneLeft.velocity = -stompWavePoint.transform.right * stompWaveSpeed;
-        cloneLeft.transform.right = stompWavePoint.transform.right;
+        //cloneLeft.transform.right = stompWavePoint.transform.right;
         cloneLeft.GetComponent<StompWave>().destroyTime = stompWaveDestroyTime;
         cloneLeft.GetComponent<StompWave>().dmg = damage;
 
         Rigidbody2D cloneRight = Instantiate(stompWave, stompWavePoint.transform.position, Quaternion.identity) as Rigidbody2D;
-        cloneRight.GetComponent<SpriteRenderer>().flipX = true;
+        //cloneRight.GetComponent<SpriteRenderer>().flipX = true;
         cloneRight.velocity = stompWavePoint.transform.right * stompWaveSpeed;
-        cloneRight.transform.right = stompWavePoint.transform.right;
+        //cloneRight.transform.right = stompWavePoint.transform.right;
         cloneRight.GetComponent<StompWave>().destroyTime = stompWaveDestroyTime;
         cloneRight.GetComponent<StompWave>().dmg = damage;
     }

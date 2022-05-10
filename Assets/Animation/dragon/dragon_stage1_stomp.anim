@@ -20,11 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 3882194283577183912, guid: 7c4ec4acabdbd44459364ca625eae518, type: 3}
+      value: {fileID: -2610100958992491761, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
+    - time: 0.5
+      value: {fileID: 5612425209956462281, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
     - time: 1
-      value: {fileID: -8334837670336803960, guid: 7c4ec4acabdbd44459364ca625eae518, type: 3}
+      value: {fileID: 6483447849736898782, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
+    - time: 1.5
+      value: {fileID: -7975738152938556487, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
     - time: 2
-      value: {fileID: 3882194283577183912, guid: 7c4ec4acabdbd44459364ca625eae518, type: 3}
+      value: {fileID: -7975738152938556487, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +48,11 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 3882194283577183912, guid: 7c4ec4acabdbd44459364ca625eae518, type: 3}
-    - {fileID: -8334837670336803960, guid: 7c4ec4acabdbd44459364ca625eae518, type: 3}
-    - {fileID: 3882194283577183912, guid: 7c4ec4acabdbd44459364ca625eae518, type: 3}
+    - {fileID: -2610100958992491761, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
+    - {fileID: 5612425209956462281, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
+    - {fileID: 6483447849736898782, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
+    - {fileID: -7975738152938556487, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
+    - {fileID: -7975738152938556487, guid: f78d3fb120a2539498a1dcb0437055cb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -73,6 +79,13 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1
+    functionName: Stomp
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2
     functionName: Stomp
     data: 
     objectReferenceParameter: {fileID: 0}
