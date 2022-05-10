@@ -31,7 +31,12 @@ public class Seed : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Stats>().TakeDamage(dmg);
+            var otherStats = other.GetComponent<Stats>();
+            otherStats.TakeDamage(dmg);
+            var v = new Vector2(other.transform.position.x - transform.position.x,
+                other.transform.position.y - transform.position.y);
+            v.Normalize();
+            otherStats.Push(v);
             Destroy(gameObject);
         }
     }

@@ -56,7 +56,6 @@ public class PlatformEnemyAI : MonoBehaviour
             var v = new Vector2(other.transform.position.x - transform.position.x,
                 other.transform.position.y - transform.position.y);
             v.Normalize();
-            print(v);
             otherStats.Push(v);
         }
     }

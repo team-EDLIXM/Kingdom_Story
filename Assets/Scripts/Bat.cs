@@ -35,7 +35,12 @@ public class Bat : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Stats>().TakeDamage(stats.dmg);
+            var otherStats = other.GetComponent<Stats>();
+            otherStats.TakeDamage(stats.dmg);
+            var v = new Vector2(other.transform.position.x - transform.position.x,
+                other.transform.position.y - transform.position.y);
+            v.Normalize();
+            otherStats.Push(v);
         }
         direction *= -1;
     }
