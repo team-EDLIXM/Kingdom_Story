@@ -84,7 +84,7 @@ public class hero : MonoBehaviour
         if (stats.isPushed)
         {
             v.x += otherVelocity.x;
-            v.y += otherVelocity.y;
+            v.y = otherVelocity.y;
         }
 
         rb.velocity = v;
