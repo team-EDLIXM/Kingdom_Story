@@ -22,7 +22,7 @@ public class CheckpointScript : MonoBehaviour
     private void Awake()
     {
         _allCheckpoints = GameObject.FindGameObjectsWithTag("checkpoints");
-        _allBosses = GameObject.FindGameObjectsWithTag("bosses");
+        _allBosses = GameObject.FindGameObjectsWithTag("Boss");
         _sPoint = gameObject;
         _player = GameObject.Find("Player");
         _sSystem = new JsonSaveSystem();
@@ -31,8 +31,7 @@ public class CheckpointScript : MonoBehaviour
         if (_data.isBossesAlive.Length != _allBosses.Length)
         {
             _data.isBossesAlive = new bool[_allBosses.Length];
-            for (int i = 0; i < _data.isBossesAlive.Length; i++)
-                _data.isBossesAlive[i] = true;
+            for (int i = 0; i < _data.isBossesAlive.Length; i++) _data.isBossesAlive[i] = true;
         }
         ApplyLoad(_data);
     }
