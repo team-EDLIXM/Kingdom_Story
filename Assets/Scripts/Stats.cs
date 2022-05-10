@@ -41,6 +41,7 @@ public class Stats : MonoBehaviour
             }
             else if (this.tag == "Boss")
             {
+                if (health<=0) gameObject.SetActive(false);
                 StartCoroutine(InvulnerabilityB());
             }
             else

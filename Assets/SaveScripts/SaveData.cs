@@ -12,12 +12,19 @@ public class SaveData
     public bool[] isBossesAlive;
     
     public bool isNewGame;
+
+    public int KeyCount;
+
+   // public bool dryadAreAlive;
+    
+    //public bool finalBossAreAlive;
     public SaveData()
     {
         player = new Player();
         checkpoints = Array.Empty<bool>();
         isBossesAlive = Array.Empty<bool>();
         isNewGame = true;
+        KeyCount = 0;
     }
 }
 
