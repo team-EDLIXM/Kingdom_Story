@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: 40d93c9b8ab7b8449b2a689b78365107
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4915606846590311112
+    second: Dragon_PortalAttack_0
+  - first:
+      213: -8747300790848782283
+    second: Dragon_Portal_0
+  - first:
+      213: -2694765976985633283
+    second: Dragon_Portal_1
+  - first:
+      213: -8221521683257349673
+    second: Dragon_Portal_2
+  - first:
+      213: -8807537817631519575
+    second: Dragon_Portal_3
+  - first:
+      213: 4350425980663208620
+    second: Dragon_Lightning_0
+  - first:
+      213: 5718821317564426524
+    second: Dragon_Lightning_1
+  - first:
+      213: -6318771016327704809
+    second: Dragon_PortalAttack_1
+  - first:
+      213: 6349438654307517119
+    second: Dragon_PortalAttack_2
+  - first:
+      213: 6138472183556649223
+    second: Dragon_PortalAttack_3
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dragon_PortalAttack_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 15
+        width: 243
+        height: 213
+      alignment: 9
+      pivot: {x: 0.218107, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835a185fd9148cbb0800000000000000
+      internalID: -4915606846590311112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Portal_0
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 209
+        width: 11
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53007f1a6485b9680800000000000000
+      internalID: -8747300790848782283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Portal_1
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 197
+        width: 17
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd76f41f944a9ad0800000000000000
+      internalID: -2694765976985633283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Portal_2
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 174
+        width: 18
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9264ca69947ed80800000000000000
+      internalID: -8221521683257349673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Portal_3
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 174
+        width: 18
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac014ae40755c580800000000000000
+      internalID: -8807537817631519575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Lightning_0
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 196
+        width: 32
+        height: 10
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa9f0f3161df5c30800000000000000
+      internalID: 4350425980663208620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Lightning_1
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 196
+        width: 33
+        height: 10
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19eb5f40b55d5f40800000000000000
+      internalID: 5718821317564426524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_PortalAttack_1
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 15
+        width: 243
+        height: 135
+      alignment: 9
+      pivot: {x: 0.218107, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fc0ca2d373f48a0800000000000000
+      internalID: -6318771016327704809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_PortalAttack_2
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 15
+        width: 243
+        height: 135
+      alignment: 9
+      pivot: {x: 0.218107, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb24229b0dcbd1850800000000000000
+      internalID: 6349438654307517119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_PortalAttack_3
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 15
+        width: 243
+        height: 135
+      alignment: 9
+      pivot: {x: 0.218107, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701b28c8deb303550800000000000000
+      internalID: 6138472183556649223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

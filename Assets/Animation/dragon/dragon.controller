@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  damage: 0
+  damage: 1
   IdleTimer: 3
   headHitCountMax: 3
   stompCountMax: 3
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  damage: 0
+  damage: 1
   IdleTimer: 2
   fireballSpeed: 2
   fireAttackCountMax: 1
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  damage: 0
+  damage: 1
   IdleTimer: 2
   headHitCountMax: 4
   stompCountMax: 4
