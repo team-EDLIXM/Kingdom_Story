@@ -22874,7 +22874,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 744506656337819379}
   m_Lens:
     FieldOfView: 45
     OrthographicSize: 5
@@ -43561,7 +43561,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 744506656337819379}
   m_Lens:
     FieldOfView: 45
     OrthographicSize: 5
@@ -44296,7 +44296,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 744506656337819379}
   m_Lens:
     FieldOfView: 45
     OrthographicSize: 5
@@ -47508,7 +47508,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 744506656337819379}
   m_Lens:
     FieldOfView: 45
     OrthographicSize: 5
@@ -48930,7 +48930,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 744506656337819379}
   m_Lens:
     FieldOfView: 45
     OrthographicSize: 5
@@ -52007,7 +52007,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 744506656337819379}
   m_Lens:
     FieldOfView: 45
     OrthographicSize: 5
