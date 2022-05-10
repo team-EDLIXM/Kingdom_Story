@@ -12,6 +12,7 @@ public class dragon_fireLeftBehavior : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         animator.GetComponent<Dragon>().fireAttackCount++;
         headLeft = GameObject.Find("headLeft");
+        headLeft.transform.position += new Vector3(-1.2f, 0, 0);
         headLeft.GetComponent<Stats>().isInvulnerable = false;
     }
 
@@ -27,7 +28,8 @@ public class dragon_fireLeftBehavior : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameObject.Find("headLeft").GetComponent<Stats>().isInvulnerable = true;
+        headLeft.GetComponent<Stats>().isInvulnerable = true;
+        headLeft.transform.position += new Vector3(1.2f, 0, 0);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

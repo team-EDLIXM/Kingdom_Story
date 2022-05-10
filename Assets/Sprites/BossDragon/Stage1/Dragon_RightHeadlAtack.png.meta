@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 58f5b879fe4c6334788721a717d43c4f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5006361826392955720
+    second: Dragon_RightHeadlAtack_0
+  - first:
+      213: -1948744254206587311
+    second: Dragon_RightHeadlAtack_1
+  - first:
+      213: 4115021136991857256
+    second: Dragon_RightHeadlAtack_2
+  - first:
+      213: 4379556121006689475
+    second: Dragon_RightHeadlAtack_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +101,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Dragon_RightHeadlAtack_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 16
+        width: 273
+        height: 213
+      alignment: 9
+      pivot: {x: 0.30402932, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b5a376e8b2a7540800000000000000
+      internalID: 5006361826392955720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_RightHeadlAtack_1
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 16
+        width: 278
+        height: 199
+      alignment: 9
+      pivot: {x: 0.31654677, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ecee9fc6ba4f4e0800000000000000
+      internalID: -1948744254206587311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_RightHeadlAtack_2
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 16
+        width: 278
+        height: 199
+      alignment: 9
+      pivot: {x: 0.31654677, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86aaf99fbed7b1930800000000000000
+      internalID: 4115021136991857256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_RightHeadlAtack_3
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 16
+        width: 273
+        height: 213
+      alignment: 9
+      pivot: {x: 0.30402932, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cccd72961f47cc30800000000000000
+      internalID: 4379556121006689475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

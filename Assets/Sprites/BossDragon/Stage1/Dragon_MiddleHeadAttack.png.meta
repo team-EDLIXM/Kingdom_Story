@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: b82f71aafb5ed3f489cd49d93a982ce3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 76708931205616176
+    second: Dragon_MiddleHeadAttack_0
+  - first:
+      213: -7765076179911297214
+    second: Dragon_MiddleHeadAttack_2
+  - first:
+      213: 5417106016338795644
+    second: Dragon_MiddleHeadAttack_3
+  - first:
+      213: -4561076408540633417
+    second: Dragon_MiddleHeadAttack_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +101,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Dragon_MiddleHeadAttack_0
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 23
+        width: 273
+        height: 213
+      alignment: 9
+      pivot: {x: 0.30402932, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0325c93dd56801100800000000000000
+      internalID: 76708931205616176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MiddleHeadAttack_2
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 23
+        width: 278
+        height: 227
+      alignment: 9
+      pivot: {x: 0.31654677, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2473a820b58ec3490800000000000000
+      internalID: -7765076179911297214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MiddleHeadAttack_3
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 23
+        width: 273
+        height: 213
+      alignment: 9
+      pivot: {x: 0.30402932, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c5186883d6d2b40800000000000000
+      internalID: 5417106016338795644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_MiddleHeadAttack_1
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 22
+        width: 278
+        height: 235
+      alignment: 9
+      pivot: {x: 0.31654677, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6658b0c2dc3b0c0800000000000000
+      internalID: -4561076408540633417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
