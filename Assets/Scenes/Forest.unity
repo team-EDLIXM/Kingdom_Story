@@ -2317,6 +2317,7 @@ MonoBehaviour:
   nameText: {fileID: 261302371}
   boxAnim: {fileID: 1170428695}
   startAnim: {fileID: 1723441212}
+  areStarted: 0
 --- !u!4 &226106771
 Transform:
   m_ObjectHideFlags: 0
@@ -3642,6 +3643,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startAnim: {fileID: 1723441212}
   dm: {fileID: 226106770}
+  dialogue:
+    name: "\u0420\u043E\u043D\u0430\u043B\u044C\u0434"
+    sentences:
+    - "\u0417\u044D\u0442 - \u044D\u0442\u043E \u0441\u0430\u043C\u043E\u0441\u0442\u044C,
+      \u0430 \u0441\u0430\u043C\u043E\u0441\u0442\u044C - \u044D\u0442\u043E \u0417\u044D\u0442"
 --- !u!58 &335598838
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6412,7 +6418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.88889, y: 2.72, z: -10}
+  m_LocalPosition: {x: 56.001778, y: 2.72, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 416135562}
@@ -48254,8 +48260,6 @@ GameObject:
   - component: {fileID: 1723441211}
   - component: {fileID: 1723441210}
   - component: {fileID: 1723441212}
-  - component: {fileID: 1723441214}
-  - component: {fileID: 1723441213}
   m_Layer: 5
   m_Name: StartDialogue
   m_TagString: Untagged
@@ -48340,79 +48344,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1723441213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723441208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb6a5ef6a1f6dc46ba321ea18d05aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: "\u0420\u043E\u043D\u0430\u043B\u044C\u0434"
-    sentences:
-    - "\u0417\u044D\u0442 - \u044D\u0442\u043E \u0441\u0430\u043C\u043E\u0441\u0442\u044C,
-      \u0430 \u0441\u0430\u043C\u043E\u0441\u0442\u044C - \u044D\u0442\u043E \u0417\u044D\u0442"
---- !u!114 &1723441214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723441208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1723441210}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1723441213}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1739035237
 GameObject:
   m_ObjectHideFlags: 0
@@ -50288,7 +50219,7 @@ GameObject:
   - component: {fileID: 1867666812}
   - component: {fileID: 1867666814}
   m_Layer: 5
-  m_Name: NextButton
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50346,7 +50277,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0414\u0430\u043B\u0435\u0435>>"
+  m_Text: "\u0414\u0430\u043B\u0435\u0435 [E]>>"
 --- !u!222 &1867666813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50394,23 +50325,11 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1867666812}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 226106770}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1878646834
 GameObject:
   m_ObjectHideFlags: 0

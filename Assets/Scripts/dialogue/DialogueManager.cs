@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     public Animator startAnim;
 
     private Queue<string> sentences;
+    
+    public bool areStarted;
 
     private void Start()
     {
@@ -22,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     {
         boxAnim.SetBool("boxOpen", true);
         startAnim.SetBool("startOpen", false);
-
+        areStarted = true;
         nameText.text = dialogue.name;
         sentences.Clear();
 
@@ -61,5 +64,6 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         boxAnim.SetBool("boxOpen", false);
+        areStarted = false;
     }
 }

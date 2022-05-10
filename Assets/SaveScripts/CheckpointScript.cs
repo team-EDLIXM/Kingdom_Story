@@ -39,7 +39,7 @@ public class CheckpointScript : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(_player.transform.position, _sPoint.transform.position) <= 1.5f)
+        if (Vector2.Distance(_player.transform.position, _sPoint.transform.position) <= 1.5f)
         {
             anim.SetBool("near", true);
             
