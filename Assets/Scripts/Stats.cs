@@ -38,6 +38,10 @@ public class Stats : MonoBehaviour
             {
                 StartCoroutine(InvulnerabilityP());
             }
+            else if (this.tag == "Boss")
+            {
+                StartCoroutine(InvulnerabilityB());
+            }
             else
             {
                 StartCoroutine(Invulnerability());
@@ -101,6 +105,22 @@ public class Stats : MonoBehaviour
             this.GetComponent<SpriteRenderer>().color.b, 1f);
         isInvulnerable = false;
         
+    }
+
+    private IEnumerator InvulnerabilityB()
+    {
+        this.GetComponentInParent<SpriteRenderer>().color = new Color(
+            this.GetComponentInParent<SpriteRenderer>().color.r,
+            this.GetComponentInParent<SpriteRenderer>().color.g,
+            this.GetComponentInParent<SpriteRenderer>().color.b, 0.8f);
+        isInvulnerable = true;
+        yield return new WaitForSeconds(InvulnerableTime);
+        this.GetComponentInParent<SpriteRenderer>().color = new Color(
+            this.GetComponentInParent<SpriteRenderer>().color.r,
+            this.GetComponentInParent<SpriteRenderer>().color.g,
+            this.GetComponentInParent<SpriteRenderer>().color.b, 1f);
+        if (this.health > 0)
+            isInvulnerable = false;
     }
 
     private void CheckDeath()
