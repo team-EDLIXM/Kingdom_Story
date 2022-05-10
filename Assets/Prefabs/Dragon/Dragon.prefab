@@ -121,6 +121,11 @@ MonoBehaviour:
   dmg: 0
   isInvulnerable: 1
   InvulnerableTime: 0.5
+  PushingForce: {x: 0.5, y: 0.5}
+  PushingTime: 0.5
+  isPushed: 0
+  freezeHP: 0
+  velocity: {x: 0, y: 0}
 --- !u!1 &6348588786747948665
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +218,11 @@ MonoBehaviour:
   dmg: 0
   isInvulnerable: 1
   InvulnerableTime: 0.5
+  PushingForce: {x: 0.5, y: 0.5}
+  PushingTime: 0.5
+  isPushed: 0
+  freezeHP: 0
+  velocity: {x: 0, y: 0}
 --- !u!1 &6348588786757192686
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +348,7 @@ MonoBehaviour:
   headMiddle: {fileID: 6348588786747948665}
   headRight: {fileID: 6348588786725141775}
   isInvulnerable: 0
-  InvulnerableTime: 0.5
+  InvulnerableTime: 1
   IdleTimer: 0
   headHitCountMax: 0
   headHitCount: 0
@@ -985,3 +995,8 @@ MonoBehaviour:
   dmg: 0
   isInvulnerable: 1
   InvulnerableTime: 0.5
+  PushingForce: {x: 0.5, y: 0.5}
+  PushingTime: 0.5
+  isPushed: 0
+  freezeHP: 0
+  velocity: {x: 0, y: 0}

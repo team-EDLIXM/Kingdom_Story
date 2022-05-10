@@ -203,6 +203,7 @@ public class Dragon : MonoBehaviour
         //player.GetComponent<Rigidbody2D>().velocity = new Vector2(-10f, 0);
         //player.GetComponent<Rigidbody2D>().MovePosition(headLeft.transform.position);
         // idk how, so the portal will kill player, if he is in right part of portal
+        player.GetComponent<Stats>().Push(new Vector2(-1, 0));
     }
 
     public IEnumerator PortalAttack()

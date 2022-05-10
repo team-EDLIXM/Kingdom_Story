@@ -32,7 +32,8 @@ public class Stats : MonoBehaviour
         if (!isInvulnerable)
         {
             if (!freezeHP) health -= value;
-            anim.SetTrigger("isTakingDamage");
+            try { anim.SetTrigger("isTakingDamage"); }
+            catch { }
 
             if (this.tag == "Player")
             {
