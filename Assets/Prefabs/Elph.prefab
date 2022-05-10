@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8319605886918187952}
   - component: {fileID: 1444932445341372749}
   - component: {fileID: 4327114322386428651}
-  - component: {fileID: 8792274913160986441}
   - component: {fileID: 3871293132217809092}
+  - component: {fileID: 1887827273712662690}
   m_Layer: 9
   m_Name: Elph
   m_TagString: Untagged
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 920ca6f4b56175b4e90540aedc697465, type: 3}
+  m_Sprite: {fileID: -1727767361153904390, guid: 1a5f40ec4c7b5b24c9d6c78d26928fae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1.0454545, y: 1.2727273}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -129,33 +129,9 @@ MonoBehaviour:
   shotReloadTime: 3
   fireball: {fileID: 7086873533731258192, guid: bf1a344828d81844f90a5e8ba2221fdc, type: 3}
   fireballPoint: {fileID: 8088114603927762234}
+  shotDistance: 10
   swapReloadTime: 5
---- !u!61 &8792274913160986441
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3621465557245128385}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.01864183}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3333334, y: 1.3333334}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8433075, y: 1.2960498}
-  m_EdgeRadius: 0
+  swapDistance: 5
 --- !u!95 &3871293132217809092
 Animator:
   serializedVersion: 3
@@ -175,6 +151,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1887827273712662690
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3621465557245128385}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0454545, y: 1.2727273}
+    newSize: {x: 1.0454545, y: 1.2727273}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0454545, y: 1.2727273}
+  m_EdgeRadius: 0
 --- !u!1 &5365857811779582872
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5365857811779582872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5899998976763543303}
