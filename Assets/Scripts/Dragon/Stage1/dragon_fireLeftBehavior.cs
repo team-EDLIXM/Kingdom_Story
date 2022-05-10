@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class dragon_fireLeftBehavior : StateMachineBehaviour
 {
+    private GameObject player;
+    private GameObject headLeft;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         animator.GetComponent<Dragon>().fireAttackCount++;
-        GameObject.Find("headLeft").GetComponent<Stats>().isInvulnerable = false;
+        headLeft = GameObject.Find("headLeft");
+        headLeft.GetComponent<Stats>().isInvulnerable = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if (player.transform.position.x < headLeft.transform.position.x)
+            headLeft.GetComponent<Stats>().isInvulnerable = true;
+        else
+            headLeft.GetComponent<Stats>().isInvulnerable = false;
+    }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
