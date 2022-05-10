@@ -117,7 +117,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   speed: 6
-  destroyTime: 5
+  destroyTime: 1.5
   dmg: 1
 --- !u!95 &920912086370384701
 Animator:
