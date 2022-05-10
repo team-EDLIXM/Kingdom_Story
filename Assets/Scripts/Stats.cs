@@ -31,26 +31,16 @@ public class Stats : MonoBehaviour
     {
         if (!isInvulnerable)
         {
+            if (!freezeHP) health -= value;
             anim.SetTrigger("isTakingDamage");
+
             if (this.tag == "Player")
             {
-                if(!freezeHP) health -= value;
                 StartCoroutine(InvulnerabilityP());
             }
             else
             {
-                if(!freezeHP) health -= value;
-
-                if (health <= 0)
-                {
-                    //anim.Play("Die");
-
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    StartCoroutine(Invulnerability());
-                }
+                StartCoroutine(Invulnerability());
             }
         }
     }
@@ -113,6 +103,20 @@ public class Stats : MonoBehaviour
         
     }
 
+    private void CheckDeath()
+    {
+        if (health <= 0)
+        {
+            speed = 0;
+            dmg = 0;
+            anim.SetTrigger("isDead");
+        }
+    }
+
+    private void onDead()
+    {
+        Destroy(gameObject);
+    }
     //public void Die()
     //{
     //    anim.SetTrigger("IsDead");
